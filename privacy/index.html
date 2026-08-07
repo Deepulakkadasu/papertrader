@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Paper Trader</title>
+<meta name="description" content="What Paper Trader does with your information.">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #16181d; --dim: #5b616b;
+    --rule: #e3e7eb; --accent: #0a8f6c; --card: #f4f6f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0e12; --fg: #f2f3f5; --dim: #9aa0ab;
+      --rule: #24262e; --accent: #2ed3a7; --card: #191a20;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 20px 80px;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { padding: 44px 0 8px; border-bottom: 1px solid var(--rule); margin-bottom: 28px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .mark {
+    width: 34px; height: 34px; border-radius: 9px; background: var(--accent);
+    display: grid; place-items: center; flex: none;
+  }
+  .mark svg { display: block; }
+  .brand span { font-weight: 700; font-size: 15px; letter-spacing: -0.1px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.4px; }
+  .updated { color: var(--dim); font-size: 14px; margin: 0 0 4px; }
+  h2 {
+    font-size: 19px; margin: 38px 0 10px; letter-spacing: -0.2px;
+    padding-top: 22px; border-top: 1px solid var(--rule);
+  }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  strong { font-weight: 650; }
+  a { color: var(--accent); }
+  .note {
+    background: var(--card); border-radius: 10px;
+    padding: 14px 16px; margin: 18px 0; font-size: 15px;
+  }
+  footer {
+    margin-top: 46px; padding-top: 20px; border-top: 1px solid var(--rule);
+    color: var(--dim); font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div class="brand">
+    <div class="mark">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+        <rect x="3" y="9"  width="4" height="9" rx="1.2"/><rect x="4.3" y="6"  width="1.4" height="15" rx="0.7"/>
+        <rect x="10" y="6" width="4" height="9" rx="1.2"/><rect x="11.3" y="3" width="1.4" height="15" rx="0.7"/>
+        <rect x="17" y="3" width="4" height="9" rx="1.2"/><rect x="18.3" y="1" width="1.4" height="15" rx="0.7"/>
+      </svg>
+    </div>
+    <span>Paper Trader</span>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated 7 August 2026</p>
+</header>
+
+<p>Paper Trader is a trading simulator. Every trade in it is made with
+virtual money; the app cannot place a real order. This policy says what
+the app does with your information, and what it does not.</p>
+
+<h2>What stays on your device</h2>
+<p>These never leave your phone:</p>
+<ul>
+  <li>Your virtual trading account: cash balance, paper positions, orders
+      and trade history.</li>
+  <li>Your preferences: watchlists, chart drawings, price alerts,
+      strategies and theme.</li>
+  <li><strong>If you connect a broker: the access token your broker
+      issues.</strong> It is written to the Android keystore, is used only
+      to fetch your own market data from your own broker, and is never
+      uploaded to us or to anyone else. Disconnecting removes it.</li>
+</ul>
+
+<h2>What leaves your device</h2>
+<p><strong>If you sign in with Google</strong> — optional; the app works
+fully without an account — the following is stored in Google Cloud
+Firestore so that it can be restored on a new phone:</p>
+<ul>
+  <li>Your name and email address from your Google account, and your
+      Firebase user ID.</li>
+  <li>Your paper trading data: trade history, positions, watchlists,
+      alerts, strategies, chart drawings and risk settings.</li>
+</ul>
+
+<div class="note">Your broker token is <strong>not</strong> included in
+that backup, by design.</div>
+
+<p><strong>Crash reports</strong> are sent to Google Firebase Crashlytics
+whether or not you sign in. These contain the error, the stack trace, and
+technical details about the device and app version. They do not contain
+your broker token or your trading data.</p>
+
+<p><strong>Subscription purchases</strong> are handled by Google Play
+Billing. We receive confirmation from Google that a subscription is
+active. We never see your card, UPI ID or bank details.</p>
+
+<p>Data is stored in Google's asia-south1 (Mumbai) region.</p>
+
+<h2>Who we share it with</h2>
+<p>Nobody. We do not sell, rent or trade your information, and we run no
+advertising or profiling SDKs. Google acts as our processor for sign-in,
+backup, crash reporting and payments; their terms govern that
+processing.</p>
+
+<h2>What the app never does</h2>
+<ul>
+  <li>It never asks for or receives your broker password, PIN or 2FA
+      code. Broker login happens on your broker's own page.</li>
+  <li>It never places, modifies or cancels a real order. It has no
+      permission to, and never requests one.</li>
+  <li>It never uploads your broker access token.</li>
+</ul>
+
+<h2>Network connections</h2>
+<ul>
+  <li><strong>Your broker's official API</strong> (HTTPS/WSS) to fetch
+      market data — prices, charts and option chains — using the
+      credentials you provided.</li>
+  <li><strong>Google Firebase</strong> for sign-in, backup and crash
+      reporting, as above.</li>
+  <li><strong>Google Play</strong> for subscriptions.</li>
+</ul>
+<p>With no broker connected, the app runs on a built-in simulated price
+feed and makes no market-data requests at all.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Internet</strong> — to fetch market data.</li>
+  <li><strong>Notifications</strong> (optional) — price alerts and order
+      fills. Asked for only when you create your first alert.</li>
+  <li><strong>Biometric / device credential</strong> (optional) — only to
+      unlock the app if you turn on App lock. Biometric data never leaves
+      your device and is handled by Android.</li>
+</ul>
+
+<h2>Deleting your data</h2>
+<ul>
+  <li><strong>Reset account</strong> in the app clears your virtual
+      trading data.</li>
+  <li><strong>Disconnect</strong> removes the saved broker token.</li>
+  <li><strong>Delete account</strong> in the Account screen deletes your
+      cloud backup and your sign-in with us.</li>
+  <li>Uninstalling the app, or clearing its storage in Android settings,
+      removes everything held on the device. <strong>It does not remove a
+      cloud backup</strong> — use "Delete account" for that.</li>
+  <li>Crash reports already sent to Crashlytics are retained by Google on
+      their own schedule and cannot be deleted individually.</li>
+</ul>
+<p>You can also email
+<a href="mailto:pradeeplakkadasu@gmail.com">pradeeplakkadasu@gmail.com</a>
+to request deletion.</p>
+
+<h2>Children</h2>
+<p>The app is not directed at children under 13.</p>
+
+<h2>Disclaimers</h2>
+<p>Paper Trader is a simulator. It does not provide investment advice or
+recommendations, and it is not a SEBI-registered intermediary, broker or
+research analyst. Simulated results do not guarantee real market results.
+Trading in securities involves risk.</p>
+<p>Market data, when you connect a broker, is delivered by that broker to
+you under your own agreement with them. We neither licence nor
+redistribute exchange data.</p>
+
+<h2>Changes</h2>
+<p>Material changes to this policy will be published here with a new
+"last updated" date.</p>
+
+<footer>
+  Questions about this policy:
+  <a href="mailto:pradeeplakkadasu@gmail.com">pradeeplakkadasu@gmail.com</a>
+</footer>
+
+</main>
+</body>
+</html>
