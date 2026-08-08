@@ -3,31 +3,83 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Paper Trader</title>
+<title>Paper Trader — practise Indian F&amp;O with virtual money</title>
+<meta name="description" content="An Android trading simulator for Indian F&amp;O. Real strikes, real margins, virtual money. The app cannot place a real order.">
+<meta name="theme-color" content="#0a8f6c">
+<meta property="og:title" content="Paper Trader">
+<meta property="og:description" content="Practise Indian F&amp;O with virtual money. Real strikes, real margins, no real orders.">
+<meta property="og:type" content="website">
 <style>
-  :root { --bg:#fff; --fg:#16181d; --dim:#5b616b; --accent:#0a8f6c; --rule:#e3e7eb; }
+  :root {
+    --bg:#fff; --fg:#16181d; --dim:#5b616b; --accent:#0a8f6c;
+    --rule:#e3e7eb; --card:#f6f8f9; --warn:#8a5a00; --warnbg:#fff8e6;
+  }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#0e0e12; --fg:#f2f3f5; --dim:#9aa0ab; --accent:#2ed3a7; --rule:#24262e; }
+    :root {
+      --bg:#0e0e12; --fg:#f2f3f5; --dim:#9aa0ab; --accent:#2ed3a7;
+      --rule:#24262e; --card:#16171d; --warn:#e6b450; --warnbg:#211b0c;
+    }
   }
+  * { box-sizing:border-box; }
   body {
-    margin:0; padding:0 20px 60px; background:var(--bg); color:var(--fg);
+    margin:0; padding:0 20px 70px; background:var(--bg); color:var(--fg);
     font:16px/1.65 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
   }
-  main { max-width:640px; margin:0 auto; padding-top:64px; }
-  .brand { display:flex; align-items:center; gap:12px; margin-bottom:26px; }
+  main { max-width:680px; margin:0 auto; padding-top:52px; }
+  .brand { display:flex; align-items:center; gap:12px; margin-bottom:34px; }
   .mark { width:38px; height:38px; border-radius:10px; background:var(--accent);
           display:grid; place-items:center; flex:none; }
-  h1 { font-size:28px; margin:0 0 8px; letter-spacing:-0.3px; }
-  p { margin:0 0 16px; color:var(--dim); }
-  ul { padding-left:20px; }
-  li { margin-bottom:10px; }
+  h1 { font-size:31px; line-height:1.2; margin:0 0 12px; letter-spacing:-0.5px; }
+  h2 { font-size:20px; margin:44px 0 12px; letter-spacing:-0.2px; }
+  h3 { font-size:15px; margin:22px 0 6px; }
+  p  { margin:0 0 15px; color:var(--dim); }
+  .lead { font-size:17.5px; color:var(--fg); }
+  ul { padding-left:20px; margin:0 0 15px; color:var(--dim); }
+  li { margin-bottom:9px; }
   a { color:var(--accent); }
-  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--rule);
+  code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+         background:var(--card); padding:1.5px 5px; border-radius:4px;
+         overflow-wrap:anywhere; }
+  hr { border:0; border-top:1px solid var(--rule); margin:44px 0; }
+
+  .shots { display:flex; gap:12px; overflow-x:auto; padding:4px 0 12px;
+           scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
+  .shots img { width:200px; flex:none; border-radius:12px;
+               border:1px solid var(--rule); scroll-snap-align:start; }
+
+  .card { background:var(--card); border:1px solid var(--rule);
+          border-radius:14px; padding:18px 20px; margin:0 0 16px; }
+  .card h3 { margin-top:0; }
+  .card p:last-child, .card ul:last-child { margin-bottom:0; }
+
+  .note { background:var(--warnbg); border:1px solid var(--warn);
+          border-radius:12px; padding:16px 18px; margin:0 0 20px; }
+  .note p { color:var(--warn); margin-bottom:0; }
+  .note strong { color:var(--warn); }
+
+  table { width:100%; border-collapse:collapse; margin:0 0 18px;
+          font-size:15px; }
+  th,td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--rule);
+          vertical-align:top; }
+  th { font-size:12.5px; text-transform:uppercase; letter-spacing:0.5px;
+       color:var(--dim); font-weight:600; }
+  td.n { color:var(--dim); }
+  .wrap { overflow-x:auto; }
+
+  .cta { display:inline-block; background:var(--accent); color:#fff;
+         text-decoration:none; font-weight:700; padding:13px 22px;
+         border-radius:11px; margin:2px 0 10px; }
+  .sub { font-size:13.5px; color:var(--dim); margin-top:0; }
+
+  footer { margin-top:52px; padding-top:20px; border-top:1px solid var(--rule);
            color:var(--dim); font-size:14px; }
+  footer a { margin-right:14px; }
 </style>
 </head>
 <body>
 <main>
+
   <div class="brand">
     <div class="mark">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
@@ -39,17 +91,232 @@
     <strong>Paper Trader</strong>
   </div>
 
-  <h1>Practise F&amp;O with virtual money</h1>
-  <p>An Android trading simulator for Indian markets. Every trade is made
-     with virtual money — the app cannot place a real order.</p>
+  <h1>Practise Indian F&amp;O with virtual money</h1>
+  <p class="lead">Real strikes, real lot sizes, real margin rules, real
+     charges. Virtual money. <strong>The app cannot place a real order —
+     there is no order-placing code in it at all.</strong></p>
 
+  <h2>What it looks like</h2>
+  <div class="shots">
+    <img src="shots/01-watchlist.webp" width="360" height="780" alt="Watchlist with live index prices" loading="lazy">
+    <img src="shots/02-fno.webp" width="360" height="780" alt="F&amp;O screen" loading="lazy">
+    <img src="shots/03-option-chain.webp" width="360" height="780" alt="Option chain with open interest" loading="lazy">
+    <img src="shots/04-order-ticket.webp" width="360" height="780" alt="Order ticket showing margin and charges" loading="lazy">
+    <img src="shots/05-chart.webp" width="360" height="780" alt="Chart with position and stop lines" loading="lazy">
+    <img src="shots/06-scalper.webp" width="360" height="780" alt="Scalper terminal" loading="lazy">
+  </div>
+
+  <h2>What it does</h2>
   <ul>
-    <li><a href="privacy/">Privacy Policy</a></li>
+    <li><strong>NIFTY and BANKNIFTY options and futures</strong> — the real
+        chain, real expiries, real lot sizes.</li>
+    <li><strong>Margin that behaves like a broker's.</strong> Long options
+        are fully paid; writing an option blocks margin; MIS squares off at
+        the real cutoffs. If a trade would be refused at a broker, it is
+        refused here.</li>
+    <li><strong>Brokerage, STT, stamp duty, exchange and SEBI charges</strong>
+        are all deducted. The P&amp;L you see is after costs, which is the
+        only P&amp;L worth practising against.</li>
+    <li><strong>Fills cross the spread</strong> and walk the order book. A
+        practice fill at the last traded price teaches the one lesson a
+        simulator must not teach.</li>
+    <li><strong>Charts you can trade from</strong> — drag a stop, pull a
+        target out of your position line, place a limit at a level.</li>
+    <li><strong>A trade journal</strong> that keeps score honestly, including
+        the trades you would rather forget.</li>
   </ul>
 
+  <hr>
+
+  <h2 id="safety">Your broker token, and what happens to it</h2>
+
+  <p>You are being asked to paste a broker access token into an app you
+     downloaded from a link. That deserves a straight answer, so here is
+     exactly what the app does and does not do with it.</p>
+
+  <div class="card">
+    <h3>It never leaves your phone</h3>
+    <p>The token is stored in Android's Keystore-backed secure storage on
+       your device. It is never sent to any server of ours — we do not
+       run a server that market data or tokens pass through. It is
+       excluded from Google cloud backup and from phone-to-phone transfer,
+       so it does not travel even when your other app data does.</p>
+  </div>
+
+  <div class="card">
+    <h3>No real order can be placed</h3>
+    <p>The app calls exactly four kinds of endpoint at your broker: quotes,
+       historical candles, the option chain, and the market feed. There is
+       no order-placement, funds, holdings or positions call anywhere in
+       the source. This is not a policy we promise to follow — the code to
+       place an order does not exist.</p>
+  </div>
+
+  <div class="card">
+    <h3>Your data goes only where you send it</h3>
+    <p>Market prices are drawn on your screen and discarded. Nothing is
+       stored or shared with anyone else, and no other user can see
+       anything of yours.</p>
+    <p>If you choose to sign in with Google to back up your practice
+       trades, your name, email and trading history are stored in your own
+       record so they come back on a new phone. That is optional, and the
+       token is never part of it. The full detail is in the
+       <a href="privacy/">Privacy Policy</a>.</p>
+  </div>
+
+  <div class="card">
+    <h3>What we can see</h3>
+    <p>If you sign in: your name, your email, and your practice trading
+       history. Nothing else. We cannot see your real positions, your real
+       funds, or your broker password — the app never asks for them and
+       the token only permits reading market data.</p>
+  </div>
+
+  <hr>
+
+  <h2>Price, said plainly</h2>
+
+  <div class="wrap">
+  <table>
+    <tr><th>What</th><th>Cost</th><th>Paid to</th></tr>
+    <tr>
+      <td>The whole simulator on practice prices</td>
+      <td><strong>Free</strong></td>
+      <td class="n">—</td>
+    </tr>
+    <tr>
+      <td>Your broker's market data API</td>
+      <td class="n">their price<br>(Dhan is about ₹499/month today)</td>
+      <td class="n"><strong>your broker</strong>, not us</td>
+    </tr>
+    <tr>
+      <td>Switching the app onto that live feed</td>
+      <td><strong>₹150 / month</strong></td>
+      <td class="n">us</td>
+    </tr>
+  </table>
+  </div>
+
+  <p>So live prices cost you two things, and only one of them is ours. We
+     would rather you know that before you pay than after. Everything
+     except the live feed is free forever, with no time limit and no
+     account needed.</p>
+
+  <h3>Refunds and cancellation</h3>
+  <p>There is nothing to cancel — each month is paid separately and
+     nothing renews automatically, so stopping means simply not paying
+     again. If the app does not work for you and you tell us within
+     <strong>7 days</strong> of paying, we refund that month in full, no
+     questions. Write to
+     <a href="mailto:pradeeplakkadasu@gmail.com">pradeeplakkadasu@gmail.com</a>
+     with the payment reference shown in the app.</p>
+
+  <hr>
+
+  <h2 id="download">Getting it</h2>
+
+  <div class="note">
+    <p><strong>This is not on the Play Store yet.</strong> Android will
+       warn you before installing an app from outside the store, and it is
+       right to. Only install this if you trust the person who sent you
+       the link — and check the fingerprint below matches, so you know the
+       file was not altered on the way to you.</p>
+  </div>
+
+  <p><a class="cta" href="https://github.com/Deepulakkadasu/papertrader/releases/latest">Download the APK</a></p>
+  <p class="sub">Android 8 or newer. About 22 MB. Pick the
+     <code>arm64-v8a</code> file unless you know your phone is older.</p>
+
+  <h3>Check what you downloaded</h3>
+  <p>Every release lists a SHA-256 fingerprint. On a phone, an app like
+     <em>Hash Droid</em> will compute it; on a computer:</p>
+  <p><code>sha256sum papertrader-arm64-v8a.apk</code></p>
+  <p>If it does not match the one on the release page, do not install it —
+     tell us instead.</p>
+
+  <h3>Installing</h3>
+  <ul>
+    <li>Open the downloaded file. Android will ask whether to allow
+        installing from this source — allow it for your browser or file
+        manager.</li>
+    <li>Play Protect may show a warning because the app is not from the
+        store. Choose <em>Install anyway</em> if you are sure of the
+        fingerprint.</li>
+    <li>Turn the permission back off afterwards if you like. The app does
+        not need it again.</li>
+  </ul>
+
+  <hr>
+
+  <h2>How it is built</h2>
+
+  <p>Written for people who want to know what they are installing.</p>
+
+  <div class="wrap">
+  <table>
+    <tr><th>Part</th><th>What it is</th></tr>
+    <tr><td>App</td><td class="n">Flutter (Dart), Android. One codebase, no web view except the chart.</td></tr>
+    <tr><td>Charts</td><td class="n">TradingView Lightweight Charts, running locally — the same charting engine broker apps use, drawing your own data.</td></tr>
+    <tr><td>Option pricing</td><td class="n">Black-Scholes with a volatility smile, used for the practice feed's chain.</td></tr>
+    <tr><td>Market data</td><td class="n">Your own broker account, over their published REST and WebSocket APIs. Currently Dhan; the broker layer is an adapter, so others can be added.</td></tr>
+    <tr><td>Fills</td><td class="n">Modelled against the live order book — the spread is crossed and size walks the levels.</td></tr>
+    <tr><td>Charges</td><td class="n">Brokerage, STT, stamp duty, exchange transaction charges, SEBI turnover fee and GST, computed per trade.</td></tr>
+    <tr><td>Storage</td><td class="n">On your device. Tokens in Android Keystore-backed secure storage; everything else in ordinary app storage.</td></tr>
+    <tr><td>Optional backup</td><td class="n">Firebase Authentication and Firestore, only if you sign in.</td></tr>
+    <tr><td>Tests</td><td class="n">280+ automated tests, run before every release, covering the engine, margins, charges, fills and expiry settlement.</td></tr>
+  </table>
+  </div>
+
+  <hr>
+
+  <h2>What this is not</h2>
+  <ul>
+    <li><strong>Not investment advice.</strong> The app gives no tips, no
+        recommendations, no buy or sell signals, and makes no claim about
+        returns. We are not registered with SEBI in any capacity and do
+        not advise anyone.</li>
+    <li><strong>Not real trading.</strong> No money is invested and no
+        order reaches an exchange. Profits and losses shown are virtual.</li>
+    <li><strong>Not a game.</strong> There are no prizes, no entry fees, no
+        leaderboards and no rewards of any kind.</li>
+    <li><strong>Not a substitute for losing your own money.</strong> A
+        simulator cannot reproduce what it feels like when the money is
+        real. It can teach you the mechanics, the costs and the maths.
+        That is worth a lot, and it is not the same thing.</li>
+  </ul>
+
+  <hr>
+
+  <h2>Questions</h2>
+
+  <h3>Do I need a broker account?</h3>
+  <p>No. Everything works on a built-in practice feed with no account, no
+     token and no payment. You only need a broker if you want the app to
+     show real live prices.</p>
+
+  <h3>Will it place a trade in my real account by mistake?</h3>
+  <p>It cannot. The app contains no code that places an order.</p>
+
+  <h3>What happens when my token expires?</h3>
+  <p>Broker tokens usually last a day. The app renews it silently when it
+     can, and tells you plainly when it cannot, so prices never quietly
+     go stale without you knowing.</p>
+
+  <h3>Do you store my broker password?</h3>
+  <p>We never see it. You paste a token that your broker generates; it
+     permits reading market data and nothing else.</p>
+
+  <h3>Can I get my money back?</h3>
+  <p>Yes — within 7 days of paying, for any reason. See above.</p>
+
   <footer>
-    Contact: <a href="mailto:pradeeplakkadasu@gmail.com">pradeeplakkadasu@gmail.com</a>
+    <a href="privacy/">Privacy Policy</a>
+    <a href="mailto:pradeeplakkadasu@gmail.com">Contact</a>
+    <br><br>
+    Paper Trader is made in Telangana, India by Pradeep Lakkadasu.<br>
+    Trading in securities carries risk. Nothing here is investment advice.
   </footer>
+
 </main>
 </body>
 </html>
