@@ -67,6 +67,22 @@
   td.n { color:var(--dim); }
   .wrap { overflow-x:auto; }
 
+  ol.flow { counter-reset:step; list-style:none; padding:0; margin:0 0 18px; }
+  ol.flow > li { counter-increment:step; position:relative;
+                 padding:0 0 20px 44px; margin:0; color:var(--dim); }
+  ol.flow > li::before {
+    content:counter(step); position:absolute; left:0; top:0;
+    width:28px; height:28px; border-radius:50%;
+    background:var(--accent); color:#fff; font-size:14px; font-weight:700;
+    display:grid; place-items:center; }
+  ol.flow > li::after {
+    content:''; position:absolute; left:13.5px; top:32px; bottom:4px;
+    width:1px; background:var(--rule); }
+  ol.flow > li:last-child { padding-bottom:0; }
+  ol.flow > li:last-child::after { display:none; }
+  ol.flow b { color:var(--fg); display:block; margin-bottom:3px;
+              font-size:15.5px; }
+  .free { color:var(--accent); font-weight:700; }
   .platform { display:flex; align-items:flex-start; gap:9px;
               background:var(--card); border:1px solid var(--rule);
               border-radius:12px; padding:13px 15px; margin:0 0 8px;
@@ -142,6 +158,63 @@
 
   <hr>
 
+  <h2 id="how">How it works, start to finish</h2>
+
+  <p>Six steps, and you can stop after the first one and never pay
+     anything.</p>
+
+  <ol class="flow">
+    <li>
+      <b>Install it and use it. <span class="free">Free.</span></b>
+      No account, no sign-up, no broker, no payment. The whole simulator
+      runs on a built-in practice feed — real strikes, real lot sizes,
+      real margins, real charges, virtual money. Most people never need
+      to go past this step.
+    </li>
+    <li>
+      <b>Decide you want real live prices</b>
+      The practice feed behaves like the market but it is not the market.
+      If you want the app to show what NIFTY is actually doing right now,
+      carry on.
+    </li>
+    <li>
+      <b>Get a market data subscription from your broker</b>
+      Today that means Dhan. You take their market data API — about ₹499
+      a month, <strong>paid to Dhan, not to us</strong> — and generate an
+      access token. It takes a few minutes on their website. The app
+      shows you where to go and what to tap.
+    </li>
+    <li>
+      <b>Paste the token into the app</b>
+      Menu → Broker connection. The app copies it off your clipboard for
+      you. It then asks Dhan for a price, and only says <em>Connected</em>
+      if a real price comes back — so you know your side works before you
+      spend anything with us.
+    </li>
+    <li>
+      <b>Pay ₹150 for the month</b>
+      Sign in with Google — that is what remembers you when you reinstall
+      or change phone. The app shows you a short code like
+      <code>PT-K4M7</code> and opens your UPI app with the amount and the
+      code already filled in. Pay it. Nothing is auto-debited, ever: each
+      month is a separate payment you choose to make.
+    </li>
+    <li>
+      <b>It unlocks by itself</b>
+      Once the payment is matched to your code, the app switches to your
+      live feed on its own — usually within a few hours. You do not need
+      to send a screenshot, message anyone, or reinstall anything. If you
+      are still locked a day later, send us your code and we will find
+      the payment.
+    </li>
+  </ol>
+
+  <p><strong>So the order is deliberate:</strong> you prove your broker
+     works first, and only then are you asked for money. If the token
+     never connects, you have not paid us anything.</p>
+
+  <hr>
+
   <h2 id="safety">Your broker token, and what happens to it</h2>
 
   <p>You are being asked to paste a broker access token into an app you
@@ -211,10 +284,14 @@
   </table>
   </div>
 
-  <p>So live prices cost you two things, and only one of them is ours. We
-     would rather you know that before you pay than after. Everything
-     except the live feed is free forever, with no time limit and no
-     account needed.</p>
+  <p>So live prices cost you two things, and only one of them is ours.
+     We would rather you know that before you pay than after. Everything
+     except the live feed is free forever, with no time limit, no account
+     and no card.</p>
+
+  <p><strong>Nothing renews by itself.</strong> There is no auto-debit and
+     no mandate on your account. When the month runs out the app goes back
+     to the practice feed and waits; you pay again only if you want to.</p>
 
   <h3>Refunds and cancellation</h3>
   <p>There is nothing to cancel — each month is paid separately and
