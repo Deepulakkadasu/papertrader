@@ -1,21 +1,21 @@
 {
-    "build":  402,
-    "version":  "0.4.2",
-    "notes":  "Live option chain on the socket; sign-in before linking a broker; in-app updates",
+    "build":  403,
+    "version":  "0.4.3",
+    "notes":  "In-app updates now come from release assets, so a new build can never be served stale",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://deepulakkadasu.github.io/papertrader/dl/papertrader-x86_64.apk",
-                                 "sha256":  "ee4cce50ebec3dce9dcda5d2c4f55b02b93bb6f44e46d0977d309432e6d913f2",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.4.3/papertrader-x86_64.apk",
+                                 "sha256":  "3bdcca43f1fd0ee5798a6202aa12deeca305b201138b37b919992dbc399b846f",
                                  "size":  25125758
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://deepulakkadasu.github.io/papertrader/dl/papertrader-arm64-v8a.apk",
-                                    "sha256":  "18be1a6d9f375c8cc74dceb2d87b9d570ca8216a45bd4580abd1272a4bef60b4",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.4.3/papertrader-arm64-v8a.apk",
+                                    "sha256":  "104e822655a7100fcf4496030543d5fe31eb299c228f379e6811972bbac50aa4",
                                     "size":  23602402
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://deepulakkadasu.github.io/papertrader/dl/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "89c76bf515d58323921876868788dcd1999958c994d20562f4ac1baaa6dc05b8",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.4.3/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "692de665d3b9780329927f147200396c991b660d985c483374017e0023b4576b",
                                       "size":  21277174
                                   }
               }
