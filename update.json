@@ -1,22 +1,22 @@
 {
-    "build":  403,
-    "version":  "0.4.3",
-    "notes":  "In-app updates now come from release assets, so a new build can never be served stale",
+    "build":  500,
+    "version":  "0.5.0",
+    "notes":  "Support tickets, WhatsApp channel, live sync between your phone and computer, and no more trades after the close",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.4.3/papertrader-x86_64.apk",
-                                 "sha256":  "3bdcca43f1fd0ee5798a6202aa12deeca305b201138b37b919992dbc399b846f",
-                                 "size":  25125758
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.0/papertrader-x86_64.apk",
+                                 "sha256":  "c3d724e97b7b8c4f1588208ae7dafd4da052617b9fceedc72ab56cb64222cca2",
+                                 "size":  25257434
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.4.3/papertrader-arm64-v8a.apk",
-                                    "sha256":  "104e822655a7100fcf4496030543d5fe31eb299c228f379e6811972bbac50aa4",
-                                    "size":  23602402
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.0/papertrader-arm64-v8a.apk",
+                                    "sha256":  "8b7940d20a13266366d467e2e678cc23c9506040da8b9704771fe766b523179f",
+                                    "size":  23734078
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.4.3/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "692de665d3b9780329927f147200396c991b660d985c483374017e0023b4576b",
-                                      "size":  21277174
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.0/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "67c77039de7ee512045a7335b9e358b8317867028ccd8d53de1a2f8203173216",
+                                      "size":  21392466
                                   }
               }
 }
