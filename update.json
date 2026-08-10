@@ -1,0 +1,22 @@
+{
+    "build":  402,
+    "version":  "0.4.2",
+    "notes":  "Live option chain on the socket; sign-in before linking a broker; in-app updates",
+    "files":  {
+                  "x86_64":  {
+                                 "url":  "https://deepulakkadasu.github.io/papertrader/dl/papertrader-x86_64.apk",
+                                 "sha256":  "ee4cce50ebec3dce9dcda5d2c4f55b02b93bb6f44e46d0977d309432e6d913f2",
+                                 "size":  25125758
+                             },
+                  "arm64-v8a":  {
+                                    "url":  "https://deepulakkadasu.github.io/papertrader/dl/papertrader-arm64-v8a.apk",
+                                    "sha256":  "18be1a6d9f375c8cc74dceb2d87b9d570ca8216a45bd4580abd1272a4bef60b4",
+                                    "size":  23602402
+                                },
+                  "armeabi-v7a":  {
+                                      "url":  "https://deepulakkadasu.github.io/papertrader/dl/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "89c76bf515d58323921876868788dcd1999958c994d20562f4ac1baaa6dc05b8",
+                                      "size":  21277174
+                                  }
+              }
+}
