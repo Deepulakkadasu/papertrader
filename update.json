@@ -1,22 +1,22 @@
 {
-    "build":  600,
-    "version":  "0.6.0",
-    "notes":  "Commodities are here: crude oil, gold, silver and natural gas on the watchlist - practice and live via Fyers, with MCX\u0027s own 9:00-23:30 hours. The scalper gets the left drawing rail with trendlines, alerts and full indicators (EMA, VWAP, Supertrend, RSI, MACD and more). Stepping strikes in the scalper now updates the chart immediately. Practice charts open on the same price the chain shows - no more flash-and-snap.",
+    "build":  601,
+    "version":  "0.6.1",
+    "notes":  "The polish update: smooth page transitions everywhere, prices pulse green/red as they tick, every sheet gets a drag handle and the same rounded shape, and buttons and text fields share one consistent style. Plus everything from 0.6.0: MCX commodities, the scalper drawing rail with indicators, and the practice-chart price fix.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.0/papertrader-x86_64.apk",
-                                 "sha256":  "c2baa12f3a9c516a7af41b7462b77617d4ae7b813a0b26d268693878ae1a60ce",
-                                 "size":  25402223
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.1/papertrader-x86_64.apk",
+                                 "sha256":  "d1873fe66552c18ed453217c1aacdfbcfe78bedcc3334df28f2860cfaca733d3",
+                                 "size":  25467763
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.0/papertrader-arm64-v8a.apk",
-                                    "sha256":  "5eabe0a31833705b614240cbdebd217142993c8fae0881b443dffc52942c6861",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.1/papertrader-arm64-v8a.apk",
+                                    "sha256":  "405a0e19e9459adc0f5133656187d0d8c146048db841ac7955789e804ee52130",
                                     "size":  23944403
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.0/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "e82a1e1d870a574cdcb470f588371c304f0850c0251a09b7b40a46c762ccb2c7",
-                                      "size":  21635559
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.1/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "3a5ccc56dea923361e703aa7f55c536c8df38eda910c2394427f54a83a8371a6",
+                                      "size":  21668331
                                   }
               }
 }
