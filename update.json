@@ -1,21 +1,21 @@
 {
-    "build":  514,
-    "version":  "0.5.14",
-    "notes":  "IV and delta now show on every option chain row instead of only inside the detail sheet. The open-interest block is now a thin meter along the bottom edge, so it no longer tints the numbers. Open in TradingView moved onto the chart toolbar - one tap, no longer buried in settings.",
+    "build":  515,
+    "version":  "0.5.15",
+    "notes":  "Option chain: the OI bar no longer strikes through the IV and delta line - it has its own lane, rows are taller, and nothing clips or truncates. After-hours: the chain, scalper, straddle and chart screens no longer poll the broker all night; newly added symbols still fetch their closing price once.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.14/papertrader-x86_64.apk",
-                                 "sha256":  "50d521af79ae559d1712e3a740ff1e81a0e8aa190012ce8d10d261fe82274a16",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.15/papertrader-x86_64.apk",
+                                 "sha256":  "64e596721a8a661a7f213bee98cd1f354ca39a576a1299f7f1e0adc0be193ee4",
                                  "size":  25402179
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.14/papertrader-arm64-v8a.apk",
-                                    "sha256":  "48fccbe3d9b27d53a8173a35f5866265d82be157286abedfe6eeb9f464a37f77",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.15/papertrader-arm64-v8a.apk",
+                                    "sha256":  "017214d2977d893ca74ac4ede9aaf63a10518b0455a11901365ffd5dd094376d",
                                     "size":  23878823
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.14/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "0884c6a7c5a4b4767d7bea1ca874e54c98cc6d14586c78777f5ac147c7994b4f",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.15/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "4c42af64173c850a9c80b9ebf0fddf4647361a4bf1f21610e2cea04b8f34638e",
                                       "size":  21619131
                                   }
               }
