@@ -1,21 +1,21 @@
 {
-    "build":  513,
-    "version":  "0.5.13",
-    "notes":  "Puts now sit on the right, mirroring the calls, with a ruled strike column and in-the-money shading. The PAPER MONEY watermark is gone. Connecting Fyers after the close loads last traded prices instead of spinning. Saved App ID and Secret are hidden - just Refresh connection. The chart\u0027s change % is now the day\u0027s change. NIFTY NEXT 50 no longer reads 0.00.",
+    "build":  514,
+    "version":  "0.5.14",
+    "notes":  "IV and delta now show on every option chain row instead of only inside the detail sheet. The open-interest block is now a thin meter along the bottom edge, so it no longer tints the numbers. Open in TradingView moved onto the chart toolbar - one tap, no longer buried in settings.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.13/papertrader-x86_64.apk",
-                                 "sha256":  "093fb9f26cabf888a7e1dbb7f6a375492cd9627b2bf29610b4af434ee9b31628",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.14/papertrader-x86_64.apk",
+                                 "sha256":  "50d521af79ae559d1712e3a740ff1e81a0e8aa190012ce8d10d261fe82274a16",
                                  "size":  25402179
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.13/papertrader-arm64-v8a.apk",
-                                    "sha256":  "c0338537f8ec6048224cf53df4d453791378c5c90095bba45c057f468b7c85f1",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.14/papertrader-arm64-v8a.apk",
+                                    "sha256":  "48fccbe3d9b27d53a8173a35f5866265d82be157286abedfe6eeb9f464a37f77",
                                     "size":  23878823
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.13/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "b1552019013c537928d0cd9a181cdfe35b47fd4660c17d313728b201e159e18e",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.14/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "0884c6a7c5a4b4767d7bea1ca874e54c98cc6d14586c78777f5ac147c7994b4f",
                                       "size":  21619131
                                   }
               }
