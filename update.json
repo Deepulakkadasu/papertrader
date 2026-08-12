@@ -1,21 +1,21 @@
 {
-    "build":  506,
-    "version":  "0.5.6",
+    "build":  507,
+    "version":  "0.5.7",
     "notes":  "",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.6/papertrader-x86_64.apk",
-                                 "sha256":  "83301ce7832bedcd84a4a330259e39e500679f736ae51a83cdb6d61d140faa17",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.7/papertrader-x86_64.apk",
+                                 "sha256":  "6cb8fbf1793060805cf91887fba7f30bfaddf43509c79c55adfbdd69c49a9313",
                                  "size":  25401475
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.6/papertrader-arm64-v8a.apk",
-                                    "sha256":  "b915dc350c0859590db747f92f4d19f9f9b1219300beb260b62264ac8f928007",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.7/papertrader-arm64-v8a.apk",
+                                    "sha256":  "a5fa758b73c66611f1217640ac93134c725587f4e3ffcc6400b8a4165ed80105",
                                     "size":  23878119
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.6/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "c855d3aa7db78365a4e8c5b8823498542043a5567fe4d2f209f7890d4d824237",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.7/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "7f35d69e381c25b7399a885122a7240966aa07fd6d0a7d3d60aeb246e1d72c16",
                                       "size":  21618427
                                   }
               }
