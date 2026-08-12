@@ -1,21 +1,21 @@
 {
-    "build":  511,
-    "version":  "0.5.11",
+    "build":  512,
+    "version":  "0.5.12",
     "notes":  "",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.11/papertrader-x86_64.apk",
-                                 "sha256":  "9c4659c66d893dc29ddb3c1b09327ab4abd60a29482f3ce89b8fa3e6d15c7950",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.12/papertrader-x86_64.apk",
+                                 "sha256":  "57f8010ec6a2ba2e9e37b67c8e221d8e849e35b4313f12f524f68227a2ee24b0",
                                  "size":  25402179
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.11/papertrader-arm64-v8a.apk",
-                                    "sha256":  "3679d1eeaeef3273cec304f344d2e7fa7761a62e95fe3d169602719f6061f0ad",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.12/papertrader-arm64-v8a.apk",
+                                    "sha256":  "d37ad8fe6edc8fe5008b1c09a5420be34b242ff9d274aaaa249ebac7eaca9b6b",
                                     "size":  23878823
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.11/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "2654e9fe2db3071e29d3da7ac618e78fdaf59e8298377e0704b910495c042868",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.12/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "c437c1ef6c29580185e0f824149aee53095c9bb92a9beb61b1c59727db5c0c79",
                                       "size":  21619131
                                   }
               }
