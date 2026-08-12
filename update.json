@@ -1,22 +1,22 @@
 {
-    "build":  510,
-    "version":  "0.5.10",
+    "build":  511,
+    "version":  "0.5.11",
     "notes":  "",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.10/papertrader-x86_64.apk",
-                                 "sha256":  "fe53b88876aa807ae8a513c8f82179cefcab1a39db4eda329d73beaee3fbc3bb",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.11/papertrader-x86_64.apk",
+                                 "sha256":  "9c4659c66d893dc29ddb3c1b09327ab4abd60a29482f3ce89b8fa3e6d15c7950",
                                  "size":  25402179
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.10/papertrader-arm64-v8a.apk",
-                                    "sha256":  "c193eedf677b8801fe1b8f10d652e4b691a1c45861cfa23668e083a77121aedd",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.11/papertrader-arm64-v8a.apk",
+                                    "sha256":  "3679d1eeaeef3273cec304f344d2e7fa7761a62e95fe3d169602719f6061f0ad",
                                     "size":  23878823
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.10/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "cbf254c9338ebd67155cf8364be4e40c6dac481ac04688a56bb656d34619cc7a",
-                                      "size":  21619127
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.11/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "2654e9fe2db3071e29d3da7ac618e78fdaf59e8298377e0704b910495c042868",
+                                      "size":  21619131
                                   }
               }
 }
