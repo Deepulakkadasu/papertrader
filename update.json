@@ -1,22 +1,22 @@
 {
-    "build":  509,
-    "version":  "0.5.9",
+    "build":  510,
+    "version":  "0.5.10",
     "notes":  "",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.9/papertrader-x86_64.apk",
-                                 "sha256":  "ad959694b42d2592c0f5b2d28d4565202233d67ad3738a1c6f49e85d7055b978",
-                                 "size":  25402107
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.10/papertrader-x86_64.apk",
+                                 "sha256":  "fe53b88876aa807ae8a513c8f82179cefcab1a39db4eda329d73beaee3fbc3bb",
+                                 "size":  25402179
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.9/papertrader-arm64-v8a.apk",
-                                    "sha256":  "eabc0755dfcc3bf8c59a45e4d2761211d9d4ba87992e31f662e49b2546e07d08",
-                                    "size":  23878751
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.10/papertrader-arm64-v8a.apk",
+                                    "sha256":  "c193eedf677b8801fe1b8f10d652e4b691a1c45861cfa23668e083a77121aedd",
+                                    "size":  23878823
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.9/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "82ca50a3fe922bebb25f1252881e56fb5ba12f0f38a4a369ed2730559ee12e7b",
-                                      "size":  21619063
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.10/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "cbf254c9338ebd67155cf8364be4e40c6dac481ac04688a56bb656d34619cc7a",
+                                      "size":  21619127
                                   }
               }
 }
