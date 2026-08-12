@@ -1,22 +1,22 @@
 {
-    "build":  503,
-    "version":  "0.5.3",
-    "notes":  "Charts: profit/loss zones around your position, tap-to-type lots and strike, all timeframes everywhere with a favourites bar, live bid/ask on the order buttons",
+    "build":  504,
+    "version":  "0.5.4",
+    "notes":  "",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.3/papertrader-x86_64.apk",
-                                 "sha256":  "5cf1c7bea24cd1903bdb155ab6d5e4428222db3498e73237274e419dd06e17c0",
-                                 "size":  25323570
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.4/papertrader-x86_64.apk",
+                                 "sha256":  "00d236a61e7988f54acf6d71ddd44bad2de3602cfb7744ee74544d75a52b5340",
+                                 "size":  25401091
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.3/papertrader-arm64-v8a.apk",
-                                    "sha256":  "3b5bbae5289ed1de21b3fc84edde940f278869d29cb3baccd8ab85c6e1c212fe",
-                                    "size":  23800214
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.4/papertrader-arm64-v8a.apk",
+                                    "sha256":  "92e80a97eeb7ea66f725aa96bfe7380fbc58cbf4fa11c8816f4169ad3d2124bb",
+                                    "size":  23877735
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.3/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "08f7c0a288fb8505b5e219f6678beaffe4da886fea5f19e7495a0ec62adf1382",
-                                      "size":  21507754
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.5.4/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "ef3e70c5db3a1e1bdf24326e2fded719bcf0fbd294be7d6c470168aea1ee62a3",
+                                      "size":  21585275
                                   }
               }
 }
