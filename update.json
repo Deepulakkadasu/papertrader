@@ -1,21 +1,21 @@
 {
-    "build":  701,
-    "version":  "0.7.1",
-    "notes":  "Practice mode is now a switch: with a broker connected the app defaults to your real market feed, and practice is one tap in the menu - or from the market-closed banner in the evening. New battery card: if your phone restricts the app in background (which breaks the live feed), the app now tells you and opens the right setting. Angel One and Upstox setup got one-tap links and copy buttons for every step.",
+    "build":  702,
+    "version":  "0.7.2",
+    "notes":  "Simpler from the first minute: with no broker connected the app now asks you directly - connect for the live market, or knowingly practise on simulation. If your broker session expires, a Refresh button appears right on the watchlist. And when you copy an API key or token on your broker\u0027s site, the right box fills itself when you come back. Plus everything from 0.7.1: the practice switch, battery guard, and guided Angel One / Upstox setup.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.1/papertrader-x86_64.apk",
-                                 "sha256":  "3ade333cf3061113d044f12a7cef56e3be16cb4f3d9eadf5542c8a7410ecaa3f",
-                                 "size":  25533783
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.2/papertrader-x86_64.apk",
+                                 "sha256":  "b539bfd0d5ecfd3b97df4b5a99f3e42a9793eade06866eff87d27d258bbd9470",
+                                 "size":  25599319
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.1/papertrader-arm64-v8a.apk",
-                                    "sha256":  "e8fccf8251e73e2bbcd2be497fa7c526d9e9aae369653e0d2a1d5f7c16cf3850",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.2/papertrader-arm64-v8a.apk",
+                                    "sha256":  "062f04ef118144734b9e47626adbe184c5cb582ebc1a8cbe6d6fcddc5af8779c",
                                     "size":  24010427
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.1/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "5680870edeca7543ebe3788aa561ccfa5aa83244fb89c33dc396307edf828e2f",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.2/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "e56302a971b4cd78b55955732e7ea905e2a62a34fc81576a05b300db518521d9",
                                       "size":  21767119
                                   }
               }
