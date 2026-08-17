@@ -1,22 +1,22 @@
 {
-    "build":  708,
-    "version":  "0.7.8",
-    "notes":  "Upstox setup: the app now checks your API key with Upstox BEFORE opening the login page - a wrong key or redirect is one clear sentence, not an error page. And prices load instantly the moment you connect any broker or switch practice mode, instead of waiting for the next refresh.",
+    "build":  800,
+    "version":  "0.8.0",
+    "notes":  "The new look begins: soft floating cards instead of boxed borders, a big confident funds figure, roomier watchlist rows with green/red change pills, and refined index tiles. This is the design language - tell us what you think and it rolls out to every screen.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.8/papertrader-x86_64.apk",
-                                 "sha256":  "9977868b562e93fb88e52d6f8871225c91d5dfbf26e70d8c740f3dbf3c1ac8e8",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.8.0/papertrader-x86_64.apk",
+                                 "sha256":  "e3afe3a25780dd8d1c904a54b303a3ee0c913a661d399b14b92d70927cc7e716",
                                  "size":  25617441
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.8/papertrader-arm64-v8a.apk",
-                                    "sha256":  "200a57d0b172bf8d50a9539d18428bdb05ff189021746b4eb566884d60547598",
-                                    "size":  24094085
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.8.0/papertrader-arm64-v8a.apk",
+                                    "sha256":  "fdb7226444c416ac143e4e52a53c8b5fde05275cda5c14f94564bfc42460aab8",
+                                    "size":  24094081
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.8/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "d1488e77829a89e472e4be5ae27b24c37459427b3697da4487e7f12a580d54b2",
-                                      "size":  21818009
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.8.0/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "ffdd8d807411276c6055a72efc3c65352c31669b90dcff4933c3b15eb9704268",
+                                      "size":  21818005
                                   }
               }
 }
