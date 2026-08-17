@@ -1,21 +1,21 @@
 {
-    "build":  905,
-    "version":  "0.9.5",
-    "notes":  "The new option chain, Groww-style: strikes hold the centre with call/put OI bars growing out of them, swipe sideways to flip the panes between OI and IV/Delta/Theta, expiry as a centred dropdown, premium one tap away. First step of the full design rebuild.",
+    "build":  906,
+    "version":  "0.9.6",
+    "notes":  "Option chain: premiums arrive. Three swipe pages now - Price (LTP + day change %) first, then OI + change %, then IV / Delta / Theta - headers follow the page. And the Upstox live feed actually connects: their v3 socket redirects into a per-session URL that Dart cannot follow, so the app now asks their authorize endpoint for the final address first. Upstox tick-by-tick works from this build.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.5/papertrader-x86_64.apk",
-                                 "sha256":  "29ffcc8c3082b015d2b4b23fdd18295c840fe9b906ab89b808b4c28aed637fb6",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.6/papertrader-x86_64.apk",
+                                 "sha256":  "413a1a9b747ecb5ab5e15ee475077c9d2501a0a38b6f25d87517754577e9a323",
                                  "size":  25617525
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.5/papertrader-arm64-v8a.apk",
-                                    "sha256":  "24d3772d5b08a2580c586c356cb3386f97b01fdb2ff13a2122605714281b3b45",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.6/papertrader-arm64-v8a.apk",
+                                    "sha256":  "57c685db02f044b7362b14c4b1036d25d159dec60971ea69b7234b965da54ce2",
                                     "size":  24094169
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.5/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "55df3ec33f040cdc993e505720e46d882f1c92009ffa92dcad3c62c0576a5c61",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.6/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "dab6ad9af0509274224332f7a63d357dd31f1396c784b4fe3b50f652c4bfb368",
                                       "size":  21867245
                                   }
               }
