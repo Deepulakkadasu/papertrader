@@ -1,22 +1,22 @@
 {
-    "build":  706,
-    "version":  "0.7.6",
-    "notes":  "Commodity orders in the evening no longer get wrongly queued as after-market - the order ticket now knows MCX trades till 11:30pm, on every broker. Commodity price alerts also fire through the MCX evening session now.",
+    "build":  707,
+    "version":  "0.7.7",
+    "notes":  "Angel One setup fixed: the Create-app button now opens the correct page (their /appnew), and the TOTP box accepts whatever you copy - the QR text, the otpauth link or the bare secret.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.6/papertrader-x86_64.apk",
-                                 "sha256":  "cd3da76076973be692dce8c30e7035883684c2976934277d79fdb13f1509d25f",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.7/papertrader-x86_64.apk",
+                                 "sha256":  "924e46277913ea27396410d376ade2d234c4e2a2f381808791dc659397fad2f6",
                                  "size":  25617441
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.6/papertrader-arm64-v8a.apk",
-                                    "sha256":  "6d34c9a8a831ff21a02293e58c3013d249cafb1302c7556b9fd3f49f671bcc95",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.7/papertrader-arm64-v8a.apk",
+                                    "sha256":  "a3695900b54970cae12ab0199fe1635bb597ef57ffb59d0176275abac86e92b6",
                                     "size":  24094085
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.6/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "0a6879bca94326daaac73ed9894cfda5158c5b469e4f6bea72f9895fab1eafc5",
-                                      "size":  21818009
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.7/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "fab2bb4820a0aaf1fca5b472d19a8889557e819b4e51d4f742bf3759bf36bcd4",
+                                      "size":  21818005
                                   }
               }
 }
