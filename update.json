@@ -1,21 +1,21 @@
 {
-    "build":  901,
-    "version":  "0.9.1",
-    "notes":  "Angel One setup: the Static IP field their form asks for is explained right in the steps - type your current IP and continue. It only applies to placing real orders, which this app never does; your data works from any network.",
+    "build":  902,
+    "version":  "0.9.2",
+    "notes":  "Angel One is now one-tap: paste just the API key, tap Log in, and finish on Angel\u0027s own page with your usual PIN and OTP - no TOTP secrets, no manual entry. The Static IP field gets a paste-ready default with a copy button. Every field on Angel\u0027s form now has its answer inside the app.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.1/papertrader-x86_64.apk",
-                                 "sha256":  "835dffb167ab2e00e324de5659776cd9afe2f1c830bd81f9189c0d23f30269d0",
-                                 "size":  25617521
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.2/papertrader-x86_64.apk",
+                                 "sha256":  "4ea47c8987dc62199f00dd206c46012924a3bd85e82686000fe0ef5b0ac7047a",
+                                 "size":  25617525
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.1/papertrader-arm64-v8a.apk",
-                                    "sha256":  "ee609c7fdbf4a65856ec64e6919f9a3ff681974cb4d3da76a03e932dfb0ec1ac",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.2/papertrader-arm64-v8a.apk",
+                                    "sha256":  "ba6745c2c7159aa93fe56f045e4e2f1b7de9648e1628ede32c0f00b99a70ec7d",
                                     "size":  24094169
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.1/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "e0b43501bba20dcf261971b5549533ac86840928602bbb1207319389174e2999",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.2/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "3ace909dc25a4e3b0791ef54b73dce3aa86e95d2f063f388684c7496f13e1efb",
                                       "size":  21867245
                                   }
               }
