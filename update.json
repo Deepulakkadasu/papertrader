@@ -1,22 +1,22 @@
 {
-    "build":  605,
-    "version":  "0.6.5",
-    "notes":  "SENSEX option chain is here (plus FINNIFTY and MIDCPNIFTY). Commodities now follow MCX\u0027s own clock: intraday positions square off at 11pm, not 3:20pm, and the evening banner says commodities are still live. Greeks from Fyers now parse under every field name they use.",
+    "build":  700,
+    "version":  "0.7.0",
+    "notes":  "Two new brokers - four total, all with free data. Angel One: connect with your free SmartAPI key and TOTP secret; the app logs in by itself every day. Upstox: create your own free API app and log in on Upstox\u0027s own page. Every credential stays on your phone, as always.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.5/papertrader-x86_64.apk",
-                                 "sha256":  "ff4e7c6c7c57d392ad48d909f40ebe48888ba30cf4ba4ed258aed931190703a8",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.0/papertrader-x86_64.apk",
+                                 "sha256":  "dd5759a660b186166d04273b5af91d02640e87f297b5ba67b891a477077bba0e",
                                  "size":  25533699
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.5/papertrader-arm64-v8a.apk",
-                                    "sha256":  "367dc0ea642dc53a56ec81ae78a1158a41b9b342461e483ea3e594a2894dea01",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.0/papertrader-arm64-v8a.apk",
+                                    "sha256":  "fa0bc52a93cd1aa3638d6d3793c1c58222be6dbf5e478f5707474de1aa417dc6",
                                     "size":  24010343
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.5/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "4a5cd652274d987ceba90688dfc6dffd44e0d32f0262d0d6f698badcda572c0f",
-                                      "size":  21668731
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.0/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "c2918dee81ab80a198e95d8d731f3e2069e0e33eb9149f5de8229520feea89cb",
+                                      "size":  21750651
                                   }
               }
 }
