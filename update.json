@@ -1,21 +1,21 @@
 {
-    "build":  705,
-    "version":  "0.7.5",
-    "notes":  "The full market on every broker: all 2,437 NSE stocks now price on Upstox (not just the defaults), and commodities - crude, gold, silver, natural gas - now quote and chart on Upstox and Angel One too, resolved from each broker\u0027s own contract lists. Four brokers, one identical experience.",
+    "build":  706,
+    "version":  "0.7.6",
+    "notes":  "Commodity orders in the evening no longer get wrongly queued as after-market - the order ticket now knows MCX trades till 11:30pm, on every broker. Commodity price alerts also fire through the MCX evening session now.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.5/papertrader-x86_64.apk",
-                                 "sha256":  "1e057295f0a2cb536953b74c4061556386d3bcd2d78847d59eb0cdc2a56ce5c1",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.6/papertrader-x86_64.apk",
+                                 "sha256":  "cd3da76076973be692dce8c30e7035883684c2976934277d79fdb13f1509d25f",
                                  "size":  25617441
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.5/papertrader-arm64-v8a.apk",
-                                    "sha256":  "18d76c9bec7022d57a225dbf0a0625dc8acbc3ff3efbfcd5ee991ebf468dd833",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.6/papertrader-arm64-v8a.apk",
+                                    "sha256":  "6d34c9a8a831ff21a02293e58c3013d249cafb1302c7556b9fd3f49f671bcc95",
                                     "size":  24094085
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.5/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "8b8db760242a796fc82bfa02dc49fca8229048bf9275b9fa6fece404df2ba0c1",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.6/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "0a6879bca94326daaac73ed9894cfda5158c5b469e4f6bea72f9895fab1eafc5",
                                       "size":  21818009
                                   }
               }
