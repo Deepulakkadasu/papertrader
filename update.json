@@ -1,21 +1,21 @@
 {
-    "build":  913,
-    "version":  "0.9.13",
-    "notes":  "The account menu gets its Groww face: the avatar centred in its green ring, PAPER TRADING SINCE AUG 26 in small caps, and the name large beneath - the header from the reference, with every existing menu function untouched below it.",
+    "build":  914,
+    "version":  "0.9.14",
+    "notes":  "The index detail screen completes the Groww set: the price at 34pt, the reference ORANGE line chart with a dashed previous-close line on 1D, and a 6M pill joining the timeframes. Every screen in the bible is now shipped.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.13/papertrader-x86_64.apk",
-                                 "sha256":  "d7f5f69ef43fbdadae23cfaddc4078bbc71f71a5ee45b1c64454d84031f6d1b8",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.14/papertrader-x86_64.apk",
+                                 "sha256":  "4881c94e273cd05fdffb448b39526b2735c864e9be5da13d460e225e94e740d6",
                                  "size":  25828321
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.13/papertrader-arm64-v8a.apk",
-                                    "sha256":  "7cdd05b95c409caaddea0508b811ed43a33ed4458884f76aee8876af5a916103",
-                                    "size":  24304969
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.14/papertrader-arm64-v8a.apk",
+                                    "sha256":  "055d6f51d8caebe8f8a99c914a3037a72fddfd2c78cda1651caea91304e216bf",
+                                    "size":  24304965
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.13/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "0466b9352ab2f9a58736f52b50e712e53532161d05a008d23ff7642c2b045c47",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.14/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "a42bef81ae2b5404cce1242ab7d6172f2713bca67abd94ffc0a837fc46e4ca4d",
                                       "size":  22028889
                                   }
               }
