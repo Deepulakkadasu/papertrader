@@ -1,22 +1,22 @@
 {
-    "build":  603,
-    "version":  "0.6.3",
-    "notes":  "The rate-limit fix, found live on a real device: the app was opening two Fyers connections at once (Fyers kicks the duplicate), firing a burst of requests on connect, and freezing 30s over one-second violations. Now: one socket ever, all requests spaced 200ms apart through one queue, and an 8s first pause honouring Fyers\u0027 own Retry-After.",
+    "build":  604,
+    "version":  "0.6.4",
+    "notes":  "The real rate-limit fix: all Fyers requests now go through one queue - 200ms apart, max 100 per minute - so bursts cannot happen. Rate-limit pauses start at 8 seconds instead of 30. The app now subscribes only to what is on screen: three indices (NIFTY, BANKNIFTY and the new SENSEX) plus your positions at launch, with Commodities and Stocks as collapsible watchlist sections that only use data while open.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.3/papertrader-x86_64.apk",
-                                 "sha256":  "1faf94d311696fd383d3e73014e8503607decad6e0f342b27456cf5dffaa738a",
-                                 "size":  25468143
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.4/papertrader-x86_64.apk",
+                                 "sha256":  "ef7538322ca14e61aade764dbfa44438027224773b239fcb4e5c3e10f28cb604",
+                                 "size":  25533699
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.3/papertrader-arm64-v8a.apk",
-                                    "sha256":  "0b43b494cbbdc8e431ccfc459e2be395157b8b136968db720e5c84e5cb158b58",
-                                    "size":  23944787
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.4/papertrader-arm64-v8a.apk",
+                                    "sha256":  "7cbf753a22e9d923291478f572380f47696acb3ec8fd06152bdc53d8a5b4795a",
+                                    "size":  23944807
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.3/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "6214088cad014ad194affd5e56f0e611662b31a805344bb1ac21dc75032cd168",
-                                      "size":  21668711
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.4/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "c859f379dc18708cdafb09355f811f1363f3394d3d8c0468e110491cc3f161d5",
+                                      "size":  21668731
                                   }
               }
 }
