@@ -1,21 +1,21 @@
 {
-    "build":  604,
-    "version":  "0.6.4",
-    "notes":  "The real rate-limit fix: all Fyers requests now go through one queue - 200ms apart, max 100 per minute - so bursts cannot happen. Rate-limit pauses start at 8 seconds instead of 30. The app now subscribes only to what is on screen: three indices (NIFTY, BANKNIFTY and the new SENSEX) plus your positions at launch, with Commodities and Stocks as collapsible watchlist sections that only use data while open.",
+    "build":  605,
+    "version":  "0.6.5",
+    "notes":  "SENSEX option chain is here (plus FINNIFTY and MIDCPNIFTY). Commodities now follow MCX\u0027s own clock: intraday positions square off at 11pm, not 3:20pm, and the evening banner says commodities are still live. Greeks from Fyers now parse under every field name they use.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.4/papertrader-x86_64.apk",
-                                 "sha256":  "ef7538322ca14e61aade764dbfa44438027224773b239fcb4e5c3e10f28cb604",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.5/papertrader-x86_64.apk",
+                                 "sha256":  "ff4e7c6c7c57d392ad48d909f40ebe48888ba30cf4ba4ed258aed931190703a8",
                                  "size":  25533699
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.4/papertrader-arm64-v8a.apk",
-                                    "sha256":  "7cbf753a22e9d923291478f572380f47696acb3ec8fd06152bdc53d8a5b4795a",
-                                    "size":  23944807
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.5/papertrader-arm64-v8a.apk",
+                                    "sha256":  "367dc0ea642dc53a56ec81ae78a1158a41b9b342461e483ea3e594a2894dea01",
+                                    "size":  24010343
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.4/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "c859f379dc18708cdafb09355f811f1363f3394d3d8c0468e110491cc3f161d5",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.6.5/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "4a5cd652274d987ceba90688dfc6dffd44e0d32f0262d0d6f698badcda572c0f",
                                       "size":  21668731
                                   }
               }
