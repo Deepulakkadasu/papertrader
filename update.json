@@ -1,21 +1,21 @@
 {
-    "build":  904,
-    "version":  "0.9.4",
-    "notes":  "The big one: TP and SL orders now trigger even if the app was closed when price crossed them. On reopen, the app checks the exact minutes it was away and fills anything that was touched - targets at your target, stops at your stop, gaps at the gap price, exactly as live. Plus clearer Angel One login errors that say exactly what to fix.",
+    "build":  905,
+    "version":  "0.9.5",
+    "notes":  "The new option chain, Groww-style: strikes hold the centre with call/put OI bars growing out of them, swipe sideways to flip the panes between OI and IV/Delta/Theta, expiry as a centred dropdown, premium one tap away. First step of the full design rebuild.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.4/papertrader-x86_64.apk",
-                                 "sha256":  "06445ec2af9c8bd2e79840e3df349aad77a00946ef3ef3ca73de2a6b5ed670b2",
-                                 "size":  25617521
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.5/papertrader-x86_64.apk",
+                                 "sha256":  "29ffcc8c3082b015d2b4b23fdd18295c840fe9b906ab89b808b4c28aed637fb6",
+                                 "size":  25617525
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.4/papertrader-arm64-v8a.apk",
-                                    "sha256":  "a5de80d104932028fe6f9c8e2cde34af61e6d6fe6e4eebad776d109663e0f4b8",
-                                    "size":  24159705
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.5/papertrader-arm64-v8a.apk",
+                                    "sha256":  "24d3772d5b08a2580c586c356cb3386f97b01fdb2ff13a2122605714281b3b45",
+                                    "size":  24094169
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.4/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "9b2987932d975156e8f6b48441c4b24170e290ec30a51d2c37e434b2f77c6af5",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.5/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "55df3ec33f040cdc993e505720e46d882f1c92009ffa92dcad3c62c0576a5c61",
                                       "size":  21867245
                                   }
               }
