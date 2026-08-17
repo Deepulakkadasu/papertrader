@@ -1,22 +1,22 @@
 {
-    "build":  900,
-    "version":  "0.9.0",
-    "notes":  "Tick-by-tick for everyone: Upstox and Angel One now stream live prices over their own websockets, exactly like Fyers and Dhan - no more 5-second refresh on any broker. The live badge turns green the moment the socket connects.",
+    "build":  901,
+    "version":  "0.9.1",
+    "notes":  "Angel One setup: the Static IP field their form asks for is explained right in the steps - type your current IP and continue. It only applies to placing real orders, which this app never does; your data works from any network.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.0/papertrader-x86_64.apk",
-                                 "sha256":  "0d8b38d49f60840750d3492ac36740d9f205362f7983b93d249fe13e8e923fe9",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.1/papertrader-x86_64.apk",
+                                 "sha256":  "835dffb167ab2e00e324de5659776cd9afe2f1c830bd81f9189c0d23f30269d0",
                                  "size":  25617521
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.0/papertrader-arm64-v8a.apk",
-                                    "sha256":  "4fb5bb4c71c554134a2c393dc7fac94d9c21ca3cb48b569cdc1c3bb7643f30ba",
-                                    "size":  24094165
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.1/papertrader-arm64-v8a.apk",
+                                    "sha256":  "ee609c7fdbf4a65856ec64e6919f9a3ff681974cb4d3da76a03e932dfb0ec1ac",
+                                    "size":  24094169
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.0/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "3beb5bd54f1371d1a0b10d5d18a5ebe2730595ae9e1ff0ef63446c909a00b3f3",
-                                      "size":  21867241
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.1/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "e0b43501bba20dcf261971b5549533ac86840928602bbb1207319389174e2999",
+                                      "size":  21867245
                                   }
               }
 }
