@@ -1,22 +1,22 @@
 {
-    "build":  910,
-    "version":  "0.9.10",
-    "notes":  "The dock learns Groww\u0027s real trick: tap F\u0026O and the Positions sheet slides up - segment pills, live P\u0026L rows that jump to their chart, All orders, and the empty-state Okay. TradingView moved to where it belongs: a small corner button on every chart - index, stock, commodity, and options route to their underlying. The kebab menu and its settings/share/engine clutter are gone; the full drawing palette lives on a long-press of the pencil.",
+    "build":  911,
+    "version":  "0.9.11",
+    "notes":  "Two of your own ideas, live. The chain\u0027s OI Chg header is now a control: tap it and measure OI change since yesterday or over the last 5, 10 or 15 minutes - the app keeps rolling OI snapshots per strike, and shows an honest dash until it has watched long enough. And the chart\u0027s info row now carries relative volume: this candle against the average of the twenty before it, a number not a signal.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.10/papertrader-x86_64.apk",
-                                 "sha256":  "449a3457048eb92686c67375be1a2c543e87b9293b6c41a286ec31ae4c2077f3",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.11/papertrader-x86_64.apk",
+                                 "sha256":  "5861638a883fa7b4a89939f3b0a4a83f4eb58a8bcb4629570aff93a259dcf32b",
                                  "size":  25748801
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.10/papertrader-arm64-v8a.apk",
-                                    "sha256":  "8f1c4c619a9c7969dbfd80a745911f525bda472fc04067d4f5bfa45af41bb3f9",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.11/papertrader-arm64-v8a.apk",
+                                    "sha256":  "4097fe934c61fde1b069715e86084dff0c1e3b8db6675520a0919adfdf0eb0f6",
                                     "size":  24225449
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.10/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "50aebf3ea9f94f3c09500f3cccbc4da2307b3a4fba7e9a5af80a0bf89e4260ee",
-                                      "size":  21949373
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.11/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "914ca0d90fd573066630281f0178147c97e4902606f34e0fc166997f26b9b446",
+                                      "size":  21965757
                                   }
               }
 }
