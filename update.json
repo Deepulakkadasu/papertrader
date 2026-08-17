@@ -1,22 +1,22 @@
 {
-    "build":  907,
-    "version":  "0.9.7",
-    "notes":  "The chain becomes what it was meant to be: one continuous strip. No more page flips - drag the chain sideways and the columns glide: Price, Chg%, OI, OI Chg, IV, Delta, Theta, mirrored around the strikes, with the header labels riding along. Lands on the premium every time you open it.",
+    "build":  908,
+    "version":  "0.9.8",
+    "notes":  "Two chain refinements from live feedback. A hard flick no longer teleports past the OI columns to the greeks - momentum is capped at about two columns per swipe, so OI and OI change are always seen on the way. And on opening the chain, the strip slides out a touch and eases back - the Groww-style tell that there is more to the sides.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.7/papertrader-x86_64.apk",
-                                 "sha256":  "8736fd4c06492771fb3df263b8f6ecf4fa4edab2e111e337ee52582c5ddf084a",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.8/papertrader-x86_64.apk",
+                                 "sha256":  "33225230b900a34e5d136faa617ce15a743508a18f08ed54a2c43eda52aab56e",
                                  "size":  25617525
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.7/papertrader-arm64-v8a.apk",
-                                    "sha256":  "1e2b5ae97842d38adceef935cf9b91257d51a9f2015c0b16a15d0b552b67efb0",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.8/papertrader-arm64-v8a.apk",
+                                    "sha256":  "8fe4544e7839e8adc8bad8bce4eae8cecb4680e3d252350a2c4aff164ac71224",
                                     "size":  24159705
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.7/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "e6a3e32970d62b46110d6e1694404fd540e434553b89dd82fc784247b82c3053",
-                                      "size":  21867245
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.8/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "298ab2a96dfec72a9aef4db4c80209e68cb8a180bdd440fbc874b32e5f3881f4",
+                                      "size":  21883629
                                   }
               }
 }
