@@ -1,22 +1,22 @@
 {
-    "build":  702,
-    "version":  "0.7.2",
-    "notes":  "Simpler from the first minute: with no broker connected the app now asks you directly - connect for the live market, or knowingly practise on simulation. If your broker session expires, a Refresh button appears right on the watchlist. And when you copy an API key or token on your broker\u0027s site, the right box fills itself when you come back. Plus everything from 0.7.1: the practice switch, battery guard, and guided Angel One / Upstox setup.",
+    "build":  703,
+    "version":  "0.7.3",
+    "notes":  "Upstox connect errors now explain themselves: the screen tells you whether it is the API key or the Redirect URL that Upstox refused, with the exact URL to compare. The Angel One \u0027Create app\u0027 button now opens the right page.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.2/papertrader-x86_64.apk",
-                                 "sha256":  "b539bfd0d5ecfd3b97df4b5a99f3e42a9793eade06866eff87d27d258bbd9470",
-                                 "size":  25599319
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.3/papertrader-x86_64.apk",
+                                 "sha256":  "401a7190841b98d943df92efced18b04d94fa85a2b33da68461e1ea7775f6ba6",
+                                 "size":  25599359
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.2/papertrader-arm64-v8a.apk",
-                                    "sha256":  "062f04ef118144734b9e47626adbe184c5cb582ebc1a8cbe6d6fcddc5af8779c",
-                                    "size":  24010427
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.3/papertrader-arm64-v8a.apk",
+                                    "sha256":  "78bbb54711d0e583d47ad374091f427af32c376b434aef6772449e989bd3bb17",
+                                    "size":  24010467
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.2/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "e56302a971b4cd78b55955732e7ea905e2a62a34fc81576a05b300db518521d9",
-                                      "size":  21767119
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.7.3/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "cbe04ad0b17b5c4821584a2685d2130612f1183ec5786fe5a3a3ed682f05a1cb",
+                                      "size":  21767159
                                   }
               }
 }
