@@ -9,6 +9,14 @@
    "sha1": "4745dd401e9d59914847e33f7f3ac2ff6b2ec9f5"
   },
   {
+   "id": "reel10_stop_hunt",
+   "title": "Stop hunt - SL hit, ventane reverse?",
+   "blurb": "Real sweep: andari stops okate chota. Evaru konnaro chudandi",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel10_stop_hunt.mp4",
+   "bytes": 4067572,
+   "sha1": "869e88ac515823d9a5e2ad85fd81cffe4437a81f"
+  },
+  {
    "id": "guide_upstox_connect",
    "title": "Upstox connect - full guide",
    "blurb": "API app create nunchi live prices varaku - keys phone lone",
@@ -61,8 +69,8 @@
    "title": "Timeframes",
    "blurb": "Up a? Down a? Rendu correct - zoom kadha",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel7_timeframes.mp4",
-   "bytes": 4398382,
-   "sha1": "a31ffca750869c576dfa0f30ce7a8cdb62d95387"
+   "bytes": 4447012,
+   "sha1": "2345c84355178631de1607b2c5986a4c4012887a"
   },
   {
    "id": "reel8_zero_edges",
@@ -79,6 +87,22 @@
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel9_practice_first.mp4",
    "bytes": 3179980,
    "sha1": "db4f0a46347afef6aa5f4126d8006f98fed6fdbc"
+  },
+  {
+   "id": "reel11_scalping_nijam",
+   "title": "Scalping nijam - meter chudandi",
+   "blurb": "Prathi scalp Rs.61 tho start. SEBI lekkalu kuda",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel11_scalping_nijam.mp4",
+   "bytes": 4097198,
+   "sha1": "1b7cb886763ea2a2a88e1328fa5209530bd0c800"
+  },
+  {
+   "id": "reel12_scalp_practice",
+   "title": "Scalp practice - rules tho",
+   "blurb": "Session rules, one-tap reps, journal - zero fee",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel12_scalp_practice.mp4",
+   "bytes": 3433119,
+   "sha1": "4a7ed27b31288e622d8cdbe329d830f500494df9"
   }
  ]
 }
