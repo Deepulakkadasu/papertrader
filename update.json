@@ -1,22 +1,22 @@
 {
-    "build":  937,
-    "version":  "0.9.37",
-    "notes":  "A sample of the learning module, live on the home screen: Lesson 1 - How a candle is born. Not a PDF and not a video: the app draws it. A price line ticks across the screen and WRITES the candle beside it, naming open, high, low and close as they are set; then bullish versus bearish, the three parts called out, the five shapes drawing themselves in turn, and a three-question quiz that marks itself. Telugu, Hindi and English, switchable at the top - the animation is the same in every language because it is drawn, not filmed.",
+    "build":  938,
+    "version":  "0.9.38",
+    "notes":  "Lesson 1 finds its voice. Every scene now speaks - warm, teacher-style narration written for the ear, not captions read aloud - in Telugu, Hindi and English, generated with Sarvam premium voices and bundled inside the app: no network, no buffering, works offline. Switch language and the voice switches with it; the animation never changes because it is drawn, not filmed. A mute button for the library, a replay that speaks again.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.37/papertrader-x86_64.apk",
-                                 "sha256":  "132957b1b4eddad6b25296ded9470aa6ea6261fbfe8f732e28edf70af69bc8d4",
-                                 "size":  25960529
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.38/papertrader-x86_64.apk",
+                                 "sha256":  "48fad6ca7510eb06d9cf72086877ca4ad1e5d983dade859afc7bc2acf7f12593",
+                                 "size":  28011360
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.37/papertrader-arm64-v8a.apk",
-                                    "sha256":  "a2be81826404966a76f274e02f448e438dbf67f8d88378e17d4d2fc872b84366",
-                                    "size":  24437173
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.38/papertrader-arm64-v8a.apk",
+                                    "sha256":  "f65e554490d6837a1aad680c960245b6c4b90144cc81c5d0c044bc1668e3d8bb",
+                                    "size":  26422468
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.37/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "66d2372952be758b5425a9b4ed0c44be21fd2929072e7c8522e78a8476554de5",
-                                      "size":  22177481
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.38/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "98d0065d275726690393fa906fd5802c0f05f1b859999984983de56bcf07b39d",
+                                      "size":  24211928
                                   }
               }
 }
