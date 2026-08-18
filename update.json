@@ -1,22 +1,22 @@
 {
-    "build":  949,
-    "version":  "0.9.49",
-    "notes":  "Indicator alerts (EMA/RSI cross on closed candles), journal R-multiples with trade-reason notes, and own Greeks when the feed sends zeros",
+    "build":  950,
+    "version":  "0.9.50",
+    "notes":  "Build your own F\u0026O screener (215 names, your conditions) and learn 13 classic option shapes - each opens pre-filled in the payoff builder",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.49/papertrader-x86_64.apk",
-                                 "sha256":  "1cb1ddac3c71a4fe172370daa6ecd815d4aabf935b501f4a37acb5ad78c125bc",
-                                 "size":  31570571
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.50/papertrader-x86_64.apk",
+                                 "sha256":  "0b10ddb9e0a20eea392f85dae07b539141549cad2b7f94bcbe387d0c2d81050a",
+                                 "size":  31701643
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.49/papertrader-arm64-v8a.apk",
-                                    "sha256":  "e2fa3d77e37417391c952c8cddb4d7dddf00dedd4244dec499562787187f083e",
-                                    "size":  29981679
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.50/papertrader-arm64-v8a.apk",
+                                    "sha256":  "260cb4bffadc53fcfb1d905ef3772e41468c41257d3b67a490c076aa933119c6",
+                                    "size":  30112751
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.49/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "df0a00ddea16364206442435f2ebe1611310a0ac06636c5fa466f57f41390eda",
-                                      "size":  27869443
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.50/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "a11cd9e6f3308684f75d5c6e6103feee9d737699fbd2fdb2bac12332c5768396",
+                                      "size":  27967747
                                   }
               }
 }
