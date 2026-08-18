@@ -1,21 +1,21 @@
 {
-    "build":  941,
-    "version":  "0.9.41",
-    "notes":  "Announcements: app ki news cheppe popup channel - site JSON edit chesthe chalu",
+    "build":  942,
+    "version":  "0.9.42",
+    "notes":  "Announcement sheet buttons in English - official register",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.41/papertrader-x86_64.apk",
-                                 "sha256":  "eb853344a8a96099779e451743ce05ee9193550a9a04456f99d24f1d1d6d8fc6",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.42/papertrader-x86_64.apk",
+                                 "sha256":  "1e9a3d0dfa0c59ca849038b1437e3f9a6f2189359b5cb106d65f582cae9da9d2",
                                  "size":  46396242
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.41/papertrader-arm64-v8a.apk",
-                                    "sha256":  "f3740223ead5cd97e14435b026f0b5614ec354bf021674bc2e5e0f1d8c5c3e2b",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.42/papertrader-arm64-v8a.apk",
+                                    "sha256":  "a6cffde311e35e6d82707cf964739d6fe60381cf027128eb1fcf2884df548761",
                                     "size":  44872886
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.41/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "3f90aae56451c6a4885b66c4953090f39c6933c18e7ec61122ecc2e2e89420da",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.42/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "58ff3d01bd0d24a85d240d5d6033a5923971edaf508e1fe36fa534ffe54587e2",
                                       "size":  42645962
                                   }
               }
