@@ -1,22 +1,22 @@
 {
-    "build":  939,
-    "version":  "0.9.39",
-    "notes":  "Lesson 0 arrives - why does price move at all: the order book drawn live, bids and asks queuing, a market order eating a level and printing the LTP, imbalance climbing the ladder, and the cast of players. All narration re-recorded in natural spoken Telugu-English mix instead of textbook Telugu - the way people actually talk. DRAFT scripts: a proper scripting formula study is underway before these are finalized.",
+    "build":  940,
+    "version":  "0.9.40",
+    "notes":  "Video lessons: 5 Bunty-voiced reels now play inside the Learn tab - swipeable full-screen, offline",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.39/papertrader-x86_64.apk",
-                                 "sha256":  "4be76bd04047ecc59302667093b0a589069ec91fc53566e0dab99e0137042095",
-                                 "size":  29960495
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.40/papertrader-x86_64.apk",
+                                 "sha256":  "944bcc1e0cf8441bd7a01f7a89a21aaad749ecdbd0f75acb3689879ff8f4e9f0",
+                                 "size":  46265014
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.39/papertrader-arm64-v8a.apk",
-                                    "sha256":  "b7e261e0422c5fd86b210d0b8e33c5f4b6cda90fbc52274a0eb3bfa4ec4cc968",
-                                    "size":  28437139
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.40/papertrader-arm64-v8a.apk",
+                                    "sha256":  "116d227edf642301b0f08b1b3c28e3f4d9d74a26092d5d1087811653a87d0811",
+                                    "size":  44741658
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.39/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "62c96355a2892fa584cfc829b55a56f0c11e3323ade6e232664a2cef90be1420",
-                                      "size":  26210215
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.40/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "1593a4ee3429c87835413380df37328902ef750c0f7b9f90b848815dbdf20c49",
+                                      "size":  42514734
                                   }
               }
 }
