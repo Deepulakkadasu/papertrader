@@ -1,22 +1,22 @@
 {
-    "build":  945,
-    "version":  "0.9.45",
-    "notes":  "Strategy Lab learns your language: describe a rule in plain words, see exactly what was understood, get the honest backtest",
+    "build":  946,
+    "version":  "0.9.46",
+    "notes":  "Video lessons download on demand - the app itself stays light; new lessons arrive without an update",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.45/papertrader-x86_64.apk",
-                                 "sha256":  "b1edcbdd03a805e3a5e603addc1b4372c893b08dea20ac96cad9690339d4e37b",
-                                 "size":  46658522
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.46/papertrader-x86_64.apk",
+                                 "sha256":  "5ac81573392876acfb1dad5d55d165b7de8f3d398523536f3a6cdc8e1583fdab",
+                                 "size":  30980123
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.45/papertrader-arm64-v8a.apk",
-                                    "sha256":  "732a7f06cac826bc924c00ebd3251ae1bdfe1cde71ef39370281a4637cf1c8bf",
-                                    "size":  45069634
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.46/papertrader-arm64-v8a.apk",
+                                    "sha256":  "4b66a87e1d4459b0f8d557924366d92bb50a4e8e00053d7b47ef9a278336b194",
+                                    "size":  29391231
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.45/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "4489f4e0ed3f9a6d164ba956e847fdd670510a27561b22c39f99f76d4784e496",
-                                      "size":  42908246
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.46/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "9c3ee91843784f5692ca282d7321b51e9cb923bd46d1e84552b9e387027f8eb5",
+                                      "size":  27246227
                                   }
               }
 }
