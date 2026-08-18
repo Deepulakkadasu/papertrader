@@ -1,22 +1,22 @@
 {
-    "build":  947,
-    "version":  "0.9.47",
-    "notes":  "Strategy builder: pick option legs, see the expiry payoff with breakevens and max loss BEFORE you fire - free, on your data",
+    "build":  948,
+    "version":  "0.9.48",
+    "notes":  "Your Coach: an observer that watches HOW you trade - revenge entries, loss streaks, nursing losers - and YOU choose what it watches",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.47/papertrader-x86_64.apk",
-                                 "sha256":  "194ca871d714f032afbefade95fa773fe279a3bf3cba3aca76abfeee8b8b4d32",
-                                 "size":  31045659
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.48/papertrader-x86_64.apk",
+                                 "sha256":  "e27999cd92752bc03d05f7f80c0e5094527d0974a7f31d3b97e58a5b93769365",
+                                 "size":  31504911
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.47/papertrader-arm64-v8a.apk",
-                                    "sha256":  "f0c9434d0728676b69bcac78723f35e4f590ecfe77a30e024f3f20b625d65891",
-                                    "size":  29522303
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.48/papertrader-arm64-v8a.apk",
+                                    "sha256":  "d2a6d11e489cea0e6e817a0dfd6989d153ef7490ea6108210bb96508c12f9f41",
+                                    "size":  29981555
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.47/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "4aa8ac9d0fddd1b1f709bfbbad0ab6855ba1d49c2c7d8f3ff31ac69e44a8ada1",
-                                      "size":  27311763
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.48/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "dd867d30d7c9a7ebfe30f2cb9a4df930c06c224cf414e5ddd73f70db7bce345b",
+                                      "size":  27803783
                                   }
               }
 }
