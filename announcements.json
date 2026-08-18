@@ -1,10 +1,10 @@
 {
   "announcements": [
     {
-      "id": "2026-08-18-video-lessons",
-      "title": "Video lessons vachayi!",
-      "body": "5 short videos: price enduku move avthundi, candles ela form avthayi, supply-demand zones (real NIFTY chart tho), mee broker keys safety, Strategy Lab. Offline kuda play avthayi - Learn lo chudandi.",
-      "cta": "Chudandi",
+      "id": "2026-08-18-video-lessons-en",
+      "title": "Video lessons are here!",
+      "body": "5 short videos: why price moves, how candles form, supply-demand zones on a real NIFTY chart, how your broker keys stay on your phone, and the Strategy Lab. They play offline - find them in Learn.",
+      "cta": "Watch now",
       "route": "learn",
       "minBuild": 0,
       "expires": "2026-09-30"
