@@ -1,9 +1,18 @@
 {
   "announcements": [
     {
+      "id": "2026-08-18-strategy-builder",
+      "title": "Strategy Builder is here!",
+      "body": "Pick option legs straight from the chain and see the expiry payoff before you fire - breakevens, max profit and max loss, all computed on your own data. Find it on the F&O tab, or from the chain's builder icon. Paper orders only, as always.",
+      "cta": "OK",
+      "route": "",
+      "minBuild": 947,
+      "expires": "2026-09-30"
+    },
+    {
       "id": "2026-08-18-video-lessons-en",
       "title": "Video lessons are here!",
-      "body": "5 short videos: why price moves, how candles form, supply-demand zones on a real NIFTY chart, how your broker keys stay on your phone, and the Strategy Lab. They play offline - find them in Learn.",
+      "body": "5 short videos: why price moves, how candles form, supply-demand zones on a real NIFTY chart, how your broker keys stay on your phone, and the Strategy Lab. They download on demand and play offline - find them in Learn.",
       "cta": "Watch now",
       "route": "learn",
       "minBuild": 0,
