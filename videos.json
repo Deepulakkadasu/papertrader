@@ -9,6 +9,14 @@
    "sha1": "4745dd401e9d59914847e33f7f3ac2ff6b2ec9f5"
   },
   {
+   "id": "guide_upstox_connect",
+   "title": "Upstox connect - full guide",
+   "blurb": "API app create nunchi live prices varaku - keys phone lone",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/guide_upstox_connect.mp4",
+   "bytes": 39329820,
+   "sha1": "ee08936e2b2d6986fd68258ca26e54b8cd2302f8"
+  },
+  {
    "id": "reel1_why_price_moves",
    "title": "Price enduku move avthundi?",
    "blurb": "Order book, spread, LTP - motham story",
@@ -39,6 +47,38 @@
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel4_strategy_lab.mp4",
    "bytes": 2683583,
    "sha1": "d6f7f6edf1ceb2ebea8b2ebce77bdbc9d6aa5389"
+  },
+  {
+   "id": "reel6_costs",
+   "title": "Costs: nija breakeven",
+   "blurb": "Flat trade = -Rs.61. Bill motham ikkade",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel6_costs.mp4",
+   "bytes": 3823631,
+   "sha1": "b0f74fb38926c1ac6d623dda4cf9e3c1cc726434"
+  },
+  {
+   "id": "reel7_timeframes",
+   "title": "Timeframes",
+   "blurb": "Up a? Down a? Rendu correct - zoom kadha",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel7_timeframes.mp4",
+   "bytes": 4398382,
+   "sha1": "a31ffca750869c576dfa0f30ce7a8cdb62d95387"
+  },
+  {
+   "id": "reel8_zero_edges",
+   "title": "Honest research: 13 tested, 0 survived",
+   "blurb": "Anduke memu tips ammamu",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel8_zero_edges.mp4",
+   "bytes": 5104774,
+   "sha1": "b29826267e0a3b98adb6d095cd4f3c6201a3073e"
+  },
+  {
+   "id": "reel9_practice_first",
+   "title": "Practice first",
+   "blurb": "SEBI: 10 lo 9 loss. Tuition fee vs virtual money",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel9_practice_first.mp4",
+   "bytes": 3179980,
+   "sha1": "db4f0a46347afef6aa5f4126d8006f98fed6fdbc"
   }
  ]
 }
