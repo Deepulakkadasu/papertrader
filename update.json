@@ -1,22 +1,22 @@
 {
-    "build":  920,
-    "version":  "0.9.20",
-    "notes":  "Fyers login gets a breath and an honest voice. The first data call used to fire 178ms behind the token exchange - fast enough to trip their per-second limiter at the exact moment of logging in - so it now waits a beat. And when Fyers throttles anyway, the app says what is true: your login is fine and saved, prices resume when their throttle lifts, practice works meanwhile.",
+    "build":  921,
+    "version":  "0.9.21",
+    "notes":  "Market news arrives - the approved flagship, v1. The home page gains a Market News section: the three freshest headlines from Moneycontrol, ET Markets and Business Standard, aggregated inside the app itself (no server of ours ever in the path), tagged by instrument - and when a headline names something we price, its day change rides beside it in a tinted chip: the news and the move, one glance. See all opens the full list with pull-to-refresh. v2 - a fast move surfacing its freshest matching headline - builds on this.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.20/papertrader-x86_64.apk",
-                                 "sha256":  "424c3d27bcf36b07bf411983eb1c427a8e8b126c5e155def3315898c0abfc6ab",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.21/papertrader-x86_64.apk",
+                                 "sha256":  "b1df9a6f94002dfd63f01f91f883f5ebfeba7954e710fb112d2e7a294fed2af9",
                                  "size":  25762701
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.20/papertrader-arm64-v8a.apk",
-                                    "sha256":  "8437a37940041ce56ab40c48c5b8713ed0f305de1c4cde654d02f2c52d2e3e76",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.21/papertrader-arm64-v8a.apk",
+                                    "sha256":  "3a00494c28ae21d4addf4eb7a6501997308b51e9532448a8bba340a5ce4c5ef0",
                                     "size":  24239345
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.20/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "0b6e3ccb7d8b7a7d05ef40ed86c2fc4e1e7ab3bc477a2e3f98e59b6283bb8e06",
-                                      "size":  21930501
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.21/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "fd3caae346df9d1816967789ff5afb25fe02a63a1638a06d7590b1a99305994f",
+                                      "size":  21979649
                                   }
               }
 }
