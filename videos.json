@@ -1,0 +1,44 @@
+{
+ "videos": [
+  {
+   "id": "reel5_sd_zones",
+   "title": "Supply & Demand zones",
+   "blurb": "Real NIFTY chart lo zone ela pani chestundo",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel5_sd_zones.mp4",
+   "bytes": 3274485,
+   "sha1": "4745dd401e9d59914847e33f7f3ac2ff6b2ec9f5"
+  },
+  {
+   "id": "reel1_why_price_moves",
+   "title": "Price enduku move avthundi?",
+   "blurb": "Order book, spread, LTP - motham story",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel1_why_price_moves.mp4",
+   "bytes": 3313392,
+   "sha1": "be25c688a13d0dcfa6039bffd5ced639117d09f6"
+  },
+  {
+   "id": "reel2_candle_ela_form_avthundi",
+   "title": "Candle ela form avthundi?",
+   "blurb": "Open high low close - prathi candle oka fight",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel2_candle_ela_form_avthundi.mp4",
+   "bytes": 3145440,
+   "sha1": "79e4471a114ba4e7d23975ae93f97d2bcae091f0"
+  },
+  {
+   "id": "reel3_trust_broker_keys",
+   "title": "Mee keys ekkadiki veltayi?",
+   "blurb": "Key phone lo ne. Server asalu ledu.",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel3_trust_broker_keys.mp4",
+   "bytes": 3260479,
+   "sha1": "be0f591f9e4be18138e94263e734123e1389a275"
+  },
+  {
+   "id": "reel4_strategy_lab",
+   "title": "Strategy Lab",
+   "blurb": "Idea nunchi honest backtest varaku",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel4_strategy_lab.mp4",
+   "bytes": 2683583,
+   "sha1": "d6f7f6edf1ceb2ebea8b2ebce77bdbc9d6aa5389"
+  }
+ ]
+}
