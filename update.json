@@ -1,22 +1,22 @@
 {
-    "build":  923,
-    "version":  "0.9.23",
-    "notes":  "The killer half of the news idea: when an index moves fast in your chosen window, the freshest headline tagged to it appears right under the move - the move and its likely reason, one glance apart. Nobody does this retail in India.",
+    "build":  924,
+    "version":  "0.9.24",
+    "notes":  "Everything analysis moves behind one quiet door. The home shows a single Market Pulse card; tap it and the full picture opens - index moves on your window, OI build-ups, the fast-move headline linkage, and the entire news tape with sentiment dots - all in one screen instead of scattered down the home page. The home is calm again.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.23/papertrader-x86_64.apk",
-                                 "sha256":  "55bc1a06ea6af835a796cf86f376da81e373a6022c2d5566f7396311cfad0ace",
-                                 "size":  25828289
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.24/papertrader-x86_64.apk",
+                                 "sha256":  "283d26794a68f46e6774486592273240fea625eb3bdc8dfc587772bf4ce1f4e3",
+                                 "size":  25828397
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.23/papertrader-arm64-v8a.apk",
-                                    "sha256":  "bfe1e02625327abf0a5a86f8628240998bb1f3ab3a1eb9c935dbf8878c2ac351",
-                                    "size":  24304937
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.24/papertrader-arm64-v8a.apk",
+                                    "sha256":  "361a472878bd72857e8533965ada497b2220ef57230ab02d2a8afc4f925e6849",
+                                    "size":  24239509
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.23/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "32bf5d70a649218cc9c9166e2c955f6f70c12a5a6cffffaabb8a05dff51f1cfb",
-                                      "size":  22012477
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.24/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "e2733278eee18c8fc582bc66aff37fe78dd19f4b011f0bfc99c02f1dd71828a5",
+                                      "size":  21979813
                                   }
               }
 }
