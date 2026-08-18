@@ -1,22 +1,22 @@
 {
-    "build":  926,
-    "version":  "0.9.26",
-    "notes":  "Three corrections from the reference reel. The position line pill now carries its LIVE P\u0026L, ticking with every price - the wiring existed for TP/SL lines but had never reached the entry line itself. The profit and loss zones are bold enough to actually see, like the reference. And Scalper means ONE thing now: the chart dock button opens the same scalper screen the home tiles do - the second BUY/SELL pad toggle pretending to be a scalper is gone, and the pad simply lives under the chart again.",
+    "build":  927,
+    "version":  "0.9.27",
+    "notes":  "The research reaches the app. Market Pulse now carries TODAY S STRUCTURE - context cards computed live from the day s own 1-minute bars using the constants the 2-year study froze: the opening state with honest gap-fill base rates, the first ORB break with the 69%-direction / 51%-retest truth and the warning that every tested entry lost, the one-sided tape read, expiry-afternoon watch on the correct Tuesday calendar, the 14:40 fresh-extreme caution, and the VIX regime backdrop. No BUY, no SELL - the cards educate and protect, because that is what the data supported.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.26/papertrader-x86_64.apk",
-                                 "sha256":  "74007e1814f5f5dc1ebf86f8c607da113242bd66907024675f2e8f4383b0ac97",
-                                 "size":  25828773
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.27/papertrader-x86_64.apk",
+                                 "sha256":  "de1928f837f3db4ca42016d1e8e0d1a60efe9621cea053c50c18098b89c4ad75",
+                                 "size":  25828909
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.26/papertrader-arm64-v8a.apk",
-                                    "sha256":  "461a1677c267ea828739103a8beebbe497d4f037d3290bc3d5d81f3e39fe77f5",
-                                    "size":  24239881
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.27/papertrader-arm64-v8a.apk",
+                                    "sha256":  "09a8915abbb6cac86e095b66daf507c5a89753ec4ce03e67eb3cd14e91dad213",
+                                    "size":  24305557
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.26/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "6bf9932619972933394772b6dbb953f379d8a67ec23bca0b9eea7bb49ca84734",
-                                      "size":  21980189
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.27/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "de25936ea3df573bdb7fa9bac8fca6e0501a8fe2d3377af151fd366b66757329",
+                                      "size":  22013093
                                   }
               }
 }
