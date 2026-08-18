@@ -1,21 +1,21 @@
 {
-    "build":  927,
-    "version":  "0.9.27",
-    "notes":  "The research reaches the app. Market Pulse now carries TODAY S STRUCTURE - context cards computed live from the day s own 1-minute bars using the constants the 2-year study froze: the opening state with honest gap-fill base rates, the first ORB break with the 69%-direction / 51%-retest truth and the warning that every tested entry lost, the one-sided tape read, expiry-afternoon watch on the correct Tuesday calendar, the 14:40 fresh-extreme caution, and the VIX regime backdrop. No BUY, no SELL - the cards educate and protect, because that is what the data supported.",
+    "build":  930,
+    "version":  "0.9.30",
+    "notes":  "Upstox tick-by-tick is ALIVE - verified on a live session: socket open, first tick decoded 76 milliseconds after subscribing, and the coverage check reading live on 10/10. The chain of causes ran three deep: a redirect Dart could not follow (fixed earlier), a subscribe that had to be a binary frame, and finally a one-line decoder bug - pos += varint() loses the length byte in Dart evaluation order - that silently desynced every frame. A frame captured off the live feed is now a permanent regression test.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.27/papertrader-x86_64.apk",
-                                 "sha256":  "de1928f837f3db4ca42016d1e8e0d1a60efe9621cea053c50c18098b89c4ad75",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.30/papertrader-x86_64.apk",
+                                 "sha256":  "dd824d5e9e5bc9519b66bd5c138e42d6e2ed925d167777e8e2ef955b7313abf9",
                                  "size":  25828909
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.27/papertrader-arm64-v8a.apk",
-                                    "sha256":  "09a8915abbb6cac86e095b66daf507c5a89753ec4ce03e67eb3cd14e91dad213",
-                                    "size":  24305557
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.30/papertrader-arm64-v8a.apk",
+                                    "sha256":  "d4102ecea133a1c337408b094b2bb6b44ea76d726ab5c6a09e9dc9d8ea14319d",
+                                    "size":  24305553
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.27/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "de25936ea3df573bdb7fa9bac8fca6e0501a8fe2d3377af151fd366b66757329",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.30/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "06006d89af4b6bb9396673b30be5ed3303dedccbcc4630d4cbd18fbc0de3d6ee",
                                       "size":  22013093
                                   }
               }
