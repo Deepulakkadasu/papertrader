@@ -1,21 +1,21 @@
 {
-    "build":  932,
-    "version":  "0.9.32",
-    "notes":  "The chart pills become the reference, exactly: anchored at the LEFT edge like the reel, one clean pill per line reading lots | live P\u0026L | x - no grip, no floating buttons, no price duplicated off the axis - and when lines crowd together the pills step apart vertically instead of burying each other over the candles. Drag the pill itself to move a line. And if your commodities were not ticking, that was the decoder bug fixed in 0.9.30 - check them again, they ride the same socket now.",
+    "build":  933,
+    "version":  "0.9.33",
+    "notes":  "Commodities reach the socket at last - the wanted-set segment map never included MCX, so they lived on the five-second poll no matter what; they tick live now. Subscriptions go properly lazy: the F\u0026O tab prices commodities only while the Commodities pill is selected and releases them when you flip away - but anything with an open position or a resting order stays live regardless of what is on screen, because TP and SL fire off those ticks.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.32/papertrader-x86_64.apk",
-                                 "sha256":  "dfca464f8d1d94a41a68132e4bae05b466d12ce0090bb06abc843ed13decb5e5",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.33/papertrader-x86_64.apk",
+                                 "sha256":  "93bc793f3f04323d1eb875a0e03807d15f8d3745972513f7d20b68e158031b88",
                                  "size":  25829205
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.32/papertrader-arm64-v8a.apk",
-                                    "sha256":  "7bdd2a2d32ffcee5003206e04c7960600ff5434da9d732756098efcefc004d93",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.33/papertrader-arm64-v8a.apk",
+                                    "sha256":  "d1631f96194b22efe5fe840cce5f612e243f4a98a81612a79e3193457e74a1bc",
                                     "size":  24305849
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.32/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "d5b1b7401c87b0666ce031662cd84134b5a82ac1523be85e786a3af254ccf19c",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.33/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "d7bb960de2e77cd6c16efbfb9f7d96d81876df425cd18b7d124f3a1f1cb849f0",
                                       "size":  22029773
                                   }
               }
