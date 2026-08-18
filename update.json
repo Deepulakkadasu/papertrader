@@ -1,22 +1,22 @@
 {
-    "build":  934,
-    "version":  "0.9.34",
-    "notes":  "Chart polish from live feedback: the pills shrink another step, the TP and SL lines are drawn at 2px so they read as handles, and the line you are DRAGGING steps forward - 3px solid while your finger owns it, back to normal on release. No more guessing where the stop went mid-drag.",
+    "build":  935,
+    "version":  "0.9.35",
+    "notes":  "Strategy Lab arrives - your algo-trading idea, v1, free and entirely on your phone. Pick a template (EMA crossover, Supertrend follow, RSI reversal, opening-range breakout), set lots and SL/target, and BACKTEST it on real candles with real costs charged - the result tells you plainly when a rule did not clear costs, because most do not. Flip Deploy and it trades PAPER money through the same engine your own orders use, tagged with a lightning bolt, acting only on closed 1-minute candles during market hours. Five tests pin its honesty: entries fill at the next bar open, a bar that touches both stop and target resolves as the stop, and costs are always charged.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.34/papertrader-x86_64.apk",
-                                 "sha256":  "660c52c4232f724a97395d5875e1a784efc19312035736df3ec7564043a252ae",
-                                 "size":  25829361
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.35/papertrader-x86_64.apk",
+                                 "sha256":  "fa3ab45d977d56dd068375827260b57b6cb76ad1da54aafc0178c34f8edf440a",
+                                 "size":  25894993
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.34/papertrader-arm64-v8a.apk",
-                                    "sha256":  "f7ee2fb2beec37a36916b831ce65e691a46d75405322d94947c83e2f4b0d6318",
-                                    "size":  24306005
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.35/papertrader-arm64-v8a.apk",
+                                    "sha256":  "1361b2b928a68230325a85116be769504d5e741ccfbb3f845c0bf26a453b0906",
+                                    "size":  24371637
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.34/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "3df7de7956d8e55e69449158a14f50a49982f1b88af6a819f8e51af58d473f5e",
-                                      "size":  22029929
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.35/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "af78cb8596148f179c27738aa79db3ecf28df463bf51a2049760e60be77fd397",
+                                      "size":  22111945
                                   }
               }
 }
