@@ -1,22 +1,22 @@
 {
-    "build":  931,
-    "version":  "0.9.31",
-    "notes":  "Eight corrections from the live morning. Chain: the OI-change window answers from its first tracked minute (labelled with the minutes it actually covers) instead of sitting blank, and the change% column falls back to the socket prev-close when a broker chain returns zero. Charts: the red/green P\u0026L backgrounds are gone everywhere on request, the bottom-left of the dock shows your LIVE P\u0026L while a position is open, pills and buttons are smaller, and the scalper position line now updates its P\u0026L live like the main chart. TradingView opens the EXACT option contract now, not the underlying. Home: virtual funds is a small card, Market Pulse moved below the watchlist, and the Pulse screen carries top movers with names.",
+    "build":  932,
+    "version":  "0.9.32",
+    "notes":  "The chart pills become the reference, exactly: anchored at the LEFT edge like the reel, one clean pill per line reading lots | live P\u0026L | x - no grip, no floating buttons, no price duplicated off the axis - and when lines crowd together the pills step apart vertically instead of burying each other over the candles. Drag the pill itself to move a line. And if your commodities were not ticking, that was the decoder bug fixed in 0.9.30 - check them again, they ride the same socket now.",
     "files":  {
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.31/papertrader-x86_64.apk",
-                                 "sha256":  "1ac0a44753c4992e5c84ac0164b5278c4c1adaa009bcd5bf2e21f5595573cb55",
-                                 "size":  25828917
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.32/papertrader-x86_64.apk",
+                                 "sha256":  "dfca464f8d1d94a41a68132e4bae05b466d12ce0090bb06abc843ed13decb5e5",
+                                 "size":  25829205
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.31/papertrader-arm64-v8a.apk",
-                                    "sha256":  "40649216c8bbe2775c772a08b36aba04c8f8018dccac0f3a4d17ba22b8e519a1",
-                                    "size":  24305561
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.32/papertrader-arm64-v8a.apk",
+                                    "sha256":  "7bdd2a2d32ffcee5003206e04c7960600ff5434da9d732756098efcefc004d93",
+                                    "size":  24305849
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.31/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "dfee6b71940d01f25e9aeb0f3723598e4538bdf511f90fc89d9b4079ee87f36a",
-                                      "size":  22029485
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.32/papertrader-armeabi-v7a.apk",
+                                      "sha256":  "d5b1b7401c87b0666ce031662cd84134b5a82ac1523be85e786a3af254ccf19c",
+                                      "size":  22029773
                                   }
               }
 }
