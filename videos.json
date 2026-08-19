@@ -185,6 +185,81 @@
    "context": [
     "journal"
    ]
+  },
+  {
+   "id": "guide_first_order",
+   "title": "First paper trade",
+   "blurb": "Thirty seconds lo - order ticket nunchi P&L varaku",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/guide_first_order.mp4",
+   "bytes": 971242,
+   "sha1": "4b6f924f707741e10b5ce01f387c4866eeb52b7d",
+   "section": "App guides",
+   "order": 4,
+   "guided": false,
+   "lang": "te",
+   "context": [
+    "order_ticket"
+   ]
+  },
+  {
+   "id": "guide_option_chain",
+   "title": "Option chain ardham",
+   "blurb": "Ladder, ATM, OI walls - context not prophecy",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/guide_option_chain.mp4",
+   "bytes": 1503493,
+   "sha1": "57577841df8f08d4d289460663e67a572c282a0a",
+   "section": "App guides",
+   "order": 5,
+   "guided": false,
+   "lang": "te",
+   "context": [
+    "option_chain"
+   ]
+  },
+  {
+   "id": "guide_chart",
+   "title": "Chart tools",
+   "blurb": "Timeframes, alerts, replay - anni okate chota",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/guide_chart.mp4",
+   "bytes": 837903,
+   "sha1": "d9b3396a05621b394805ba22d5235b8d7f46ec7c",
+   "section": "App guides",
+   "order": 6,
+   "guided": false,
+   "lang": "te",
+   "context": [
+    "chart"
+   ]
+  },
+  {
+   "id": "guide_strategy_lab",
+   "title": "Strategy Lab guide",
+   "blurb": "Rule build - honest backtest - paper deploy",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/guide_strategy_lab.mp4",
+   "bytes": 915714,
+   "sha1": "b7b35fdfb93ebd015503de284a7909a07523df82",
+   "section": "App guides",
+   "order": 7,
+   "guided": false,
+   "lang": "te",
+   "context": [
+    "strategy_lab"
+   ]
+  },
+  {
+   "id": "guide_coach",
+   "title": "Coach - mee thappula mirror",
+   "blurb": "Revenge entries, loss streaks - mee data lo",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/guide_coach.mp4",
+   "bytes": 1070195,
+   "sha1": "c926a7840f83852cf6b5db3d3e09b76ed33eef54",
+   "section": "App guides",
+   "order": 8,
+   "guided": false,
+   "lang": "te",
+   "context": [
+    "coach"
+   ]
   }
  ]
 }
