@@ -131,7 +131,7 @@
     <a class="cta" href="dl/papertrader.apk" download>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px;margin-right:7px">
         <path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4l-4.7-4.7 1.4-1.4 3.3 3.3V3h2zM5 19h14v2H5v-2z"/>
-      </svg>Download for Android · 22 MB</a>
+      </svg>Download for Android · 50 MB</a>
     &nbsp;&nbsp;<a href="#download" style="font-size:13.5px">install help ↓</a>
   </p>
 
@@ -373,7 +373,7 @@
     <a class="cta" href="dl/papertrader.apk" download>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px;margin-right:7px">
         <path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4l-4.7-4.7 1.4-1.4 3.3 3.3V3h2zM5 19h14v2H5v-2z"/>
-      </svg>Download for Android · 22 MB</a>
+      </svg>Download for Android · 50 MB</a>
   </p>
   <p class="sub">The download starts as soon as you tap it. When it
      finishes, tap the file in your notifications to install.</p>
@@ -394,15 +394,35 @@
        file, same fingerprint — only the name is different, which is the
        whole reason Chrome allows it.</p>
   </div>
-  <p class="sub">Android 8 or newer. If it says <em>App not installed</em>,
-     your phone is older than about 2018 — ask us and we will send you the
-     build for it.
+  <p class="sub">Android 7.0 or newer, and one file for every phone —
+     32-bit and 64-bit alike.
      <a href="https://github.com/Deepulakkadasu/papertrader/releases/latest">All versions and fingerprints</a>.</p>
+
+  <h3 id="notinstalled">If it says <em>App not installed</em></h3>
+  <p>Until 0.9.59 this page handed out a 64-bit-only build, so phones with
+     a 32-bit processor downloaded a file they could not run and got
+     exactly that message. That was our mistake and it is fixed — the
+     download above now works on every Android phone. If you hit it
+     before, download again; nothing else is needed.</p>
+  <p>If it still fails, it is one of these:</p>
+  <ul>
+    <li><strong>Play Protect blocked it.</strong> Tap <em>More details</em>
+        → <em>Install anyway</em>. It warns about every app installed
+        outside the store, ours included.</li>
+    <li><strong>An older Paper Trader is already on the phone</strong> from
+        a file someone sent you long ago. Android refuses to replace an app
+        with one signed differently. Uninstall the old one first — your
+        trades are in your account, so signing in restores them.</li>
+    <li><strong>Not enough free space.</strong> Android needs roughly twice
+        the file size free while it installs.</li>
+    <li><strong>The download stopped short.</strong> Check the fingerprint
+        below; if it does not match, delete the file and download again.</li>
+  </ul>
 
   <h3>Check what you downloaded</h3>
   <p>Every release lists a SHA-256 fingerprint. On a phone, an app like
      <em>Hash Droid</em> will compute it; on a computer:</p>
-  <p><code>sha256sum papertrader-arm64-v8a.apk</code></p>
+  <p><code>sha256sum papertrader.apk</code></p>
   <p>If it does not match the one on the release page, do not install it —
      tell us instead.</p>
 

@@ -1,22 +1,27 @@
 {
-    "build":  958,
-    "version":  "0.9.58",
-    "notes":  "Describe a rule the Lab does not know and the AI compiles YOUR words into a strategy - read it back, test it, deploy it on paper",
+    "build":  959,
+    "version":  "0.9.59",
+    "notes":  "**If the app would not install on your phone, it will now.**\n\nUntil this release the download on the website was a 64-bit-only build.\nPhones that run a 32-bit version of Android â€” a Redmi 9i, for example â€”\ndownloaded it fine and then showed *App not installed*, with nothing to\nexplain why. That was our mistake, not your phone\u0027s. There is now one\nAPK that installs on every Android phone, 32-bit and 64-bit alike.\n\n**The AI Strategy Lab works again.** Google retired the model name the\napp was asking for, but only for keys that had not used it before â€” so\nit kept working here and failed for everyone else. The app now asks your\nown key which model it can actually use, so a rename on Google\u0027s side\ncannot take the feature down again.\n\n**You can reach a person.** Help \u0026 support now carries a WhatsApp number\nand a group link, alongside the channel.\n\nNothing changed in how orders, positions or fills are calculated.\n",
     "files":  {
+                  "universal":  {
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.59/papertrader.apk",
+                                    "sha256":  "44a7618a210e76cab37ec156728481e968117739eca701feb966bc768d09b48f",
+                                    "size":  52831629
+                                },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.58/papertrader-x86_64.apk",
-                                 "sha256":  "a6baef2a41d33325efae5af94d94a78e29c6d19a734aaaf9f8d371d6879896c8",
-                                 "size":  32903423
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.59/papertrader.apk",
+                                 "sha256":  "44a7618a210e76cab37ec156728481e968117739eca701feb966bc768d09b48f",
+                                 "size":  52831629
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.58/papertrader-arm64-v8a.apk",
-                                    "sha256":  "9467570cb2964b311935a5592b60d2dd7d200464f946f993be35d6b92b23451f",
-                                    "size":  31183462
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.59/papertrader.apk",
+                                    "sha256":  "44a7618a210e76cab37ec156728481e968117739eca701feb966bc768d09b48f",
+                                    "size":  52831629
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.58/papertrader-armeabi-v7a.apk",
-                                      "sha256":  "67dee2965716e12250c4c716f804fe9693de06fc34f4d5383696cb354d5e71d3",
-                                      "size":  28694396
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.59/papertrader.apk",
+                                      "sha256":  "44a7618a210e76cab37ec156728481e968117739eca701feb966bc768d09b48f",
+                                      "size":  52831629
                                   }
               }
 }
