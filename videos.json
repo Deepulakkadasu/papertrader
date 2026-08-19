@@ -6,7 +6,14 @@
    "blurb": "Real NIFTY chart lo zone ela pani chestundo",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel5_sd_zones.mp4",
    "bytes": 3274485,
-   "sha1": "4745dd401e9d59914847e33f7f3ac2ff6b2ec9f5"
+   "sha1": "4745dd401e9d59914847e33f7f3ac2ff6b2ec9f5",
+   "section": "Basics - real data lo",
+   "order": 4,
+   "guided": true,
+   "lang": "te",
+   "context": [
+    "chart"
+   ]
   },
   {
    "id": "reel10_stop_hunt",
@@ -14,7 +21,14 @@
    "blurb": "Real sweep: andari stops okate chota. Evaru konnaro chudandi",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel10_stop_hunt.mp4",
    "bytes": 4067572,
-   "sha1": "869e88ac515823d9a5e2ad85fd81cffe4437a81f"
+   "sha1": "869e88ac515823d9a5e2ad85fd81cffe4437a81f",
+   "section": "Basics - real data lo",
+   "order": 5,
+   "guided": true,
+   "lang": "te",
+   "context": [
+    "chart"
+   ]
   },
   {
    "id": "guide_upstox_connect",
@@ -22,7 +36,14 @@
    "blurb": "API app create nunchi live prices varaku - keys phone lone",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/guide_upstox_connect.mp4",
    "bytes": 39329820,
-   "sha1": "ee08936e2b2d6986fd68258ca26e54b8cd2302f8"
+   "sha1": "ee08936e2b2d6986fd68258ca26e54b8cd2302f8",
+   "section": "App guides",
+   "order": 1,
+   "guided": false,
+   "lang": "te",
+   "context": [
+    "connect_broker"
+   ]
   },
   {
    "id": "reel1_why_price_moves",
@@ -30,7 +51,11 @@
    "blurb": "Order book, spread, LTP - motham story",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel1_why_price_moves.mp4",
    "bytes": 3313392,
-   "sha1": "be25c688a13d0dcfa6039bffd5ced639117d09f6"
+   "sha1": "be25c688a13d0dcfa6039bffd5ced639117d09f6",
+   "section": "Basics - real data lo",
+   "order": 1,
+   "guided": true,
+   "lang": "te"
   },
   {
    "id": "reel2_candle_ela_form_avthundi",
@@ -38,7 +63,14 @@
    "blurb": "Open high low close - prathi candle oka fight",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel2_candle_ela_form_avthundi.mp4",
    "bytes": 3145440,
-   "sha1": "79e4471a114ba4e7d23975ae93f97d2bcae091f0"
+   "sha1": "79e4471a114ba4e7d23975ae93f97d2bcae091f0",
+   "section": "Basics - real data lo",
+   "order": 2,
+   "guided": true,
+   "lang": "te",
+   "context": [
+    "chart"
+   ]
   },
   {
    "id": "reel3_trust_broker_keys",
@@ -46,7 +78,14 @@
    "blurb": "Key phone lo ne. Server asalu ledu.",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel3_trust_broker_keys.mp4",
    "bytes": 3260479,
-   "sha1": "be0f591f9e4be18138e94263e734123e1389a275"
+   "sha1": "be0f591f9e4be18138e94263e734123e1389a275",
+   "section": "App guides",
+   "order": 2,
+   "guided": false,
+   "lang": "te",
+   "context": [
+    "connect_broker"
+   ]
   },
   {
    "id": "reel4_strategy_lab",
@@ -54,7 +93,14 @@
    "blurb": "Idea nunchi honest backtest varaku",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel4_strategy_lab.mp4",
    "bytes": 2683583,
-   "sha1": "d6f7f6edf1ceb2ebea8b2ebce77bdbc9d6aa5389"
+   "sha1": "d6f7f6edf1ceb2ebea8b2ebce77bdbc9d6aa5389",
+   "section": "App guides",
+   "order": 3,
+   "guided": false,
+   "lang": "te",
+   "context": [
+    "strategy_lab"
+   ]
   },
   {
    "id": "reel6_costs",
@@ -62,7 +108,14 @@
    "blurb": "Flat trade = -Rs.61. Bill motham ikkade",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel6_costs.mp4",
    "bytes": 3792513,
-   "sha1": "577b71fcc70103dda0b61e951c736490ec8f2888"
+   "sha1": "577b71fcc70103dda0b61e951c736490ec8f2888",
+   "section": "Risk & costs nijalu",
+   "order": 1,
+   "guided": true,
+   "lang": "te",
+   "context": [
+    "order_ticket"
+   ]
   },
   {
    "id": "reel7_timeframes",
@@ -70,7 +123,14 @@
    "blurb": "Up a? Down a? Rendu correct - zoom kadha",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel7_timeframes.mp4",
    "bytes": 4447012,
-   "sha1": "2345c84355178631de1607b2c5986a4c4012887a"
+   "sha1": "2345c84355178631de1607b2c5986a4c4012887a",
+   "section": "Basics - real data lo",
+   "order": 3,
+   "guided": true,
+   "lang": "te",
+   "context": [
+    "chart"
+   ]
   },
   {
    "id": "reel8_zero_edges",
@@ -78,7 +138,14 @@
    "blurb": "Anduke memu tips ammamu",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel8_zero_edges.mp4",
    "bytes": 5104774,
-   "sha1": "b29826267e0a3b98adb6d095cd4f3c6201a3073e"
+   "sha1": "b29826267e0a3b98adb6d095cd4f3c6201a3073e",
+   "section": "Risk & costs nijalu",
+   "order": 5,
+   "guided": true,
+   "lang": "te",
+   "context": [
+    "strategy_lab"
+   ]
   },
   {
    "id": "reel9_practice_first",
@@ -86,7 +153,11 @@
    "blurb": "SEBI: 10 lo 9 loss. Tuition fee vs virtual money",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel9_practice_first.mp4",
    "bytes": 3179980,
-   "sha1": "db4f0a46347afef6aa5f4126d8006f98fed6fdbc"
+   "sha1": "db4f0a46347afef6aa5f4126d8006f98fed6fdbc",
+   "section": "Risk & costs nijalu",
+   "order": 4,
+   "guided": true,
+   "lang": "te"
   },
   {
    "id": "reel11_scalping_nijam",
@@ -94,7 +165,11 @@
    "blurb": "Prathi scalp Rs.61 tho start. SEBI lekkalu kuda",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel11_scalping_nijam.mp4",
    "bytes": 4097198,
-   "sha1": "1b7cb886763ea2a2a88e1328fa5209530bd0c800"
+   "sha1": "1b7cb886763ea2a2a88e1328fa5209530bd0c800",
+   "section": "Risk & costs nijalu",
+   "order": 2,
+   "guided": true,
+   "lang": "te"
   },
   {
    "id": "reel12_scalp_practice",
@@ -102,7 +177,14 @@
    "blurb": "Session rules, one-tap reps, journal - zero fee",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel12_scalp_practice.mp4",
    "bytes": 3433119,
-   "sha1": "4a7ed27b31288e622d8cdbe329d830f500494df9"
+   "sha1": "4a7ed27b31288e622d8cdbe329d830f500494df9",
+   "section": "Risk & costs nijalu",
+   "order": 3,
+   "guided": true,
+   "lang": "te",
+   "context": [
+    "journal"
+   ]
   }
  ]
 }
