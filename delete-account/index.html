@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete your account — Paper Trader</title>
+<meta name="description" content="How to delete your Paper Trader account and what happens to your data.">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #16181d; --dim: #5b616b;
+    --rule: #e3e7eb; --accent: #0a8f6c; --card: #f4f6f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0e12; --fg: #f2f3f5; --dim: #9aa0ab;
+      --rule: #24262e; --accent: #2ed3a7; --card: #191a20;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 20px 80px;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { padding: 44px 0 8px; border-bottom: 1px solid var(--rule); margin-bottom: 28px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .mark {
+    width: 34px; height: 34px; border-radius: 9px; background: var(--accent);
+    display: grid; place-items: center; flex: none;
+    color: #fff; font-weight: 800; font-size: 14px;
+  }
+  .brand span { font-weight: 700; font-size: 15px; letter-spacing: -0.1px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.4px; }
+  .updated { color: var(--dim); font-size: 14px; margin: 0 0 4px; }
+  h2 {
+    font-size: 19px; margin: 38px 0 10px; letter-spacing: -0.2px;
+    padding-top: 22px; border-top: 1px solid var(--rule);
+  }
+  ol, ul { padding-left: 22px; }
+  li { margin: 8px 0; }
+  .card {
+    background: var(--card); border-radius: 12px; padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .mail { font-weight: 600; }
+  footer { color: var(--dim); font-size: 13px; margin-top: 46px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand"><div class="mark">PT</div><span>Paper Trader</span></div>
+    <h1>Delete your account</h1>
+    <p class="updated">Applies to the Paper Trader app (com.papertrader.paper_trader)</p>
+  </header>
+
+  <p>You can delete your account from inside the app at any time, or ask
+  us to delete it for you. Both routes remove the same things.</p>
+
+  <h2>Delete it yourself, in the app</h2>
+  <ol>
+    <li>Open Paper Trader.</li>
+    <li>Tap the app icon at the top left to open the menu, then tap your
+        name to open <strong>Account</strong>.</li>
+    <li>Tap <strong>Delete account</strong> and confirm.</li>
+  </ol>
+  <p>Your sign-in and your cloud record are deleted immediately. If the
+  app asks you to sign in again first, that is Google requiring a recent
+  sign-in before a deletion — sign in and repeat the step.</p>
+
+  <h2>Ask us to delete it</h2>
+  <div class="card">
+    <p>Email <span class="mail">dakshinsolar@gmail.com</span> from the
+    address you signed in with, with the subject <strong>Delete my
+    account</strong>.</p>
+    <p style="margin-bottom:0">We action it within 7 days and reply when
+    it is done. We may ask you to confirm from the same address — that is
+    the only check we do, and it exists so nobody else can delete your
+    account.</p>
+  </div>
+
+  <h2>What gets deleted</h2>
+  <ul>
+    <li>Your sign-in account with us.</li>
+    <li>Your cloud record: the display name and email attached to it, your
+        backup of practice trading state if you enabled backup, and any
+        subscription record we hold.</li>
+    <li>Support tickets you raised are anonymised — the text stays as a
+        record of what was reported, with your identity removed.</li>
+  </ul>
+
+  <h2>What is not ours to delete</h2>
+  <ul>
+    <li><strong>Your broker API keys and tokens never reach us.</strong>
+        They are stored only on your phone, in Android's hardware-backed
+        secure storage. Uninstalling the app removes them; so does
+        <em>Disconnect</em> on the broker screen.</li>
+    <li><strong>Practice trading data on your device</strong> — positions,
+        orders, journal, chart drawings, recorded market history. It lives
+        on the phone. Use <em>Reset account</em> inside the app, or
+        uninstall, to remove it.</li>
+    <li><strong>Your broker account</strong> is with your broker. Deleting
+        here changes nothing there.</li>
+    <li>Anonymous crash reports (Google Crashlytics) carry no account
+        identity and cannot be traced back to you after deletion.</li>
+  </ul>
+
+  <h2>Retention</h2>
+  <p>Nothing is kept after deletion except anonymised support-ticket text
+  and anonymous crash diagnostics. There is no grace period and no
+  archive — a deleted account cannot be restored, and neither can the
+  cloud backup that was attached to it.</p>
+
+  <footer>
+    <p>Paper Trader is a practice simulator. It places no real orders and
+    holds no money. See the
+    <a href="../privacy/">privacy policy</a> for the full picture.</p>
+  </footer>
+</main>
+</body>
+</html>
