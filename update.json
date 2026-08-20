@@ -1,27 +1,27 @@
 {
-    "build":  984,
-    "version":  "0.9.84",
-    "notes":  "**The order pad showed two-fifths of what a trade costs.** \"Approx charges\" priced only the order being placed. On options the entry pays no STT at all and the exit pays 0.15% of premium, so the number you read before committing money was well under half the round trip. The pad now says what the whole trade costs and how far the price has to move before you are square - which is the line that makes the case: a NIFTY option lot needs most of a rupee just to break even, and a five-rupee weekly needs several percent.\n\n**A VWAP on an index is not a VWAP.** NIFTY is a number, not something that trades, so every bar reports zero volume and the \"volume-weighted\" average weighs them all the same. It still runs - going silent would be worse - but the report now says so, in amber, right under the numbers.\n\n**Which day it is, for a contract, is a question about Mumbai.** Expiry-day detection, the futures list and near-month selection all read your device\u0027s calendar. Expiry day is the one session where an option\u0027s fill model changes.\n\n*If you skipped 0.9.83: your journal was counting trades that lost money as wins, and the coach was doing the same.*",
+    "build":  985,
+    "version":  "0.9.85",
+    "notes":  "**The chart\u0027s clock and the expiry countdown were your phone\u0027s, not the market\u0027s.** The candle countdown divided the phone\u0027s minute, so on a device in another zone it pointed at a minute the exchange does not close a candle on. And \"Expires today\" on an open position read the phone\u0027s calendar - on the wrong side of midnight that is the difference between a warning and no warning on the one day it matters.\n\n**A refused order left the strategy naming a position it never opened.**\n\n**An options rule could have bought the contract resolved for a different strategy** - a loose end from this afternoon\u0027s work, closed the same day.\n\n*If you skipped 0.9.84: the order pad now shows what a whole trade costs and how far price must move before you are square, and a VWAP measured on an index says so.*",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.84/papertrader.apk",
-                                    "sha256":  "e1d3f40ae4d5b1da8ee335a9d25449429a6a0b2c8c6991ff55e2f3a88cfd8c5d",
-                                    "size":  53520673
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.85/papertrader.apk",
+                                    "sha256":  "6c85b15eba2112403758b53e6c156beeecb47124069c9c788f4e7a025d6eb194",
+                                    "size":  53520677
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.84/papertrader.apk",
-                                 "sha256":  "e1d3f40ae4d5b1da8ee335a9d25449429a6a0b2c8c6991ff55e2f3a88cfd8c5d",
-                                 "size":  53520673
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.85/papertrader.apk",
+                                 "sha256":  "6c85b15eba2112403758b53e6c156beeecb47124069c9c788f4e7a025d6eb194",
+                                 "size":  53520677
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.84/papertrader.apk",
-                                    "sha256":  "e1d3f40ae4d5b1da8ee335a9d25449429a6a0b2c8c6991ff55e2f3a88cfd8c5d",
-                                    "size":  53520673
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.85/papertrader.apk",
+                                    "sha256":  "6c85b15eba2112403758b53e6c156beeecb47124069c9c788f4e7a025d6eb194",
+                                    "size":  53520677
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.84/papertrader.apk",
-                                      "sha256":  "e1d3f40ae4d5b1da8ee335a9d25449429a6a0b2c8c6991ff55e2f3a88cfd8c5d",
-                                      "size":  53520673
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.85/papertrader.apk",
+                                      "sha256":  "6c85b15eba2112403758b53e6c156beeecb47124069c9c788f4e7a025d6eb194",
+                                      "size":  53520677
                                   }
               }
 }
