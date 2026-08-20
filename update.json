@@ -1,27 +1,27 @@
 {
-    "build":  968,
-    "version":  "0.9.68",
-    "notes":  "**Ask your broker what it actually gives you.** Strategies now opens\nwith a data check: it asks your own account for a year of candles on\nthe index, the futures contract, a live option and whatever equity or\ncommodity you watch, then tells you exactly what came back and what can\nhonestly be tested with it. Every claim the app makes about a backtest\nnow rests on that measurement instead of an assumption.\n\n**The strategy builder speaks plainly.** Whatever you pick, the top of\nthe screen says what you built in one sentence â€” \"When NIFTY\u0027s 9-candle\naverage crosses above its 21-candle average, buy 1 lot of NIFTY\nfutures. Sell again at 1% profit, at 0.5% loss, or before the market\ncloses.\" The two numbers that decide whether an idea is worth trying\nare money now, not jargon: what it sets aside to hold, and what each\nbuy-and-sell costs in charges.\n\n**Options work end to end.** Choose a call or a put, how far from the\nmoney, and which expiry. Your rule watches the index; when it fires the\napp buys that actual contract at the real premium, with the stop and\ntarget set on the premium. A backtest shows you WHEN the rule fired and\nputs no rupee figure on the option â€” those strikes have expired and\nnobody can price them any more â€” so the real answer comes from running\nit forward on paper.\n\n**Futures roll themselves.** A rule built on the August contract moves\nto the next one when August expires, keeping its history and its caps,\nand never while a position is open.\n\n**Two fixes underneath.** Backtests were charging a flat 0.35% of\nturnover when a broker charges about a sixth of that â€” every result was\nburied under costs that were never real. And positions were being held\novernight in a test while the deployed version squares off at the bell,\nso the report described trades the app would never place.\n",
+    "build":  976,
+    "version":  "0.9.76",
+    "notes":  "**Backtests were running on data they never had.** Three separate\nlayers were hiding the same failure, and together they meant every\nbacktest in the app ran on a single session while printing a longer\nwindow on the report. Fixed: history is fetched in chunks your broker\nwill accept, and the report states the span it actually covered. On a\nreal account that is the difference between 60 candles of this morning\nand 4,520 going back to May.\n\n**The rule you tested is now the rule that runs.** Reports were\nproduced on 5-minute candles while a deployed rule read 1-minute ones,\nwhich makes it a different rule â€” different crossings, different times,\ndifferent trades. A strategy now carries one candle size, you choose it\non the build screen, and both use it.\n\n**A stop that gets jumped now costs what it really costs.** When a\ncandle opens past your stop, that price was never available again. The\ntest used to pretend you got it anyway.\n\n**Options are priced on the option.** Each signal is valued on the\npremium of the contract it would really have bought, and any signal the\ndata cannot price honestly is left out and counted rather than\nestimated â€” including ones where the listed contract was not the expiry\nyour rule would have chosen that day.\n\n**Coach can read your patterns.** It joins its own observations\ntogether and tells you what they add up to: your habits, never what to\ntrade. Uses your own AI key, and only those lines leave the phone.\n\n**Also:** rules can sell first as well as buy; futures roll onto the\nnext contract by themselves; commodities and equity are available; and\nevery deployed rule has a Live screen listing every trade it has taken,\nwhat it is holding, and why a signal did not become a trade.\n",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.68/papertrader.apk",
-                                    "sha256":  "c8823018cb8dabc15d222e944f44656364c4499e67cc32fff8c3d2b91780494f",
-                                    "size":  53208777
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.76/papertrader.apk",
+                                    "sha256":  "ca589a7186162b149b716458aef20f690f4b34129fbbd8404c418858947a0b94",
+                                    "size":  53372685
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.68/papertrader.apk",
-                                 "sha256":  "c8823018cb8dabc15d222e944f44656364c4499e67cc32fff8c3d2b91780494f",
-                                 "size":  53208777
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.76/papertrader.apk",
+                                 "sha256":  "ca589a7186162b149b716458aef20f690f4b34129fbbd8404c418858947a0b94",
+                                 "size":  53372685
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.68/papertrader.apk",
-                                    "sha256":  "c8823018cb8dabc15d222e944f44656364c4499e67cc32fff8c3d2b91780494f",
-                                    "size":  53208777
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.76/papertrader.apk",
+                                    "sha256":  "ca589a7186162b149b716458aef20f690f4b34129fbbd8404c418858947a0b94",
+                                    "size":  53372685
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.68/papertrader.apk",
-                                      "sha256":  "c8823018cb8dabc15d222e944f44656364c4499e67cc32fff8c3d2b91780494f",
-                                      "size":  53208777
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.76/papertrader.apk",
+                                      "sha256":  "ca589a7186162b149b716458aef20f690f4b34129fbbd8404c418858947a0b94",
+                                      "size":  53372685
                                   }
               }
 }
