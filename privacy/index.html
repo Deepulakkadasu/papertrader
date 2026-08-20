@@ -108,6 +108,22 @@ it to anyone.</p>
 <div class="note">Your broker token is <strong>not</strong> included in
 that backup, by design.</div>
 
+<p><strong>A count of installs.</strong> Once a day, whether or not you
+sign in, the app writes a random identifier it generated on this device,
+the date it first ran, the date it last ran, and the app version. That
+is the whole record. It is never joined to your account, your email,
+your broker, your trades or your location; it is not your advertising
+ID; and it exists so we know how many people use the app. You can switch
+it off in Settings.</p>
+
+<p><strong>What you type into the AI strategy builder.</strong> If you
+add your own Google Gemini key and ask the app to turn a sentence into a
+rule, that sentence is sent to Google&rsquo;s Gemini API along with a
+description of what this app is able to run. It goes with YOUR key, to
+your own Google AI account, and it does not pass through us. Nothing is
+sent unless you ask for it, and the feature does nothing at all without
+a key you supplied.</p>
+
 <p><strong>Crash reports</strong> are sent to Google Firebase Crashlytics
 whether or not you sign in. These contain the error, the stack trace, and
 technical details about the device and app version. They do not contain
