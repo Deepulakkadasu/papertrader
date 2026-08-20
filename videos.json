@@ -14,7 +14,9 @@
    "context": [],
    "related": [
     "chart"
-   ]
+   ],
+   "seconds": 71,
+   "tour": false
   },
   {
    "id": "reel10_stop_hunt",
@@ -30,7 +32,9 @@
    "context": [],
    "related": [
     "chart"
-   ]
+   ],
+   "seconds": 66,
+   "tour": false
   },
   {
    "id": "guide_upstox_connect",
@@ -45,7 +49,9 @@
    "lang": "te",
    "context": [
     "connect_broker"
-   ]
+   ],
+   "seconds": 109,
+   "tour": false
   },
   {
    "id": "reel1_why_price_moves",
@@ -58,7 +64,9 @@
    "order": 1,
    "guided": true,
    "lang": "te",
-   "context": []
+   "context": [],
+   "seconds": 57,
+   "tour": false
   },
   {
    "id": "reel2_candle_ela_form_avthundi",
@@ -74,7 +82,9 @@
    "context": [],
    "related": [
     "chart"
-   ]
+   ],
+   "seconds": 66,
+   "tour": false
   },
   {
    "id": "reel3_trust_broker_keys",
@@ -90,7 +100,9 @@
    "context": [],
    "related": [
     "connect_broker"
-   ]
+   ],
+   "seconds": 58,
+   "tour": false
   },
   {
    "id": "reel4_strategy_lab",
@@ -106,7 +118,9 @@
    "context": [],
    "related": [
     "strategy_lab"
-   ]
+   ],
+   "seconds": 54,
+   "tour": false
   },
   {
    "id": "reel6_costs",
@@ -122,7 +136,9 @@
    "context": [],
    "related": [
     "order_ticket"
-   ]
+   ],
+   "seconds": 75,
+   "tour": false
   },
   {
    "id": "reel7_timeframes",
@@ -138,7 +154,9 @@
    "context": [],
    "related": [
     "chart"
-   ]
+   ],
+   "seconds": 86,
+   "tour": false
   },
   {
    "id": "reel8_zero_edges",
@@ -154,7 +172,9 @@
    "context": [],
    "related": [
     "strategy_lab"
-   ]
+   ],
+   "seconds": 91,
+   "tour": false
   },
   {
    "id": "reel9_practice_first",
@@ -167,7 +187,9 @@
    "order": 4,
    "guided": true,
    "lang": "te",
-   "context": []
+   "context": [],
+   "seconds": 60,
+   "tour": false
   },
   {
    "id": "reel11_scalping_nijam",
@@ -180,7 +202,9 @@
    "order": 2,
    "guided": true,
    "lang": "te",
-   "context": []
+   "context": [],
+   "seconds": 66,
+   "tour": false
   },
   {
    "id": "reel12_scalp_practice",
@@ -195,7 +219,9 @@
    "lang": "te",
    "context": [
     "journal"
-   ]
+   ],
+   "seconds": 63,
+   "tour": false
   },
   {
    "id": "guide_first_order",
@@ -210,7 +236,9 @@
    "lang": "te",
    "context": [
     "order_ticket"
-   ]
+   ],
+   "seconds": 35,
+   "tour": false
   },
   {
    "id": "guide_option_chain",
@@ -226,7 +254,9 @@
    "context": [],
    "related": [
     "option_chain"
-   ]
+   ],
+   "seconds": 39,
+   "tour": false
   },
   {
    "id": "guide_chart",
@@ -241,7 +271,9 @@
    "lang": "te",
    "context": [
     "chart"
-   ]
+   ],
+   "seconds": 34,
+   "tour": false
   },
   {
    "id": "guide_strategy_lab",
@@ -256,7 +288,9 @@
    "lang": "te",
    "context": [
     "strategy_lab"
-   ]
+   ],
+   "seconds": 38,
+   "tour": false
   },
   {
    "id": "guide_coach",
@@ -271,7 +305,9 @@
    "lang": "te",
    "context": [
     "coach"
-   ]
+   ],
+   "seconds": 38,
+   "tour": false
   },
   {
    "id": "reel15_gap",
@@ -287,7 +323,9 @@
    "lang": "te",
    "related": [
     "chart"
-   ]
+   ],
+   "seconds": 29,
+   "tour": false
   },
   {
    "id": "reel16_lot",
@@ -303,7 +341,9 @@
    "lang": "te",
    "related": [
     "order_ticket"
-   ]
+   ],
+   "seconds": 31,
+   "tour": false
   },
   {
    "id": "reel17_support",
@@ -319,7 +359,9 @@
    "lang": "te",
    "related": [
     "chart"
-   ]
+   ],
+   "seconds": 29,
+   "tour": false
   },
   {
    "id": "reel18_theta",
@@ -335,7 +377,9 @@
    "lang": "te",
    "related": [
     "option_chain"
-   ]
+   ],
+   "seconds": 33,
+   "tour": false
   },
   {
    "id": "reel13_showcase_light",
@@ -351,7 +395,9 @@
    "lang": "te",
    "related": [
     "chart"
-   ]
+   ],
+   "seconds": 68,
+   "tour": false
   },
   {
    "id": "reel14_smart_retail_launch",
@@ -364,7 +410,9 @@
    "order": 0,
    "guided": true,
    "lang": "te",
-   "context": []
+   "context": [],
+   "seconds": 54,
+   "tour": false
   },
   {
    "id": "reel19_spread",
@@ -380,7 +428,9 @@
    "lang": "te",
    "related": [
     "option_chain"
-   ]
+   ],
+   "seconds": 31,
+   "tour": false
   },
   {
    "id": "reel20_volume",
@@ -396,7 +446,9 @@
    "lang": "te",
    "related": [
     "chart"
-   ]
+   ],
+   "seconds": 32,
+   "tour": false
   },
   {
    "id": "reel21_margin",
@@ -412,7 +464,9 @@
    "lang": "te",
    "related": [
     "order_ticket"
-   ]
+   ],
+   "seconds": 31,
+   "tour": false
   },
   {
    "id": "reel22_expiry",
@@ -428,14 +482,18 @@
    "lang": "te",
    "related": [
     "option_chain"
-   ]
+   ],
+   "seconds": 32,
+   "tour": false
   },
   {
    "id": "reel13_stophunt_showcase",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel13_stophunt_showcase.mp4",
    "bytes": 4068124,
    "sha1": "8fcf3afc5f414c9de92040745950b34f1cfea23b",
-   "context": []
+   "context": [],
+   "seconds": 65,
+   "tour": false
   },
   {
    "id": "screen_funds",
@@ -450,7 +508,9 @@
    "context": [
     "funds"
    ],
-   "lang": "te"
+   "lang": "te",
+   "seconds": 21,
+   "tour": true
   },
   {
    "id": "screen_option_chain",
@@ -465,7 +525,9 @@
    "context": [
     "option_chain"
    ],
-   "lang": "te"
+   "lang": "te",
+   "seconds": 22,
+   "tour": true
   },
   {
    "id": "screen_movers",
@@ -480,7 +542,9 @@
    "context": [
     "movers"
    ],
-   "lang": "te"
+   "lang": "te",
+   "seconds": 17,
+   "tour": true
   },
   {
    "id": "screen_risk",
@@ -495,7 +559,9 @@
    "context": [
     "risk"
    ],
-   "lang": "te"
+   "lang": "te",
+   "seconds": 24,
+   "tour": true
   },
   {
    "id": "screen_market_pulse",
@@ -510,7 +576,9 @@
    "context": [
     "market_pulse"
    ],
-   "lang": "te"
+   "lang": "te",
+   "seconds": 18,
+   "tour": true
   },
   {
    "id": "screen_reports",
@@ -525,7 +593,9 @@
    "context": [
     "reports"
    ],
-   "lang": "te"
+   "lang": "te",
+   "seconds": 18,
+   "tour": true
   }
  ],
  "diary": {
