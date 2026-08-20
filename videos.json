@@ -347,6 +347,66 @@
    "order": 0,
    "guided": true,
    "lang": "te"
+  },
+  {
+   "id": "reel19_spread",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel19_spread.mp4",
+   "bytes": 1011633,
+   "sha1": "205464c11cbfb23710669d914eab4c160f0f7a68",
+   "title": "Spread ante enti?",
+   "blurb": "Konagane minus lo enduku untaru",
+   "section": "Risk & costs nijalu",
+   "order": 7,
+   "guided": true,
+   "context": [
+    "option_chain"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "reel20_volume",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel20_volume.mp4",
+   "bytes": 1083682,
+   "sha1": "5facd86b9f12aa728380b9186657734224b135c8",
+   "title": "Volume ekkuva ante price paiki na?",
+   "blurb": "Okka trade lo buyer, seller iddaru untaru",
+   "section": "Basics - real data lo",
+   "order": 10,
+   "guided": true,
+   "context": [
+    "chart"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "reel21_margin",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel21_margin.mp4",
+   "bytes": 1174405,
+   "sha1": "d7d16f3d3a93592a23f5cc64d3d08467d13bc47e",
+   "title": "Margin ante deposit, price kaadu",
+   "blurb": "Risk margin kaadu - position size",
+   "section": "Risk & costs nijalu",
+   "order": 8,
+   "guided": true,
+   "context": [
+    "order_ticket"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "reel22_expiry",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel22_expiry.mp4",
+   "bytes": 1079403,
+   "sha1": "251ef419561b1363bf6f9807ddf58262fb86d36b",
+   "title": "Expiry roju em jarugutundi?",
+   "blurb": "Time value dadapu sunna - chinna move, pedda swing",
+   "section": "Risk & costs nijalu",
+   "order": 9,
+   "guided": true,
+   "context": [
+    "option_chain"
+   ],
+   "lang": "te"
   }
  ]
 }
