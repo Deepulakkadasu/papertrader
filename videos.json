@@ -446,7 +446,7 @@
    "blurb": "Virtual koti, margin rows, P&L, charges - anni okate chota",
    "section": "Screen tours",
    "order": 2,
-   "guided": true,
+   "guided": false,
    "context": [
     "funds"
    ],
@@ -461,7 +461,7 @@
    "blurb": "Mana screen meeda ne: strikes, spot line, OI bars, panes",
    "section": "Screen tours",
    "order": 1,
-   "guided": true,
+   "guided": false,
    "context": [
     "option_chain"
    ],
@@ -476,7 +476,7 @@
    "blurb": "Gainers, losers, most active - NIFTY 50 lo",
    "section": "Screen tours",
    "order": 3,
-   "guided": true,
+   "guided": false,
    "context": [
     "movers"
    ],
@@ -491,7 +491,7 @@
    "blurb": "Daily loss limit, Safe Exit, F&O pause - mee brakes",
    "section": "Screen tours",
    "order": 4,
-   "guided": true,
+   "guided": false,
    "context": [
     "risk"
    ],
@@ -506,7 +506,7 @@
    "blurb": "Base rates gatham cheptayi - repu prediction kaadu",
    "section": "Screen tours",
    "order": 5,
-   "guided": true,
+   "guided": false,
    "context": [
     "market_pulse"
    ],
@@ -521,7 +521,7 @@
    "blurb": "XIRR, realised, charges, CSV - practice record kosam",
    "section": "Screen tours",
    "order": 6,
-   "guided": true,
+   "guided": false,
    "context": [
     "reports"
    ],
