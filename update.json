@@ -1,27 +1,27 @@
 {
-    "build":  987,
-    "version":  "0.9.87",
-    "notes":  "**The app is free. The payment path is gone, not switched off.** Play Billing, the UPI screen, licence keys, the subscription record, the trial clock and the countdown banner are deleted. Nothing is locked, nothing runs out, there is no plan to be on. Reaching people comes first, and when there is a way to pay it will be one we build ourselves.\n\n**Your backtests now keep their history.** The candle archive - whatever depth your own broker grants, stored on your phone - existed in the code and nothing read or wrote it. So every backtest asked the broker again for bars it had already been given, and a window your broker refused today was gone even if it had been served last week. It keeps them now.\n\n**A backup file you own.** No sign-in, nothing uploaded: one file with your account, watchlists, alerts, drawings and every rule you have built. And every rule you built was, until now, the one thing no backup carried - not the cloud copy either.\n\n**Your broker keys have not moved and will not.** They stay in this phone\u0027s keystore, out of every backup, out of the cloud, out of the file. That is the same in the Play build.",
+    "build":  988,
+    "version":  "0.9.88",
+    "notes":  "**A price alert crossed while the app was shut never arrived.** Alerts only fired on a crossing a running app watched happen. Set one above the price, close the app, let the market pass the level overnight, open it in the morning - nothing. And that is the commonest case, because people set an alert precisely so they do not have to watch. An alert now remembers which side the price was on when you set it, and that answers on the first tick after a launch.\n\n**Your backtests keep their history, and keep it tidy.** The candle archive is wired in: whatever depth your broker grants is stored on the phone, so a window it refuses today is still there if it was served last week. It stores only what is new or corrected, so running the same backtest fifty times does not grow the file - and it fills the window you asked for rather than quietly widening it.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.87/papertrader.apk",
-                                    "sha256":  "daad76be7764b01c08288b656361b2abec647c64616603a76b530acdc8042528",
-                                    "size":  53159141
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.88/papertrader.apk",
+                                    "sha256":  "795faf9dfd69511a42059ade619dcef44af893f8359534aa0141097fcbc05f1c",
+                                    "size":  53241061
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.87/papertrader.apk",
-                                 "sha256":  "daad76be7764b01c08288b656361b2abec647c64616603a76b530acdc8042528",
-                                 "size":  53159141
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.88/papertrader.apk",
+                                 "sha256":  "795faf9dfd69511a42059ade619dcef44af893f8359534aa0141097fcbc05f1c",
+                                 "size":  53241061
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.87/papertrader.apk",
-                                    "sha256":  "daad76be7764b01c08288b656361b2abec647c64616603a76b530acdc8042528",
-                                    "size":  53159141
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.88/papertrader.apk",
+                                    "sha256":  "795faf9dfd69511a42059ade619dcef44af893f8359534aa0141097fcbc05f1c",
+                                    "size":  53241061
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.87/papertrader.apk",
-                                      "sha256":  "daad76be7764b01c08288b656361b2abec647c64616603a76b530acdc8042528",
-                                      "size":  53159141
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.88/papertrader.apk",
+                                      "sha256":  "795faf9dfd69511a42059ade619dcef44af893f8359534aa0141097fcbc05f1c",
+                                      "size":  53241061
                                   }
               }
 }
