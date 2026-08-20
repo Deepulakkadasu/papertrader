@@ -1,27 +1,27 @@
 {
-    "build":  986,
-    "version":  "0.9.86",
-    "notes":  "**Every rule you built was the one thing no backup carried.** The account screen promised cloud backup covers \"your paper trades, watchlists, alerts and strategies\". Three of those four were true. A new phone came back with an empty Lab - including scripts the AI had been paid to compile - while the screen said your account had been saved. Fixed, and your customised coach goes with it.\n\n**There is now a backup file you own.** No sign-in, nothing uploaded: one file with your account, watchlists, alerts, drawings and every rule, kept wherever you keep things. The code was written and tested months ago and never given a button, so the only way off a phone was the one that asks for your name and email. Your broker keys are not in it and never will be.\n\n**A delta rule that cannot see its contract now says so** instead of sitting there looking like the market never obliged.",
+    "build":  987,
+    "version":  "0.9.87",
+    "notes":  "**The app is free. The payment path is gone, not switched off.** Play Billing, the UPI screen, licence keys, the subscription record, the trial clock and the countdown banner are deleted. Nothing is locked, nothing runs out, there is no plan to be on. Reaching people comes first, and when there is a way to pay it will be one we build ourselves.\n\n**Your backtests now keep their history.** The candle archive - whatever depth your own broker grants, stored on your phone - existed in the code and nothing read or wrote it. So every backtest asked the broker again for bars it had already been given, and a window your broker refused today was gone even if it had been served last week. It keeps them now.\n\n**A backup file you own.** No sign-in, nothing uploaded: one file with your account, watchlists, alerts, drawings and every rule you have built. And every rule you built was, until now, the one thing no backup carried - not the cloud copy either.\n\n**Your broker keys have not moved and will not.** They stay in this phone\u0027s keystore, out of every backup, out of the cloud, out of the file. That is the same in the Play build.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.86/papertrader.apk",
-                                    "sha256":  "6c050b599657a4118e7455816bb80a29bb1322db0c72cac11892f60d52f9c01f",
-                                    "size":  53635437
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.87/papertrader.apk",
+                                    "sha256":  "daad76be7764b01c08288b656361b2abec647c64616603a76b530acdc8042528",
+                                    "size":  53159141
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.86/papertrader.apk",
-                                 "sha256":  "6c050b599657a4118e7455816bb80a29bb1322db0c72cac11892f60d52f9c01f",
-                                 "size":  53635437
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.87/papertrader.apk",
+                                 "sha256":  "daad76be7764b01c08288b656361b2abec647c64616603a76b530acdc8042528",
+                                 "size":  53159141
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.86/papertrader.apk",
-                                    "sha256":  "6c050b599657a4118e7455816bb80a29bb1322db0c72cac11892f60d52f9c01f",
-                                    "size":  53635437
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.87/papertrader.apk",
+                                    "sha256":  "daad76be7764b01c08288b656361b2abec647c64616603a76b530acdc8042528",
+                                    "size":  53159141
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.86/papertrader.apk",
-                                      "sha256":  "6c050b599657a4118e7455816bb80a29bb1322db0c72cac11892f60d52f9c01f",
-                                      "size":  53635437
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.87/papertrader.apk",
+                                      "sha256":  "daad76be7764b01c08288b656361b2abec647c64616603a76b530acdc8042528",
+                                      "size":  53159141
                                   }
               }
 }
