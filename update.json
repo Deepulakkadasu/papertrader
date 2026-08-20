@@ -1,27 +1,27 @@
 {
-    "build":  982,
-    "version":  "0.9.82",
-    "notes":  "**An option\u0027s stop was booked against the index\u0027s price.** When a stop or target fired, the runner found out on its next tick and priced that exit off NIFTY - so a contract bought at 120 was closed against a quote of 24,000. A twenty-three thousand rupee \"profit\" per unit, straight into the day\u0027s P\u0026L and the loss cap that decides whether the rule keeps trading. It now reads the engine\u0027s own fill for the contract that was actually held.\n\n**A deployed rule was not paying the spread.** It filled at the exact quote - better than the backtest that justified it, and better than a person tapping the same trade by hand. A rule firing is a market order and now fills like one, at the price it really got.\n\n**Today\u0027s P\u0026L on a live rule ignored costs.** The one app that argues costs are the edge was reporting its own deployed rules gross - and the day-loss cap read the same number, so a rule ran past a cap it had already breached while the screen said it was still ahead.\n\n**An exit was booked before the order was placed.** If the engine refused it - the bell had gone, the segment was shut - the rule believed it was flat while the position was still open.\n\n**Every greek was a function of your phone\u0027s timezone.** The expiry bell was 15:30 wherever the device thought it was, rather than 15:30 in India.\n\n**An expired commodity contract now says so** instead of blaming your broker for not serving its candles.\n\n*Also in 0.9.81, if you skipped it: written options no longer report winners as losses, delta rules actually run once deployed, \"exit after three bars\" works live, leverage answers to the stock, and simple sentences build without the AI.*",
+    "build":  983,
+    "version":  "0.9.83",
+    "notes":  "**Your journal was counting trades that lost money as wins.** Win rate, profit factor, average win, average loss - all of it came from the difference between two prices with the charges thrown away. A scratch that made twenty rupees and paid forty was a win. The trades most likely to flip sign once costs are counted are exactly the small quick ones a journal is full of, so the scoreboard flattered precisely the habit this app exists to warn you about.\n\n**The coach was doing the same thing.** Every observation it makes about money - your risk-reward, your win rate, your loss streaks - read gross P\u0026L. A scalper whose trades made forty rupees and cost sixty was told he had good discipline.\n\n**An expired commodity contract now says so** instead of reporting that your broker will not serve its candles.\n\n*If you skipped 0.9.82: an option\u0027s stop was booked against the index\u0027s price, deployed rules were not paying the spread, and every greek depended on your phone\u0027s timezone.*",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.82/papertrader.apk",
-                                    "sha256":  "a54167047b091cd25a49aa79012f039c974c552b5d88b224465c1e56948613e2",
-                                    "size":  53455137
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.83/papertrader.apk",
+                                    "sha256":  "fa9fd6a41007f4677f80ce97fdbaac24cd482025aeff2ea4576f24bf3af1f33c",
+                                    "size":  53455141
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.82/papertrader.apk",
-                                 "sha256":  "a54167047b091cd25a49aa79012f039c974c552b5d88b224465c1e56948613e2",
-                                 "size":  53455137
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.83/papertrader.apk",
+                                 "sha256":  "fa9fd6a41007f4677f80ce97fdbaac24cd482025aeff2ea4576f24bf3af1f33c",
+                                 "size":  53455141
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.82/papertrader.apk",
-                                    "sha256":  "a54167047b091cd25a49aa79012f039c974c552b5d88b224465c1e56948613e2",
-                                    "size":  53455137
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.83/papertrader.apk",
+                                    "sha256":  "fa9fd6a41007f4677f80ce97fdbaac24cd482025aeff2ea4576f24bf3af1f33c",
+                                    "size":  53455141
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.82/papertrader.apk",
-                                      "sha256":  "a54167047b091cd25a49aa79012f039c974c552b5d88b224465c1e56948613e2",
-                                      "size":  53455137
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.83/papertrader.apk",
+                                      "sha256":  "fa9fd6a41007f4677f80ce97fdbaac24cd482025aeff2ea4576f24bf3af1f33c",
+                                      "size":  53455141
                                   }
               }
 }
