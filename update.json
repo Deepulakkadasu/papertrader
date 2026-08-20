@@ -1,27 +1,27 @@
 {
-    "build":  983,
-    "version":  "0.9.83",
-    "notes":  "**Your journal was counting trades that lost money as wins.** Win rate, profit factor, average win, average loss - all of it came from the difference between two prices with the charges thrown away. A scratch that made twenty rupees and paid forty was a win. The trades most likely to flip sign once costs are counted are exactly the small quick ones a journal is full of, so the scoreboard flattered precisely the habit this app exists to warn you about.\n\n**The coach was doing the same thing.** Every observation it makes about money - your risk-reward, your win rate, your loss streaks - read gross P\u0026L. A scalper whose trades made forty rupees and cost sixty was told he had good discipline.\n\n**An expired commodity contract now says so** instead of reporting that your broker will not serve its candles.\n\n*If you skipped 0.9.82: an option\u0027s stop was booked against the index\u0027s price, deployed rules were not paying the spread, and every greek depended on your phone\u0027s timezone.*",
+    "build":  984,
+    "version":  "0.9.84",
+    "notes":  "**The order pad showed two-fifths of what a trade costs.** \"Approx charges\" priced only the order being placed. On options the entry pays no STT at all and the exit pays 0.15% of premium, so the number you read before committing money was well under half the round trip. The pad now says what the whole trade costs and how far the price has to move before you are square - which is the line that makes the case: a NIFTY option lot needs most of a rupee just to break even, and a five-rupee weekly needs several percent.\n\n**A VWAP on an index is not a VWAP.** NIFTY is a number, not something that trades, so every bar reports zero volume and the \"volume-weighted\" average weighs them all the same. It still runs - going silent would be worse - but the report now says so, in amber, right under the numbers.\n\n**Which day it is, for a contract, is a question about Mumbai.** Expiry-day detection, the futures list and near-month selection all read your device\u0027s calendar. Expiry day is the one session where an option\u0027s fill model changes.\n\n*If you skipped 0.9.83: your journal was counting trades that lost money as wins, and the coach was doing the same.*",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.83/papertrader.apk",
-                                    "sha256":  "fa9fd6a41007f4677f80ce97fdbaac24cd482025aeff2ea4576f24bf3af1f33c",
-                                    "size":  53455141
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.84/papertrader.apk",
+                                    "sha256":  "e1d3f40ae4d5b1da8ee335a9d25449429a6a0b2c8c6991ff55e2f3a88cfd8c5d",
+                                    "size":  53520673
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.83/papertrader.apk",
-                                 "sha256":  "fa9fd6a41007f4677f80ce97fdbaac24cd482025aeff2ea4576f24bf3af1f33c",
-                                 "size":  53455141
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.84/papertrader.apk",
+                                 "sha256":  "e1d3f40ae4d5b1da8ee335a9d25449429a6a0b2c8c6991ff55e2f3a88cfd8c5d",
+                                 "size":  53520673
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.83/papertrader.apk",
-                                    "sha256":  "fa9fd6a41007f4677f80ce97fdbaac24cd482025aeff2ea4576f24bf3af1f33c",
-                                    "size":  53455141
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.84/papertrader.apk",
+                                    "sha256":  "e1d3f40ae4d5b1da8ee335a9d25449429a6a0b2c8c6991ff55e2f3a88cfd8c5d",
+                                    "size":  53520673
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.83/papertrader.apk",
-                                      "sha256":  "fa9fd6a41007f4677f80ce97fdbaac24cd482025aeff2ea4576f24bf3af1f33c",
-                                      "size":  53455141
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.84/papertrader.apk",
+                                      "sha256":  "e1d3f40ae4d5b1da8ee335a9d25449429a6a0b2c8c6991ff55e2f3a88cfd8c5d",
+                                      "size":  53520673
                                   }
               }
 }
