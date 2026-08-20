@@ -1,26 +1,26 @@
 {
-    "build":  990,
-    "version":  "0.9.90",
-    "notes":  "**The plain sentence said \"buy a call\" about a rule that writes one.** The one line on the build screen a beginner can act on read the rule\u0027s direction - which is forced long for options so the leg can decide the side. A written option now says what it actually is: sell, collect the premium, keep it if the index stays below the strike (or above, for a put) - and says this is the side whose loss has no limit.\n\n**The live screen watching that rule had the same fault in three places.** A written call\u0027s profit was painted red, the line said \"Bought\", and the stop and target were described as the opposite of where they were really placed.\n\n**A share card could claim a profit the trade did not make** - the number that leaves the app into a WhatsApp group was before costs. So were the scalper strip, the realised P\u0026L statement and the basket preview. All four now count what trading costs.",
+    "build":  991,
+    "version":  "0.9.91",
+    "notes":  "**\"Sell\" built a rule that bought.** \"Short when ema 9 crosses below ema 21\" was stripped to its condition and built a BUY - the action word sat in the stop-word list, so it never reached the rule and never reached the amber box either. Same for \"rsi 70 daatithe ammu\". The clearest thing in the sentence, silently reversed. The side is now read, shown on the read-back card, and applied.\n\n**A Telugu \"don\u0027t\" was not a don\u0027t.** The negation guard was English-only, in an app whose sentences are mostly typed in romanised Telugu. \"konakoodadu rsi 70 paina unte\" - do NOT buy when RSI is above 70 - built exactly the rule it forbade. \"vaddu\", \"koodadu\" and the rest are in the guard now.\n\n**Max pain answered with the lowest strike when the chain carried no open interest** - an artefact of the search, printed next to PCR as if it were a level.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.90/papertrader.apk",
-                                    "sha256":  "f451706e6e3d4806fd1f3b52d9fb61ff0838961cf883aeb42efaf2a6922a372f",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.91/papertrader.apk",
+                                    "sha256":  "bd3bcb2009042ee4d227b662ed597fe680878c84ac405ec8c7ce6563fcf04efe",
                                     "size":  53241061
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.90/papertrader.apk",
-                                 "sha256":  "f451706e6e3d4806fd1f3b52d9fb61ff0838961cf883aeb42efaf2a6922a372f",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.91/papertrader.apk",
+                                 "sha256":  "bd3bcb2009042ee4d227b662ed597fe680878c84ac405ec8c7ce6563fcf04efe",
                                  "size":  53241061
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.90/papertrader.apk",
-                                    "sha256":  "f451706e6e3d4806fd1f3b52d9fb61ff0838961cf883aeb42efaf2a6922a372f",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.91/papertrader.apk",
+                                    "sha256":  "bd3bcb2009042ee4d227b662ed597fe680878c84ac405ec8c7ce6563fcf04efe",
                                     "size":  53241061
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.90/papertrader.apk",
-                                      "sha256":  "f451706e6e3d4806fd1f3b52d9fb61ff0838961cf883aeb42efaf2a6922a372f",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.91/papertrader.apk",
+                                      "sha256":  "bd3bcb2009042ee4d227b662ed597fe680878c84ac405ec8c7ce6563fcf04efe",
                                       "size":  53241061
                                   }
               }
