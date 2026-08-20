@@ -1,26 +1,26 @@
 {
-    "build":  989,
-    "version":  "0.9.89",
-    "notes":  "**A share card could claim a profit the trade did not make.** The P\u0026L on a share card - the image that goes into a WhatsApp group, the one number in this app that leaves it - was the difference between two prices with the charges thrown away. So was the realised P\u0026L statement shaped like a tax report. Both are after costs now, and the statement shows gross, charges and net in three columns instead of one.\n\n**The scalper strip showed the move, not the result.** A scalper\u0027s whole result is the difference between the move and the round trip, and the running P\u0026L counted only the move. Twenty clicks at twenty rupees each is four hundred rupees the number did not know about - on the one screen built for people making twenty clicks.\n\n**A basket quoted premium and margin and never mentioned charges.** A four-legged condor is four brokerages plus STT on both sells before the market has moved a rupee. It is quoted now, per leg.",
+    "build":  990,
+    "version":  "0.9.90",
+    "notes":  "**The plain sentence said \"buy a call\" about a rule that writes one.** The one line on the build screen a beginner can act on read the rule\u0027s direction - which is forced long for options so the leg can decide the side. A written option now says what it actually is: sell, collect the premium, keep it if the index stays below the strike (or above, for a put) - and says this is the side whose loss has no limit.\n\n**The live screen watching that rule had the same fault in three places.** A written call\u0027s profit was painted red, the line said \"Bought\", and the stop and target were described as the opposite of where they were really placed.\n\n**A share card could claim a profit the trade did not make** - the number that leaves the app into a WhatsApp group was before costs. So were the scalper strip, the realised P\u0026L statement and the basket preview. All four now count what trading costs.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.89/papertrader.apk",
-                                    "sha256":  "54564868e21c9635048a92e9d37e073d8215d9aacbcdd24c4112dfcf8f24d91b",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.90/papertrader.apk",
+                                    "sha256":  "f451706e6e3d4806fd1f3b52d9fb61ff0838961cf883aeb42efaf2a6922a372f",
                                     "size":  53241061
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.89/papertrader.apk",
-                                 "sha256":  "54564868e21c9635048a92e9d37e073d8215d9aacbcdd24c4112dfcf8f24d91b",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.90/papertrader.apk",
+                                 "sha256":  "f451706e6e3d4806fd1f3b52d9fb61ff0838961cf883aeb42efaf2a6922a372f",
                                  "size":  53241061
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.89/papertrader.apk",
-                                    "sha256":  "54564868e21c9635048a92e9d37e073d8215d9aacbcdd24c4112dfcf8f24d91b",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.90/papertrader.apk",
+                                    "sha256":  "f451706e6e3d4806fd1f3b52d9fb61ff0838961cf883aeb42efaf2a6922a372f",
                                     "size":  53241061
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.89/papertrader.apk",
-                                      "sha256":  "54564868e21c9635048a92e9d37e073d8215d9aacbcdd24c4112dfcf8f24d91b",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.90/papertrader.apk",
+                                      "sha256":  "f451706e6e3d4806fd1f3b52d9fb61ff0838961cf883aeb42efaf2a6922a372f",
                                       "size":  53241061
                                   }
               }
