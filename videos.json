@@ -11,7 +11,8 @@
    "order": 4,
    "guided": true,
    "lang": "te",
-   "context": [
+   "context": [],
+   "related": [
     "chart"
    ]
   },
@@ -26,7 +27,8 @@
    "order": 5,
    "guided": true,
    "lang": "te",
-   "context": [
+   "context": [],
+   "related": [
     "chart"
    ]
   },
@@ -55,7 +57,8 @@
    "section": "Basics - real data lo",
    "order": 1,
    "guided": true,
-   "lang": "te"
+   "lang": "te",
+   "context": []
   },
   {
    "id": "reel2_candle_ela_form_avthundi",
@@ -68,7 +71,8 @@
    "order": 2,
    "guided": true,
    "lang": "te",
-   "context": [
+   "context": [],
+   "related": [
     "chart"
    ]
   },
@@ -83,7 +87,8 @@
    "order": 2,
    "guided": false,
    "lang": "te",
-   "context": [
+   "context": [],
+   "related": [
     "connect_broker"
    ]
   },
@@ -98,7 +103,8 @@
    "order": 3,
    "guided": false,
    "lang": "te",
-   "context": [
+   "context": [],
+   "related": [
     "strategy_lab"
    ]
   },
@@ -113,7 +119,8 @@
    "order": 1,
    "guided": true,
    "lang": "te",
-   "context": [
+   "context": [],
+   "related": [
     "order_ticket"
    ]
   },
@@ -128,7 +135,8 @@
    "order": 3,
    "guided": true,
    "lang": "te",
-   "context": [
+   "context": [],
+   "related": [
     "chart"
    ]
   },
@@ -143,7 +151,8 @@
    "order": 5,
    "guided": true,
    "lang": "te",
-   "context": [
+   "context": [],
+   "related": [
     "strategy_lab"
    ]
   },
@@ -157,7 +166,8 @@
    "section": "Risk & costs nijalu",
    "order": 4,
    "guided": true,
-   "lang": "te"
+   "lang": "te",
+   "context": []
   },
   {
    "id": "reel11_scalping_nijam",
@@ -169,7 +179,8 @@
    "section": "Risk & costs nijalu",
    "order": 2,
    "guided": true,
-   "lang": "te"
+   "lang": "te",
+   "context": []
   },
   {
    "id": "reel12_scalp_practice",
@@ -212,7 +223,8 @@
    "order": 5,
    "guided": false,
    "lang": "te",
-   "context": [
+   "context": [],
+   "related": [
     "option_chain"
    ]
   },
@@ -271,10 +283,11 @@
    "section": "Basics - real data lo",
    "order": 6,
    "guided": true,
-   "context": [
+   "context": [],
+   "lang": "te",
+   "related": [
     "chart"
-   ],
-   "lang": "te"
+   ]
   },
   {
    "id": "reel16_lot",
@@ -286,10 +299,11 @@
    "section": "Basics - real data lo",
    "order": 7,
    "guided": true,
-   "context": [
+   "context": [],
+   "lang": "te",
+   "related": [
     "order_ticket"
-   ],
-   "lang": "te"
+   ]
   },
   {
    "id": "reel17_support",
@@ -301,10 +315,11 @@
    "section": "Basics - real data lo",
    "order": 8,
    "guided": true,
-   "context": [
+   "context": [],
+   "lang": "te",
+   "related": [
     "chart"
-   ],
-   "lang": "te"
+   ]
   },
   {
    "id": "reel18_theta",
@@ -316,10 +331,11 @@
    "section": "Risk & costs nijalu",
    "order": 6,
    "guided": true,
-   "context": [
+   "context": [],
+   "lang": "te",
+   "related": [
     "option_chain"
-   ],
-   "lang": "te"
+   ]
   },
   {
    "id": "reel13_showcase_light",
@@ -331,10 +347,11 @@
    "section": "Basics - real data lo",
    "order": 9,
    "guided": true,
-   "context": [
+   "context": [],
+   "lang": "te",
+   "related": [
     "chart"
-   ],
-   "lang": "te"
+   ]
   },
   {
    "id": "reel14_smart_retail_launch",
@@ -346,7 +363,8 @@
    "section": "Basics - real data lo",
    "order": 0,
    "guided": true,
-   "lang": "te"
+   "lang": "te",
+   "context": []
   },
   {
    "id": "reel19_spread",
@@ -358,10 +376,11 @@
    "section": "Risk & costs nijalu",
    "order": 7,
    "guided": true,
-   "context": [
+   "context": [],
+   "lang": "te",
+   "related": [
     "option_chain"
-   ],
-   "lang": "te"
+   ]
   },
   {
    "id": "reel20_volume",
@@ -373,10 +392,11 @@
    "section": "Basics - real data lo",
    "order": 10,
    "guided": true,
-   "context": [
+   "context": [],
+   "lang": "te",
+   "related": [
     "chart"
-   ],
-   "lang": "te"
+   ]
   },
   {
    "id": "reel21_margin",
@@ -388,10 +408,11 @@
    "section": "Risk & costs nijalu",
    "order": 8,
    "guided": true,
-   "context": [
+   "context": [],
+   "lang": "te",
+   "related": [
     "order_ticket"
-   ],
-   "lang": "te"
+   ]
   },
   {
    "id": "reel22_expiry",
@@ -403,16 +424,18 @@
    "section": "Risk & costs nijalu",
    "order": 9,
    "guided": true,
-   "context": [
+   "context": [],
+   "lang": "te",
+   "related": [
     "option_chain"
-   ],
-   "lang": "te"
+   ]
   },
   {
    "id": "reel13_stophunt_showcase",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/reel13_stophunt_showcase.mp4",
    "bytes": 4068124,
-   "sha1": "8fcf3afc5f414c9de92040745950b34f1cfea23b"
+   "sha1": "8fcf3afc5f414c9de92040745950b34f1cfea23b",
+   "context": []
   },
   {
    "id": "screen_funds",
