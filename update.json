@@ -1,26 +1,26 @@
 {
-    "build":  992,
-    "version":  "0.9.92",
-    "notes":  "**The Telugu could say \"crosses above\" and could not say \"drops below\".** \"rsi 30 kindaki vasthe konu\" reached the parser untouched and was refused, while its mirror image \"rsi 60 daatithe konu\" had worked all along. Half a vocabulary is worse than none, because the half that works teaches you the rest does too. padithe, thaggithe, kindaki, perigithe and penchithe are all in now.\n\n**Two of them were ideas, not words.** \"kindaki vasthe\" came out \"below reaches\", which is not a sentence. \"paiki tirigithe\" came out \"up turns\", so the Supertrend rule read \"supertrend up\" and left the verb in the amber box - refusing a rule it had already understood. Both are phrases now, with their opposites beside them.",
+    "build":  993,
+    "version":  "0.9.93",
+    "notes":  "**The check that keeps the AI honest could be satisfied by citing \"buy\".** Every rule the compiler writes has to quote your own words back, verbatim - that is what stops a model inventing a condition and calling it yours. It checked the quote was verbatim and never that it was anything: \"buy\" is a substring of almost every sentence typed into a strategy builder, so a real trading condition could hang off a citation naming nothing. A citation now has to survive having the filler stripped out.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.92/papertrader.apk",
-                                    "sha256":  "9ea2cba7efecbfd069df150b365efa2e02e859302d3c7e6392d15c023b94705e",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.93/papertrader.apk",
+                                    "sha256":  "0bdc4c7e61b1f4f0e8be8aabfcadb0f1ca65a6f8c0172b109a9a398b20ff92fe",
                                     "size":  53241061
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.92/papertrader.apk",
-                                 "sha256":  "9ea2cba7efecbfd069df150b365efa2e02e859302d3c7e6392d15c023b94705e",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.93/papertrader.apk",
+                                 "sha256":  "0bdc4c7e61b1f4f0e8be8aabfcadb0f1ca65a6f8c0172b109a9a398b20ff92fe",
                                  "size":  53241061
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.92/papertrader.apk",
-                                    "sha256":  "9ea2cba7efecbfd069df150b365efa2e02e859302d3c7e6392d15c023b94705e",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.93/papertrader.apk",
+                                    "sha256":  "0bdc4c7e61b1f4f0e8be8aabfcadb0f1ca65a6f8c0172b109a9a398b20ff92fe",
                                     "size":  53241061
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.92/papertrader.apk",
-                                      "sha256":  "9ea2cba7efecbfd069df150b365efa2e02e859302d3c7e6392d15c023b94705e",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.93/papertrader.apk",
+                                      "sha256":  "0bdc4c7e61b1f4f0e8be8aabfcadb0f1ca65a6f8c0172b109a9a398b20ff92fe",
                                       "size":  53241061
                                   }
               }
