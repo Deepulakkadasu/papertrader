@@ -1,27 +1,27 @@
 {
-    "build":  980,
-    "version":  "0.9.80",
-    "notes":  "**Delta rules now run.** \"Buy when delta crosses 0.5, get out if it falls back to 0.3\" is an ordinary thing to say and the app refused it until now. It works out the option\u0027s delta, IV and time decay from what that contract actually traded at, bar by bar - and on a bar whose quote carried no time value it says so instead of inventing one.\n\n**The menus are tiles.** Choosing what to trade used to mean scrolling past five full-width rows to find out what was on offer. Two across now, one glance.\n\n**Max profit was being read off the drawn picture.** A butterfly whose peak sat outside the chart reported its best case as a small loss. Fixed.",
+    "build":  981,
+    "version":  "0.9.81",
+    "notes":  "**A written call that made money was recorded as a loss.** Sell an option at 100, buy it back at 80, and that twenty-rupee profit was booked as a twenty-rupee loss - so the day-loss cap switched the rule off for winning and the Live screen painted every winner red. Worse, the stop on a written option was placed as a SELL: a stop that adds to the position it exists to close.\n\n**Delta rules now actually run.** \"Buy when delta crosses 0.5, exit if it falls back to 0.3\" backtested correctly and then, once deployed, never fired once - the live runner was never told what the option\u0027s delta was, so every comparison came out false and the screen said \"no trades yet\".\n\n**A rule that says \"exit after three bars\" now exits after three bars.** The count of bars held was stuck at zero live, so only the stop, the target or the closing bell could end a trade.\n\n**Every AI-built rule is now proved against your own words.** A second reading of your sentence - one that never sees the code - invents test cases, and the code is run on them. Where the two disagree you are shown the exact case.\n\n**Leverage answers to the stock.** Every equity intraday trade got five times leverage regardless. A scrip that swings five percent a day needs a quarter of its value upfront, not a fifth.\n\n**Pay Later interest for every day it was held.** Over a weekend, Monday charged one day for three.\n\n**An options backtest reported no drawdown for a trade that halved.** Only closed trades touched the curve.\n\n**Simple sentences no longer need the AI.** If the app can read your whole sentence it builds the rule itself - free, instant, no key.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.80/papertrader.apk",
-                                    "sha256":  "0fbc77acb9df3215fb673df2c3f99a0c808cdf4217f1aa200e1829c42c89ba48",
-                                    "size":  53389453
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.81/papertrader.apk",
+                                    "sha256":  "1952694bcc947fb7eb0e627b496804ac4782496055819029189846296df2cb51",
+                                    "size":  53455137
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.80/papertrader.apk",
-                                 "sha256":  "0fbc77acb9df3215fb673df2c3f99a0c808cdf4217f1aa200e1829c42c89ba48",
-                                 "size":  53389453
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.81/papertrader.apk",
+                                 "sha256":  "1952694bcc947fb7eb0e627b496804ac4782496055819029189846296df2cb51",
+                                 "size":  53455137
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.80/papertrader.apk",
-                                    "sha256":  "0fbc77acb9df3215fb673df2c3f99a0c808cdf4217f1aa200e1829c42c89ba48",
-                                    "size":  53389453
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.81/papertrader.apk",
+                                    "sha256":  "1952694bcc947fb7eb0e627b496804ac4782496055819029189846296df2cb51",
+                                    "size":  53455137
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.80/papertrader.apk",
-                                      "sha256":  "0fbc77acb9df3215fb673df2c3f99a0c808cdf4217f1aa200e1829c42c89ba48",
-                                      "size":  53389453
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.81/papertrader.apk",
+                                      "sha256":  "1952694bcc947fb7eb0e627b496804ac4782496055819029189846296df2cb51",
+                                      "size":  53455137
                                   }
               }
 }
