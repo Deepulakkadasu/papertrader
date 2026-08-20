@@ -1,27 +1,27 @@
 {
-    "build":  977,
-    "version":  "0.9.77",
-    "notes":  "**You can now see how many phones are actually running this.** Once a day, when the app is opened, it sends three things and nothing else: a random number made on your phone, the date, and which version you are on. No account, no broker, no trade, no rupee figure, and the random number is never joined to your login. There is a switch for it in Help and support, named in full rather than buried under \u0027analytics\u0027.",
+    "build":  980,
+    "version":  "0.9.80",
+    "notes":  "**Delta rules now run.** \"Buy when delta crosses 0.5, get out if it falls back to 0.3\" is an ordinary thing to say and the app refused it until now. It works out the option\u0027s delta, IV and time decay from what that contract actually traded at, bar by bar - and on a bar whose quote carried no time value it says so instead of inventing one.\n\n**The menus are tiles.** Choosing what to trade used to mean scrolling past five full-width rows to find out what was on offer. Two across now, one glance.\n\n**Max profit was being read off the drawn picture.** A butterfly whose peak sat outside the chart reported its best case as a small loss. Fixed.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.77/papertrader.apk",
-                                    "sha256":  "3b53b81ab48da94b8860aa08f0806dec84fdb0a57a1350fc5f26259936412932",
-                                    "size":  53389193
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.80/papertrader.apk",
+                                    "sha256":  "0fbc77acb9df3215fb673df2c3f99a0c808cdf4217f1aa200e1829c42c89ba48",
+                                    "size":  53389453
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.77/papertrader.apk",
-                                 "sha256":  "3b53b81ab48da94b8860aa08f0806dec84fdb0a57a1350fc5f26259936412932",
-                                 "size":  53389193
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.80/papertrader.apk",
+                                 "sha256":  "0fbc77acb9df3215fb673df2c3f99a0c808cdf4217f1aa200e1829c42c89ba48",
+                                 "size":  53389453
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.77/papertrader.apk",
-                                    "sha256":  "3b53b81ab48da94b8860aa08f0806dec84fdb0a57a1350fc5f26259936412932",
-                                    "size":  53389193
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.80/papertrader.apk",
+                                    "sha256":  "0fbc77acb9df3215fb673df2c3f99a0c808cdf4217f1aa200e1829c42c89ba48",
+                                    "size":  53389453
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.77/papertrader.apk",
-                                      "sha256":  "3b53b81ab48da94b8860aa08f0806dec84fdb0a57a1350fc5f26259936412932",
-                                      "size":  53389193
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.80/papertrader.apk",
+                                      "sha256":  "0fbc77acb9df3215fb673df2c3f99a0c808cdf4217f1aa200e1829c42c89ba48",
+                                      "size":  53389453
                                   }
               }
 }
