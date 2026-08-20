@@ -1,26 +1,26 @@
 {
-    "build":  993,
-    "version":  "0.9.93",
-    "notes":  "**The check that keeps the AI honest could be satisfied by citing \"buy\".** Every rule the compiler writes has to quote your own words back, verbatim - that is what stops a model inventing a condition and calling it yours. It checked the quote was verbatim and never that it was anything: \"buy\" is a substring of almost every sentence typed into a strategy builder, so a real trading condition could hang off a citation naming nothing. A citation now has to survive having the filler stripped out.",
+    "build":  994,
+    "version":  "0.9.94",
+    "notes":  "**Housekeeping, verified rather than assumed.** The QuickJS sandbox - the piece that actually runs your compiled strategy code - is skipped by the normal test run, because the test host cannot open its native library. Thirty-two tests, visibly skipped, on the riskiest file in the app. Both release builds now run it separately and refuse to build if it fails.\n\n**The leftovers of the removed paywall are gone too**: connecting a broker no longer calls a function that asked for money and did nothing, three times over.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.93/papertrader.apk",
-                                    "sha256":  "0bdc4c7e61b1f4f0e8be8aabfcadb0f1ca65a6f8c0172b109a9a398b20ff92fe",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.94/papertrader.apk",
+                                    "sha256":  "0fefc063ada60be3feaea11bbb1d67df745f34f00dafbee7399e1b416837da35",
                                     "size":  53241061
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.93/papertrader.apk",
-                                 "sha256":  "0bdc4c7e61b1f4f0e8be8aabfcadb0f1ca65a6f8c0172b109a9a398b20ff92fe",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.94/papertrader.apk",
+                                 "sha256":  "0fefc063ada60be3feaea11bbb1d67df745f34f00dafbee7399e1b416837da35",
                                  "size":  53241061
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.93/papertrader.apk",
-                                    "sha256":  "0bdc4c7e61b1f4f0e8be8aabfcadb0f1ca65a6f8c0172b109a9a398b20ff92fe",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.94/papertrader.apk",
+                                    "sha256":  "0fefc063ada60be3feaea11bbb1d67df745f34f00dafbee7399e1b416837da35",
                                     "size":  53241061
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.93/papertrader.apk",
-                                      "sha256":  "0bdc4c7e61b1f4f0e8be8aabfcadb0f1ca65a6f8c0172b109a9a398b20ff92fe",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.94/papertrader.apk",
+                                      "sha256":  "0fefc063ada60be3feaea11bbb1d67df745f34f00dafbee7399e1b416837da35",
                                       "size":  53241061
                                   }
               }
