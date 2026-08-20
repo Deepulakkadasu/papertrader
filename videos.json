@@ -320,6 +320,33 @@
     "option_chain"
    ],
    "lang": "te"
+  },
+  {
+   "id": "reel13_showcase_light",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel13_showcase_light.mp4",
+   "bytes": 6430180,
+   "sha1": "b12b51c355e1a847cdf1fec7e3d4e4ea95fbcada",
+   "title": "SL hit... ventane reverse?",
+   "blurb": "Real NIFTY sweep - andari stops okate chota",
+   "section": "Basics - real data lo",
+   "order": 9,
+   "guided": true,
+   "context": [
+    "chart"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "reel14_smart_retail_launch",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel14_smart_retail_launch.mp4",
+   "bytes": 1279165,
+   "sha1": "c73457fce5074d75544a31eac4b65a205fcec415",
+   "title": "Meeru ye number?",
+   "blurb": "Start cheyala, mistakes aagatleda, automate cheyala",
+   "section": "Basics - real data lo",
+   "order": 0,
+   "guided": true,
+   "lang": "te"
   }
  ]
 }
