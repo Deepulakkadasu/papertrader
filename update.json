@@ -1,26 +1,26 @@
 {
-    "build":  991,
-    "version":  "0.9.91",
-    "notes":  "**\"Sell\" built a rule that bought.** \"Short when ema 9 crosses below ema 21\" was stripped to its condition and built a BUY - the action word sat in the stop-word list, so it never reached the rule and never reached the amber box either. Same for \"rsi 70 daatithe ammu\". The clearest thing in the sentence, silently reversed. The side is now read, shown on the read-back card, and applied.\n\n**A Telugu \"don\u0027t\" was not a don\u0027t.** The negation guard was English-only, in an app whose sentences are mostly typed in romanised Telugu. \"konakoodadu rsi 70 paina unte\" - do NOT buy when RSI is above 70 - built exactly the rule it forbade. \"vaddu\", \"koodadu\" and the rest are in the guard now.\n\n**Max pain answered with the lowest strike when the chain carried no open interest** - an artefact of the search, printed next to PCR as if it were a level.",
+    "build":  992,
+    "version":  "0.9.92",
+    "notes":  "**The Telugu could say \"crosses above\" and could not say \"drops below\".** \"rsi 30 kindaki vasthe konu\" reached the parser untouched and was refused, while its mirror image \"rsi 60 daatithe konu\" had worked all along. Half a vocabulary is worse than none, because the half that works teaches you the rest does too. padithe, thaggithe, kindaki, perigithe and penchithe are all in now.\n\n**Two of them were ideas, not words.** \"kindaki vasthe\" came out \"below reaches\", which is not a sentence. \"paiki tirigithe\" came out \"up turns\", so the Supertrend rule read \"supertrend up\" and left the verb in the amber box - refusing a rule it had already understood. Both are phrases now, with their opposites beside them.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.91/papertrader.apk",
-                                    "sha256":  "bd3bcb2009042ee4d227b662ed597fe680878c84ac405ec8c7ce6563fcf04efe",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.92/papertrader.apk",
+                                    "sha256":  "9ea2cba7efecbfd069df150b365efa2e02e859302d3c7e6392d15c023b94705e",
                                     "size":  53241061
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.91/papertrader.apk",
-                                 "sha256":  "bd3bcb2009042ee4d227b662ed597fe680878c84ac405ec8c7ce6563fcf04efe",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.92/papertrader.apk",
+                                 "sha256":  "9ea2cba7efecbfd069df150b365efa2e02e859302d3c7e6392d15c023b94705e",
                                  "size":  53241061
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.91/papertrader.apk",
-                                    "sha256":  "bd3bcb2009042ee4d227b662ed597fe680878c84ac405ec8c7ce6563fcf04efe",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.92/papertrader.apk",
+                                    "sha256":  "9ea2cba7efecbfd069df150b365efa2e02e859302d3c7e6392d15c023b94705e",
                                     "size":  53241061
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.91/papertrader.apk",
-                                      "sha256":  "bd3bcb2009042ee4d227b662ed597fe680878c84ac405ec8c7ce6563fcf04efe",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.92/papertrader.apk",
+                                      "sha256":  "9ea2cba7efecbfd069df150b365efa2e02e859302d3c7e6392d15c023b94705e",
                                       "size":  53241061
                                   }
               }
