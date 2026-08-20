@@ -417,8 +417,8 @@
   {
    "id": "screen_funds",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/screen_funds.mp4",
-   "bytes": 480134,
-   "sha1": "aa38d095f4422d508fed12e1173ab5485ff57504",
+   "bytes": 489071,
+   "sha1": "a3f4348bd8e7eecc82263e3c20679eee8d441837",
    "title": "Funds - screen tour",
    "blurb": "Virtual koti, margin rows, P&L, charges - anni okate chota",
    "section": "Screen tours",
@@ -432,8 +432,8 @@
   {
    "id": "screen_option_chain",
    "url": "https://deepulakkadasu.github.io/papertrader/videos/screen_option_chain.mp4",
-   "bytes": 570311,
-   "sha1": "75d0f0b4dd5aebf964562a9688117549bcfc063a",
+   "bytes": 590113,
+   "sha1": "e4015559815bba3f2f953c44c564d9f44f75ce09",
    "title": "Option chain - screen tour",
    "blurb": "Mana screen meeda ne: strikes, spot line, OI bars, panes",
    "section": "Screen tours",
@@ -441,6 +441,66 @@
    "guided": true,
    "context": [
     "option_chain"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "screen_movers",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/screen_movers.mp4",
+   "bytes": 484564,
+   "sha1": "fe55bceddffd3f94a087d80453a73999d1ef3009",
+   "title": "Market movers - screen tour",
+   "blurb": "Gainers, losers, most active - NIFTY 50 lo",
+   "section": "Screen tours",
+   "order": 3,
+   "guided": true,
+   "context": [
+    "movers"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "screen_risk",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/screen_risk.mp4",
+   "bytes": 497958,
+   "sha1": "8ec851e4e9f30ddbdb9c03ae24083e8ab2fd819f",
+   "title": "Risk controls - screen tour",
+   "blurb": "Daily loss limit, Safe Exit, F&O pause - mee brakes",
+   "section": "Screen tours",
+   "order": 4,
+   "guided": true,
+   "context": [
+    "risk"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "screen_market_pulse",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/screen_market_pulse.mp4",
+   "bytes": 571545,
+   "sha1": "0528e82b1daa7bd3c9a4caa009d461e8d955351e",
+   "title": "Market Pulse - screen tour",
+   "blurb": "Base rates gatham cheptayi - repu prediction kaadu",
+   "section": "Screen tours",
+   "order": 5,
+   "guided": true,
+   "context": [
+    "market_pulse"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "screen_reports",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/screen_reports.mp4",
+   "bytes": 367378,
+   "sha1": "ef232c40b20a43caaccafb1b71152b4bb23d9b2c",
+   "title": "Reports - screen tour",
+   "blurb": "XIRR, realised, charges, CSV - practice record kosam",
+   "section": "Screen tours",
+   "order": 6,
+   "guided": true,
+   "context": [
+    "reports"
    ],
    "lang": "te"
   }
