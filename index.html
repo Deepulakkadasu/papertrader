@@ -102,6 +102,29 @@
   footer { margin-top:52px; padding-top:20px; border-top:1px solid var(--rule);
            color:var(--dim); font-size:14px; }
   footer a { margin-right:14px; }
+
+  /* Tonight's market diary. A pill, not an interstitial: a visitor who
+     came to download the app should never have to dismiss a video to
+     reach the button. It only appears when today's diary is published. */
+  .diary-pill { position:fixed; right:16px; bottom:16px; z-index:40;
+      display:none; align-items:center; gap:10px; cursor:pointer;
+      background:var(--card); border:1px solid var(--rule);
+      border-radius:999px; padding:9px 16px 9px 11px; font-size:14px;
+      color:var(--ink); box-shadow:0 6px 22px rgba(0,0,0,.14); }
+  .diary-pill.on { display:flex; }
+  .diary-pill .dot { width:9px; height:9px; border-radius:50%;
+      background:var(--accent); flex:none; }
+  .diary-pill b { font-weight:650; }
+  .diary-pill span { color:var(--dim); }
+  .diary-modal { position:fixed; inset:0; z-index:50; display:none;
+      align-items:center; justify-content:center; padding:18px;
+      background:rgba(16,18,22,.62); }
+  .diary-modal.on { display:flex; }
+  .diary-modal video { width:min(340px,86vw); max-height:82vh;
+      border-radius:16px; background:#000; }
+  .diary-close { position:absolute; top:14px; right:16px; color:#fff;
+      font-size:30px; line-height:1; background:none; border:0;
+      cursor:pointer; }
 </style>
 </head>
 <body>
@@ -523,5 +546,47 @@
   </footer>
 
 </main>
+
+<div class="diary-pill" id="diaryPill" role="button" tabindex="0">
+  <span class="dot"></span>
+  <b>Ee roju market</b> <span id="diaryLen">51 sec</span>
+</div>
+<div class="diary-modal" id="diaryModal">
+  <button class="diary-close" id="diaryClose" aria-label="Close">&times;</button>
+  <video id="diaryVideo" controls playsinline preload="none"></video>
+</div>
+<script>
+// The diary is one manifest key away, so the page never needs editing
+// for a new night - and if tonight has not been published, nothing at
+// all is shown.
+(function () {
+  var pill = document.getElementById('diaryPill');
+  var modal = document.getElementById('diaryModal');
+  var video = document.getElementById('diaryVideo');
+  function close() { modal.classList.remove('on'); video.pause(); }
+  fetch('videos.json', { cache: 'no-store' }).then(function (r) {
+    return r.json();
+  }).then(function (m) {
+    var d = m.diary;
+    if (!d || !d.url) return;
+    document.getElementById('diaryLen').textContent =
+      (d.seconds || 51) + ' sec  ·  ' + (d.title || '').replace('Market Diary - ', '');
+    video.src = d.url;
+    pill.classList.add('on');
+  }).catch(function () {});
+  function open() { modal.classList.add('on'); video.play(); }
+  pill.addEventListener('click', open);
+  pill.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+  });
+  document.getElementById('diaryClose').addEventListener('click', close);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) close();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
+})();
+</script>
 </body>
 </html>
