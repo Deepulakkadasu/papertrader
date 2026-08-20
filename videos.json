@@ -408,5 +408,31 @@
    ],
    "lang": "te"
   }
+ ],
+ "diary": {
+  "id": "news_2026_08_20",
+  "date": "2026-08-20",
+  "title": "Market Diary - 20 Aug 2026",
+  "blurb": "Naalugu rojula patanam aagindi",
+  "url": "https://deepulakkadasu.github.io/papertrader/videos/news_2026_08_20.mp4",
+  "bytes": 1071533,
+  "sha1": "72f048f13d1daae15538e312a5b89917a7f13403",
+  "seconds": 51,
+  "playAt": "19:00",
+  "lang": "te"
+ },
+ "diaryArchive": [
+  {
+   "id": "news_2026_08_20",
+   "date": "2026-08-20",
+   "title": "Market Diary - 20 Aug 2026",
+   "blurb": "Naalugu rojula patanam aagindi",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/news_2026_08_20.mp4",
+   "bytes": 1071533,
+   "sha1": "72f048f13d1daae15538e312a5b89917a7f13403",
+   "seconds": 51,
+   "playAt": "19:00",
+   "lang": "te"
+  }
  ]
 }
