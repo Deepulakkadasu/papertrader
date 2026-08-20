@@ -1,26 +1,26 @@
 {
-    "build":  981,
-    "version":  "0.9.81",
-    "notes":  "**A written call that made money was recorded as a loss.** Sell an option at 100, buy it back at 80, and that twenty-rupee profit was booked as a twenty-rupee loss - so the day-loss cap switched the rule off for winning and the Live screen painted every winner red. Worse, the stop on a written option was placed as a SELL: a stop that adds to the position it exists to close.\n\n**Delta rules now actually run.** \"Buy when delta crosses 0.5, exit if it falls back to 0.3\" backtested correctly and then, once deployed, never fired once - the live runner was never told what the option\u0027s delta was, so every comparison came out false and the screen said \"no trades yet\".\n\n**A rule that says \"exit after three bars\" now exits after three bars.** The count of bars held was stuck at zero live, so only the stop, the target or the closing bell could end a trade.\n\n**Every AI-built rule is now proved against your own words.** A second reading of your sentence - one that never sees the code - invents test cases, and the code is run on them. Where the two disagree you are shown the exact case.\n\n**Leverage answers to the stock.** Every equity intraday trade got five times leverage regardless. A scrip that swings five percent a day needs a quarter of its value upfront, not a fifth.\n\n**Pay Later interest for every day it was held.** Over a weekend, Monday charged one day for three.\n\n**An options backtest reported no drawdown for a trade that halved.** Only closed trades touched the curve.\n\n**Simple sentences no longer need the AI.** If the app can read your whole sentence it builds the rule itself - free, instant, no key.",
+    "build":  982,
+    "version":  "0.9.82",
+    "notes":  "**An option\u0027s stop was booked against the index\u0027s price.** When a stop or target fired, the runner found out on its next tick and priced that exit off NIFTY - so a contract bought at 120 was closed against a quote of 24,000. A twenty-three thousand rupee \"profit\" per unit, straight into the day\u0027s P\u0026L and the loss cap that decides whether the rule keeps trading. It now reads the engine\u0027s own fill for the contract that was actually held.\n\n**A deployed rule was not paying the spread.** It filled at the exact quote - better than the backtest that justified it, and better than a person tapping the same trade by hand. A rule firing is a market order and now fills like one, at the price it really got.\n\n**Today\u0027s P\u0026L on a live rule ignored costs.** The one app that argues costs are the edge was reporting its own deployed rules gross - and the day-loss cap read the same number, so a rule ran past a cap it had already breached while the screen said it was still ahead.\n\n**An exit was booked before the order was placed.** If the engine refused it - the bell had gone, the segment was shut - the rule believed it was flat while the position was still open.\n\n**Every greek was a function of your phone\u0027s timezone.** The expiry bell was 15:30 wherever the device thought it was, rather than 15:30 in India.\n\n**An expired commodity contract now says so** instead of blaming your broker for not serving its candles.\n\n*Also in 0.9.81, if you skipped it: written options no longer report winners as losses, delta rules actually run once deployed, \"exit after three bars\" works live, leverage answers to the stock, and simple sentences build without the AI.*",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.81/papertrader.apk",
-                                    "sha256":  "1952694bcc947fb7eb0e627b496804ac4782496055819029189846296df2cb51",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.82/papertrader.apk",
+                                    "sha256":  "a54167047b091cd25a49aa79012f039c974c552b5d88b224465c1e56948613e2",
                                     "size":  53455137
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.81/papertrader.apk",
-                                 "sha256":  "1952694bcc947fb7eb0e627b496804ac4782496055819029189846296df2cb51",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.82/papertrader.apk",
+                                 "sha256":  "a54167047b091cd25a49aa79012f039c974c552b5d88b224465c1e56948613e2",
                                  "size":  53455137
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.81/papertrader.apk",
-                                    "sha256":  "1952694bcc947fb7eb0e627b496804ac4782496055819029189846296df2cb51",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.82/papertrader.apk",
+                                    "sha256":  "a54167047b091cd25a49aa79012f039c974c552b5d88b224465c1e56948613e2",
                                     "size":  53455137
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.81/papertrader.apk",
-                                      "sha256":  "1952694bcc947fb7eb0e627b496804ac4782496055819029189846296df2cb51",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.82/papertrader.apk",
+                                      "sha256":  "a54167047b091cd25a49aa79012f039c974c552b5d88b224465c1e56948613e2",
                                       "size":  53455137
                                   }
               }
