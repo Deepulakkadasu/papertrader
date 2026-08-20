@@ -260,6 +260,66 @@
    "context": [
     "coach"
    ]
+  },
+  {
+   "id": "reel15_gap",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel15_gap.mp4",
+   "bytes": 1059988,
+   "sha1": "0de8673e7f4465b0588aaf53a2b0de6010afa79b",
+   "title": "Gap enduku vastundi?",
+   "blurb": "Raatri news, udayam price - madhyalo trade ledu",
+   "section": "Basics - real data lo",
+   "order": 6,
+   "guided": true,
+   "context": [
+    "chart"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "reel16_lot",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel16_lot.mp4",
+   "bytes": 955790,
+   "sha1": "40528c9876d06c3699d8f3d3ca43c03db1f62009",
+   "title": "Lot size ante enti?",
+   "blurb": "Premium share ki, payment lot ki",
+   "section": "Basics - real data lo",
+   "order": 7,
+   "guided": true,
+   "context": [
+    "order_ticket"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "reel17_support",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel17_support.mp4",
+   "bytes": 788419,
+   "sha1": "a204d239a5fcb459b3112bd0c41b653f63fe4a77",
+   "title": "Support ante goda kaadu",
+   "blurb": "Zone, line kaadu - prathi test dabbu thinesthundi",
+   "section": "Basics - real data lo",
+   "order": 8,
+   "guided": true,
+   "context": [
+    "chart"
+   ],
+   "lang": "te"
+  },
+  {
+   "id": "reel18_theta",
+   "url": "https://deepulakkadasu.github.io/papertrader/videos/reel18_theta.mp4",
+   "bytes": 973244,
+   "sha1": "7e2b04fa419dd570801e55afe7e8b9eb3d6879ba",
+   "title": "Premium roju roju enduku thaggutundi?",
+   "blurb": "Time value karugutundi - seller ki rent, buyer ki cost",
+   "section": "Risk & costs nijalu",
+   "order": 6,
+   "guided": true,
+   "context": [
+    "option_chain"
+   ],
+   "lang": "te"
   }
  ]
 }
