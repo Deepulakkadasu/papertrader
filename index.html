@@ -37,6 +37,12 @@
     --red:#ff6b6b; --warn:#e6b450; --warnbg:#20190a;
   }
 }
+/* Several rules below are declared twice: a plain value first, then a
+   color-mix() version. color-mix needs Chrome 111 / Safari 16.2, and a
+   good share of this audience is on a cheap Android phone several
+   versions behind — where an unsupported value drops the WHOLE
+   declaration. Without the first line the sticky header would have no
+   background at all and content would scroll under the nav. */
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -66,6 +72,7 @@ section{padding:clamp(56px,8vw,104px) 0}
 /* ---------------------------------------------------------- nav */
 header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(14px);
   -webkit-backdrop-filter:saturate(180%) blur(14px);
+  background:var(--bg);
   background:color-mix(in srgb,var(--bg) 82%,transparent);
   border-bottom:1px solid transparent; transition:border-color .25s}
 header.stuck{border-bottom-color:var(--rule)}
@@ -86,11 +93,13 @@ header.stuck{border-bottom-color:var(--rule)}
   align-items:center}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr; gap:36px}}
 .glow{position:absolute; inset:-20% -10% auto -10%; height:520px; pointer-events:none;
+  background:none;
   background:radial-gradient(60% 60% at 25% 30%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 70%);
   filter:blur(10px); z-index:-1}
 .pill{display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600;
   color:var(--accent2); background:var(--accentSoft); border-radius:999px;
-  padding:6px 13px; margin-bottom:20px; border:1px solid color-mix(in srgb,var(--accent) 22%,transparent)}
+  padding:6px 13px; margin-bottom:20px; border:1px solid var(--rule);
+  border-color:color-mix(in srgb,var(--accent) 22%,transparent)}
 @media (prefers-color-scheme:dark){.pill{color:var(--accent)}}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);
   animation:pulse 2.4s ease-in-out infinite}
@@ -104,8 +113,10 @@ header.stuck{border-bottom-color:var(--rule)}
 .btn:hover{text-decoration:none; transform:translateY(-2px)}
 .btn:active{transform:translateY(0)}
 .btn-primary{background:var(--accent); color:#fff;
+  box-shadow:0 6px 20px -6px rgba(0,0,0,.18);
   box-shadow:0 6px 20px -6px color-mix(in srgb,var(--accent) 65%,transparent)}
 .btn-primary:hover{background:var(--accent2);
+  box-shadow:0 12px 30px -8px rgba(0,0,0,.22);
   box-shadow:0 12px 30px -8px color-mix(in srgb,var(--accent) 70%,transparent)}
 @media (prefers-color-scheme:dark){.btn-primary{color:#07110d}}
 .btn-ghost{background:transparent; color:var(--fg); border-color:var(--rule)}
@@ -162,7 +173,8 @@ header.stuck{border-bottom-color:var(--rule)}
 @media(max-width:620px){.g3,.g2{grid-template-columns:1fr}}
 .card{background:var(--card); border:1px solid var(--rule); border-radius:var(--radius);
   padding:22px; transition:transform .22s cubic-bezier(.2,.8,.3,1),box-shadow .22s,border-color .22s}
-.card:hover{transform:translateY(-3px); box-shadow:var(--shadow); border-color:color-mix(in srgb,var(--accent) 35%,var(--rule))}
+.card:hover{transform:translateY(-3px); box-shadow:var(--shadow); border-color:var(--accent);
+  border-color:color-mix(in srgb,var(--accent) 35%,var(--rule))}
 .card p{margin:0; font-size:14.8px}
 .ico{width:38px;height:38px;border-radius:11px;background:var(--accentSoft);
   color:var(--accent2); display:grid;place-items:center;margin-bottom:14px}
@@ -193,7 +205,8 @@ header.stuck{border-bottom-color:var(--rule)}
   width:1px; background:var(--rule)}
 .steps li:last-child{padding-bottom:0}
 .steps li:last-child::after{display:none}
-.note{background:var(--warnbg); border:1px solid color-mix(in srgb,var(--warn) 30%,transparent);
+.note{background:var(--warnbg); border:1px solid var(--warn);
+  border-color:color-mix(in srgb,var(--warn) 30%,transparent);
   border-radius:14px; padding:17px 19px; margin:0 0 18px}
 .note p{color:var(--warn); margin:0}
 .note p+p{margin-top:10px}
