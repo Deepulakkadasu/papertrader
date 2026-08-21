@@ -1,26 +1,26 @@
 {
-    "build":  1014,
-    "version":  "1.1.4",
-    "notes":  "**The Coach told a trader he was losing on a sample where he was up.** \"Even a 60% win rate loses money at this ratio\" is arithmetic, and it was false wherever the card fired below 1.5 - which is most of its range. Six wins of Rs 1,000 against four losses of Rs 1,400 is a net of PLUS Rs 400, and the coach printed a red card saying otherwise. It works out the real break-even win rate for your actual ratio now.\n\n**The behaviour check was blaming your rule for the test.** When a generated test case carried fewer candles than your rule needs, the sandbox refused to run it - and that was recorded as \"the rule decided to do nothing\". A rule needing 21 candles, tested on 8, failed every case it should have passed; and if all its cases were short the verdict read \"this rule gave the same answer to every case\", about code that never ran once.\n\n**On Dhan the screener\u0027s day-change column could never work.** The quote parser was reading the OHLC block and dropping the closing price, so every \"change from yesterday\" was blank and \"Opened up\" matched nothing - reported as a fact about the market rather than about the feed.\n\n**\"NIFTY 50 universe\" was 48 names.** TATAMOTORS and LTIM are not in the symbol table and were dropped in silence. The screen says what it actually scanned now, and names what it could not find.\n\n**The 4-year weekly chart was showing 14 months.** The daily cache served whatever was fetched first, and app startup pins about 14 months before any screen opens.\n\n**An alert set in the evening forgot which side the price was on** - the overnight-gap case the feature exists for.",
+    "build":  1015,
+    "version":  "1.1.5",
+    "notes":  "**A dragged stop landed at a different price from the one under your finger.** Once you pan back into history with a live price outside the visible range, the touch layer and the drawing layer were building the price scale from different inputs - so a target or stop dropped on the chart was placed somewhere else.\n\n**The option chain\u0027s \"computed\" marker was on the wrong column.** The ~ that tells you a greek came from the app\u0027s own model rather than your broker was only ever drawn on IV. A model delta was shown bare; a broker IV next to a model delta was stamped as computed. And the sheet you get by tapping a row printed \"0.00\" for a greek the row itself correctly showed as a dash - a quote at or below intrinsic has no readable volatility, and that is an ordinary thing, not a zero.\n\n**Ten code comments described an app this one used to be** - four still quoting the flat 0.35% cost model that was replaced months ago, one claiming a test pinned two functions together when no such test exists, and two on the trust page: the cloud backup does not go to \"your own Google account\", it goes to a Firebase database this app owns, filed under the account you signed in with.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.4/papertrader.apk",
-                                    "sha256":  "633faaa2a0bb2b4a0001147c860da0a26795f9985a33504a19aca9d89e187428",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.5/papertrader.apk",
+                                    "sha256":  "7fdae2c29950e04cd93268813a10a7ab5656e309745f1a209cf7c8b69b556c5e",
                                     "size":  54649985
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.4/papertrader.apk",
-                                 "sha256":  "633faaa2a0bb2b4a0001147c860da0a26795f9985a33504a19aca9d89e187428",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.5/papertrader.apk",
+                                 "sha256":  "7fdae2c29950e04cd93268813a10a7ab5656e309745f1a209cf7c8b69b556c5e",
                                  "size":  54649985
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.4/papertrader.apk",
-                                    "sha256":  "633faaa2a0bb2b4a0001147c860da0a26795f9985a33504a19aca9d89e187428",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.5/papertrader.apk",
+                                    "sha256":  "7fdae2c29950e04cd93268813a10a7ab5656e309745f1a209cf7c8b69b556c5e",
                                     "size":  54649985
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.4/papertrader.apk",
-                                      "sha256":  "633faaa2a0bb2b4a0001147c860da0a26795f9985a33504a19aca9d89e187428",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.5/papertrader.apk",
+                                      "sha256":  "7fdae2c29950e04cd93268813a10a7ab5656e309745f1a209cf7c8b69b556c5e",
                                       "size":  54649985
                                   }
               }
