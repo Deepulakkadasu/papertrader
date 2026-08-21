@@ -1,27 +1,27 @@
 {
-    "build":  1002,
-    "version":  "1.0.2",
-    "notes":  "**Twenty sentences a person would actually type, run through the parser. Five came back confidently wrong.**\n\n**\"delta 0.4 crosses above 0.5\" was read as EMA 4 crossing EMA 0** - and shown in the green half as understood. The cross pattern was matching the digits either side of the decimal point. \"price 0.5 crosses 1.5\" came back as EMA 5 crossing EMA 1 with nothing in the amber box at all. An EMA now needs the word ema actually present, and a period of 0, 1, or one equal to the other is refused.\n\n**\"rsi 30 kinda unte konu, 70 paiki vellithe ammu\" was flipped to SHORT.** Buy below 30, sell above 70 - and because the sentence contains a sell word the whole rule faced the wrong way and would have SOLD when RSI fell below 30. Which way a rule faces is decided by the first clause that names an action now.\n\n**\"... buy, ... sell\" put both halves in the ENTRY.** Cross above AND cross below on the same bar, joined with AND: a rule that can never fire, read back as two conditions understood perfectly. Each clause now knows its own side, whether the verb leads it or trails it.\n\n**Telugu never reached the parser at all.** The translator existed and only the AI path used it. So a Telugu sentence the app can read perfectly was declared unreadable and sent to a paid model. It now comes in the same door as English - free, instant, offline.\n\nAlso: \"1 percent stop\" is now a stop (it was silently keeping the default half-percent), and \"before 3 pm\" is now read - the time gate only worked in one direction.",
+    "build":  1003,
+    "version":  "1.0.3",
+    "notes":  "**Five new things you can just say.** Price levels (\"buy when nifty crosses 24500\"), sides of a moving average (\"price above ema 20\"), N-bar breaks (\"20 bar high break\"), gaps (\"gap up 1%\") and days of the week (\"only on monday and friday\").\n\nNone of these are new capability. The engine could already evaluate all five, correctly, with tests - and nothing in the app could produce one, because the only thing that builds a rule is the sentence parser and the parser knew six conditions out of fifteen. They were built and wired to nothing.\n\n**A side of a moving average is kept apart from a cross.** Being above an EMA is true all the way up a run; crossing it is true on exactly one bar. That is the difference between one trade and forty.\n\n**Two rule engines became one.** There were two implementations of every condition. They agreed - which is exactly why nobody noticed when one of them drifted, twice this week. Now there is one place a condition can be wrong.\n\n**Every template is tested to actually fire**, at all five candle sizes. That is the check the Opening Range Breakout template needed and never had.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.2/papertrader.apk",
-                                    "sha256":  "a07dcdf2fd1ea0754e72837a1d9558ffbc8bd64e08c36782a7a6e3fff0db39f1",
-                                    "size":  53306601
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.3/papertrader.apk",
+                                    "sha256":  "c41889b4746ce61641ac01a676e315f8cc53836f76061bea5f34c3a7c7b99fe6",
+                                    "size":  53421289
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.2/papertrader.apk",
-                                 "sha256":  "a07dcdf2fd1ea0754e72837a1d9558ffbc8bd64e08c36782a7a6e3fff0db39f1",
-                                 "size":  53306601
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.3/papertrader.apk",
+                                 "sha256":  "c41889b4746ce61641ac01a676e315f8cc53836f76061bea5f34c3a7c7b99fe6",
+                                 "size":  53421289
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.2/papertrader.apk",
-                                    "sha256":  "a07dcdf2fd1ea0754e72837a1d9558ffbc8bd64e08c36782a7a6e3fff0db39f1",
-                                    "size":  53306601
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.3/papertrader.apk",
+                                    "sha256":  "c41889b4746ce61641ac01a676e315f8cc53836f76061bea5f34c3a7c7b99fe6",
+                                    "size":  53421289
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.2/papertrader.apk",
-                                      "sha256":  "a07dcdf2fd1ea0754e72837a1d9558ffbc8bd64e08c36782a7a6e3fff0db39f1",
-                                      "size":  53306601
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.3/papertrader.apk",
+                                      "sha256":  "c41889b4746ce61641ac01a676e315f8cc53836f76061bea5f34c3a7c7b99fe6",
+                                      "size":  53421289
                                   }
               }
 }
