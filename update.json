@@ -1,26 +1,26 @@
 {
-    "build":  1015,
-    "version":  "1.1.5",
-    "notes":  "**A dragged stop landed at a different price from the one under your finger.** Once you pan back into history with a live price outside the visible range, the touch layer and the drawing layer were building the price scale from different inputs - so a target or stop dropped on the chart was placed somewhere else.\n\n**The option chain\u0027s \"computed\" marker was on the wrong column.** The ~ that tells you a greek came from the app\u0027s own model rather than your broker was only ever drawn on IV. A model delta was shown bare; a broker IV next to a model delta was stamped as computed. And the sheet you get by tapping a row printed \"0.00\" for a greek the row itself correctly showed as a dash - a quote at or below intrinsic has no readable volatility, and that is an ordinary thing, not a zero.\n\n**Ten code comments described an app this one used to be** - four still quoting the flat 0.35% cost model that was replaced months ago, one claiming a test pinned two functions together when no such test exists, and two on the trust page: the cloud backup does not go to \"your own Google account\", it goes to a Firebase database this app owns, filed under the account you signed in with.",
+    "build":  1020,
+    "version":  "1.2.0",
+    "notes":  "**You could not tell the simulated market from the real one.** The home screen had the right words and then lost them: with no broker connected you got a full card explaining the prices are simulated - and a button marked \"Practice on simulation\" that folded it into a one-line strip, forever. That strip is the thing everybody ignored, and people were left believing they were watching the real market for weeks.\n\nThe card does not fold any more. **\"No broker connected\"** as a heading, one line on what to do, a full-width **Connect your broker** button - and the practice note demoted to small grey text underneath, because that is what is happening, not what to do. It removes itself the moment a broker is linked, which is the only dismissal a statement of fact gets.\n\nA broker that IS linked with practice deliberately switched on still gets the small line, because that one is your own choice.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.5/papertrader.apk",
-                                    "sha256":  "7fdae2c29950e04cd93268813a10a7ab5656e309745f1a209cf7c8b69b556c5e",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.0/papertrader.apk",
+                                    "sha256":  "117c06cb2ecb6ea3aef625d21d4c6f51d2934d516db068d1d1db92bc4cd4c094",
                                     "size":  54649985
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.5/papertrader.apk",
-                                 "sha256":  "7fdae2c29950e04cd93268813a10a7ab5656e309745f1a209cf7c8b69b556c5e",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.0/papertrader.apk",
+                                 "sha256":  "117c06cb2ecb6ea3aef625d21d4c6f51d2934d516db068d1d1db92bc4cd4c094",
                                  "size":  54649985
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.5/papertrader.apk",
-                                    "sha256":  "7fdae2c29950e04cd93268813a10a7ab5656e309745f1a209cf7c8b69b556c5e",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.0/papertrader.apk",
+                                    "sha256":  "117c06cb2ecb6ea3aef625d21d4c6f51d2934d516db068d1d1db92bc4cd4c094",
                                     "size":  54649985
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.5/papertrader.apk",
-                                      "sha256":  "7fdae2c29950e04cd93268813a10a7ab5656e309745f1a209cf7c8b69b556c5e",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.0/papertrader.apk",
+                                      "sha256":  "117c06cb2ecb6ea3aef625d21d4c6f51d2934d516db068d1d1db92bc4cd4c094",
                                       "size":  54649985
                                   }
               }
