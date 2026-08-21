@@ -1,27 +1,27 @@
 {
-    "build":  995,
-    "version":  "0.9.95",
-    "notes":  "**The guided videos are offered where you are already stuck.** An empty state - \"No closed trades yet\", \"No open positions\", \"No orders yet\" - now offers that screen\u0027s own tour, with its real length beside it. It is the moment you least know what a screen will show you, and until now nothing on it said a twenty-second walk existed.\n\n**It never shows a dead link.** When no video is mapped to a screen, nothing renders at all - so a screen can carry the offer before the video exists and light up on the day it lands, with no app update. And a length is only printed when it was actually measured, never estimated.",
+    "build":  996,
+    "version":  "0.9.96",
+    "notes":  "**Your rule can choose the strike now.** \"Buy when delta crosses 0.5\" is a sentence about WHICH STRIKE, and the app could only hear it as a sentence about when - the leg said \"at the money\" when you built the rule and every signal for three months bought whatever sat there. A leg can now say \"nearest delta 0.5\" or \"nearest 100 in premium\", and the chain answers at the moment of the signal.\n\n**The backtest chooses the same way.** It prices the candidate strikes at that bar, works each delta out from the premium that really printed, and picks exactly as the live chain would. If the two chose differently, the rule you tested would not be the rule that runs.\n\n**And it says when the answer was constrained.** A strike that lands at the edge of the strikes searched is reported - that is the closest available, not the closest there is.\n\n**You can choose the AI model.** The app used to resolve one silently and take the cheapest. Now the key screen lists what your key can call, marks the one it would pick, and lets you spend a better one on a sentence that keeps coming back wrong.\n\n*Every rule you already built keeps choosing exactly the strike it always chose.*",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.95/papertrader.apk",
-                                    "sha256":  "bfa479400a386f96cdbc28dd79484203aba0423b4861e0b4c9a4d7747dd50a22",
-                                    "size":  53241061
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.96/papertrader.apk",
+                                    "sha256":  "3e6adb58bf55f88d6c9c175f3bd8955a44a8a2d5f3ff4c0d34b9c80f2e5099a0",
+                                    "size":  53290213
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.95/papertrader.apk",
-                                 "sha256":  "bfa479400a386f96cdbc28dd79484203aba0423b4861e0b4c9a4d7747dd50a22",
-                                 "size":  53241061
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.96/papertrader.apk",
+                                 "sha256":  "3e6adb58bf55f88d6c9c175f3bd8955a44a8a2d5f3ff4c0d34b9c80f2e5099a0",
+                                 "size":  53290213
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.95/papertrader.apk",
-                                    "sha256":  "bfa479400a386f96cdbc28dd79484203aba0423b4861e0b4c9a4d7747dd50a22",
-                                    "size":  53241061
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.96/papertrader.apk",
+                                    "sha256":  "3e6adb58bf55f88d6c9c175f3bd8955a44a8a2d5f3ff4c0d34b9c80f2e5099a0",
+                                    "size":  53290213
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.95/papertrader.apk",
-                                      "sha256":  "bfa479400a386f96cdbc28dd79484203aba0423b4861e0b4c9a4d7747dd50a22",
-                                      "size":  53241061
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.96/papertrader.apk",
+                                      "sha256":  "3e6adb58bf55f88d6c9c175f3bd8955a44a8a2d5f3ff4c0d34b9c80f2e5099a0",
+                                      "size":  53290213
                                   }
               }
 }
