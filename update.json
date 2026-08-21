@@ -1,26 +1,26 @@
 {
-    "build":  997,
-    "version":  "0.9.97",
-    "notes":  "**A delta rule backtested against nothing and reported \"0 trades\".** Yesterday\u0027s fix put the option\u0027s greeks into the LIVE runner. The backtest was doing the same thing and its failure is the worse one: delta null on every bar, no signals, and a report saying zero trades - which reads as a verdict on your rule when it is a verdict on the harness. You would have deleted a working idea on the strength of it.\n\n**A rule that reads the greeks now gets them on every bar**, because that is how it decides to trade at all - not only on the bars it trades. The strike being watched is worked out at each bar the same way the pricing pass works it out at each signal, so the delta the rule saw belongs to the contract it would have bought. A bar the contract did not trade gets nothing, never yesterday\u0027s number.",
+    "build":  998,
+    "version":  "0.9.98",
+    "notes":  "**Deployed rules were deciding on a bar that had not happened yet.** Your broker sends the bar that is still forming as the last one in the list - its close is just the last trade so far. The runner was reading it. So a rule saying \"close above 24,000\" could enter at 9:31 on a five-minute bar that closed at 23,990 four minutes later: an entry the backtest would never take and could never reproduce. Both the runner and the backtest now drop unfinished bars before anything looks at them.\n\n**\"Exit after three bars\" was exiting after four.** The backtest fills at the open of the bar after the signal and calls that bar one. The runner was not counting the bar the fill landed in, so every deployed rule ran one bar behind the report it was approved on.\n\n**A signal could fire twice, or not at all.** The guard that makes one signal fire exactly once was keyed on a position in a list that gets refetched every minute. Now it is keyed on the bar itself.\n\n**Five new tests replay the live runner against the backtest**, bar for bar, and demand the same decisions. The two paths are genuinely different code and nothing but a test holds them together.\n\n**The report subtitle was telling everybody \"last 30 days of 5-minute candles\"** even after an hourly run over four months. It says what the run actually covered now.\n\n**The AI key screen had no way in.** You could only reach it by starting Coach or Build with AI and being stopped. There is a row in the menu now: it says whether a key is saved and which model is spending your quota, and you can change the model or take the key off the phone from there.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.97/papertrader.apk",
-                                    "sha256":  "039fde110b7efb85acadd483cca551c50f6a3d4b9c718cb8795db27e139b5398",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.98/papertrader.apk",
+                                    "sha256":  "ed40ac806f9c13516aa201c0b9ad140253c0eea6cc8436a7fafd4749d8328ba6",
                                     "size":  53306597
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.97/papertrader.apk",
-                                 "sha256":  "039fde110b7efb85acadd483cca551c50f6a3d4b9c718cb8795db27e139b5398",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.98/papertrader.apk",
+                                 "sha256":  "ed40ac806f9c13516aa201c0b9ad140253c0eea6cc8436a7fafd4749d8328ba6",
                                  "size":  53306597
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.97/papertrader.apk",
-                                    "sha256":  "039fde110b7efb85acadd483cca551c50f6a3d4b9c718cb8795db27e139b5398",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.98/papertrader.apk",
+                                    "sha256":  "ed40ac806f9c13516aa201c0b9ad140253c0eea6cc8436a7fafd4749d8328ba6",
                                     "size":  53306597
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.97/papertrader.apk",
-                                      "sha256":  "039fde110b7efb85acadd483cca551c50f6a3d4b9c718cb8795db27e139b5398",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.98/papertrader.apk",
+                                      "sha256":  "ed40ac806f9c13516aa201c0b9ad140253c0eea6cc8436a7fafd4749d8328ba6",
                                       "size":  53306597
                                   }
               }
