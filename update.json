@@ -1,27 +1,27 @@
 {
-    "build":  996,
-    "version":  "0.9.96",
-    "notes":  "**Your rule can choose the strike now.** \"Buy when delta crosses 0.5\" is a sentence about WHICH STRIKE, and the app could only hear it as a sentence about when - the leg said \"at the money\" when you built the rule and every signal for three months bought whatever sat there. A leg can now say \"nearest delta 0.5\" or \"nearest 100 in premium\", and the chain answers at the moment of the signal.\n\n**The backtest chooses the same way.** It prices the candidate strikes at that bar, works each delta out from the premium that really printed, and picks exactly as the live chain would. If the two chose differently, the rule you tested would not be the rule that runs.\n\n**And it says when the answer was constrained.** A strike that lands at the edge of the strikes searched is reported - that is the closest available, not the closest there is.\n\n**You can choose the AI model.** The app used to resolve one silently and take the cheapest. Now the key screen lists what your key can call, marks the one it would pick, and lets you spend a better one on a sentence that keeps coming back wrong.\n\n*Every rule you already built keeps choosing exactly the strike it always chose.*",
+    "build":  997,
+    "version":  "0.9.97",
+    "notes":  "**A delta rule backtested against nothing and reported \"0 trades\".** Yesterday\u0027s fix put the option\u0027s greeks into the LIVE runner. The backtest was doing the same thing and its failure is the worse one: delta null on every bar, no signals, and a report saying zero trades - which reads as a verdict on your rule when it is a verdict on the harness. You would have deleted a working idea on the strength of it.\n\n**A rule that reads the greeks now gets them on every bar**, because that is how it decides to trade at all - not only on the bars it trades. The strike being watched is worked out at each bar the same way the pricing pass works it out at each signal, so the delta the rule saw belongs to the contract it would have bought. A bar the contract did not trade gets nothing, never yesterday\u0027s number.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.96/papertrader.apk",
-                                    "sha256":  "3e6adb58bf55f88d6c9c175f3bd8955a44a8a2d5f3ff4c0d34b9c80f2e5099a0",
-                                    "size":  53290213
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.97/papertrader.apk",
+                                    "sha256":  "039fde110b7efb85acadd483cca551c50f6a3d4b9c718cb8795db27e139b5398",
+                                    "size":  53306597
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.96/papertrader.apk",
-                                 "sha256":  "3e6adb58bf55f88d6c9c175f3bd8955a44a8a2d5f3ff4c0d34b9c80f2e5099a0",
-                                 "size":  53290213
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.97/papertrader.apk",
+                                 "sha256":  "039fde110b7efb85acadd483cca551c50f6a3d4b9c718cb8795db27e139b5398",
+                                 "size":  53306597
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.96/papertrader.apk",
-                                    "sha256":  "3e6adb58bf55f88d6c9c175f3bd8955a44a8a2d5f3ff4c0d34b9c80f2e5099a0",
-                                    "size":  53290213
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.97/papertrader.apk",
+                                    "sha256":  "039fde110b7efb85acadd483cca551c50f6a3d4b9c718cb8795db27e139b5398",
+                                    "size":  53306597
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.96/papertrader.apk",
-                                      "sha256":  "3e6adb58bf55f88d6c9c175f3bd8955a44a8a2d5f3ff4c0d34b9c80f2e5099a0",
-                                      "size":  53290213
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.97/papertrader.apk",
+                                      "sha256":  "039fde110b7efb85acadd483cca551c50f6a3d4b9c718cb8795db27e139b5398",
+                                      "size":  53306597
                                   }
               }
 }
