@@ -1,27 +1,27 @@
 {
-    "build":  1000,
-    "version":  "1.0.0",
-    "notes":  "**\"Running\" was a claim about a switch, not about the app.** A deployed rule runs on a timer inside the app. Close it, or let your phone freeze it, and the rule stops looking - while the screen still said Running and the trade list still said \"no trades yet, the conditions have not happened\". Those are two different sentences: one means it looked and found nothing, the other means nobody looked. The Live screen now says when the rule last actually looked, and past three minutes during market hours it says so in amber and names the cause.\n\n**Three VWAPs, one name.** A rule saying \"above VWAP\" was measured against a line that was not the one drawn on your chart, and not the one a price alert on the same level used. The chart\u0027s own version never reset at a session boundary either, so on a multi-day chart the \"session VWAP\" was a running average of the whole window. All of them use one function now.\n\n**The daily trade cap reset on your phone\u0027s date, not India\u0027s.** On a phone set to another timezone the trading day rolled mid-session, or never.\n\n**The chart\u0027s private EMA and RSI are gone** - they were identical copies, and two copies of an indicator agree right up until one of them is corrected.",
+    "build":  1001,
+    "version":  "1.0.1",
+    "notes":  "**The AI key screen now explains what it costs.** The model picker was there but nothing told you that the careful models spend your daily allowance much faster, that some are not offered on a free key at all, that a model missing from the list is one your key cannot call, or that removing the daily cap is a billing switch on your own Google account. Everything except the AI parts works with no key at all - that is in there too. No prices anywhere: Google\u0027s change and differ by country, and a number baked into an app would be wrong and believed.\n\n**\"Try again in a minute\" when the day was gone.** A per-minute limit and a spent daily allowance both arrive as the same error and the app told you the same story for both. It now reads which one it is, never retries a spent day, and says when it comes back.\n\n**A backtest that could not price its option was sending its hidden numbers to the AI.** When the contracts cannot be reached the report hides every rupee figure, because it is index arithmetic on a trade nobody made. The explain button was handing the model exactly those hidden numbers. It now says there is nothing to account for.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.0/papertrader.apk",
-                                    "sha256":  "2be60c1d640f1d376d00244311fd9eb5e5b85f846de5f35e8f923fd7b35d236c",
-                                    "size":  53306597
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.1/papertrader.apk",
+                                    "sha256":  "046341780f2a4c6a7014207686fc45bd7b903f24e91875aae38207cbe3392faf",
+                                    "size":  53306601
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.0/papertrader.apk",
-                                 "sha256":  "2be60c1d640f1d376d00244311fd9eb5e5b85f846de5f35e8f923fd7b35d236c",
-                                 "size":  53306597
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.1/papertrader.apk",
+                                 "sha256":  "046341780f2a4c6a7014207686fc45bd7b903f24e91875aae38207cbe3392faf",
+                                 "size":  53306601
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.0/papertrader.apk",
-                                    "sha256":  "2be60c1d640f1d376d00244311fd9eb5e5b85f846de5f35e8f923fd7b35d236c",
-                                    "size":  53306597
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.1/papertrader.apk",
+                                    "sha256":  "046341780f2a4c6a7014207686fc45bd7b903f24e91875aae38207cbe3392faf",
+                                    "size":  53306601
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.0/papertrader.apk",
-                                      "sha256":  "2be60c1d640f1d376d00244311fd9eb5e5b85f846de5f35e8f923fd7b35d236c",
-                                      "size":  53306597
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.1/papertrader.apk",
+                                      "sha256":  "046341780f2a4c6a7014207686fc45bd7b903f24e91875aae38207cbe3392faf",
+                                      "size":  53306601
                                   }
               }
 }
