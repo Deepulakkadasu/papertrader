@@ -1,26 +1,26 @@
 {
-    "build":  1011,
-    "version":  "1.1.1",
-    "notes":  "**Signing in destroyed the rules of anyone who had not yet placed a trade.** The \"two accounts found\" question only checked whether you had paper TRADES on the phone. If you had spent two evenings building strategies and a watchlist but had not traded yet, the check saw an empty device, never asked, and overwrote your strategies, watchlists, alerts, drawings and coach setup from an old cloud copy. No banner, no message. It asks about everything now.\n\n**And the button that would have saved them did nothing.** \"Use my saved account\" re-raised the same banner forever - your cloud copy was never restored, and the only button that worked was the one that destroyed it.\n\n**Replay printed a gross number and called it \"Net\".** No brokerage, no STT, no exchange fee, no stamp, no GST - on the screen where you learn what a scalp is worth. A two-point NIFTY scalp read \"Net Rs 150\" and is actually a loss. It pays real charges now and shows what was paid beside what was kept.\n\n**The journal\u0027s profit factor was printing rupees.** One winning trade of 86 paise showed \"Profit factor 0.86\" in red on an account that had never lost anything.\n\n**Exported spreadsheets were stamped in UTC on Upstox accounts** - every trade written five and a half hours early, outside market hours, in the file you send to somebody else, while the coverage line on the same sheet had the right dates.\n\n**Six more places read the clock off a candle** - the SIP simulator picked the wrong month, CPR read the wrong previous session, the replay picker showed one day as two half-days, and an expired contract could settle against the wrong session\u0027s close.",
+    "build":  1012,
+    "version":  "1.1.2",
+    "notes":  "**The way out was the only order in the app that did not pay the spread.** Every one-tap close - the positions screen, the option chain, the chart\u0027s close line, the scalper, Safe Exit, the auto square-off - filled exactly on the last traded price, while every entry crossed the spread properly. A scalper doing twenty round trips kept money a real one hands to the market maker, and worse: a strategy whose entries were slipped and whose exits were not read as profitable when the round trip was flat. An expiry settlement is exempt, because a contract ceasing is not a trade against anybody.\n\n**The 3:20pm square-off cancelled stops on the wrong exchange.** Closing one NSE equity position at 3:20 cancelled EVERY open intraday order in the book - including the stop-loss on an MCX crude position that trades until 11pm, and the F\u0026O stops whose positions are deliberately left alive for five more minutes. A stop that cannot stop, cancelled by a rule about a different exchange. It now cancels only the orders belonging to the positions it actually closed. The notification also said \"3:20pm cut-off\" at eleven at night.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.1/papertrader.apk",
-                                    "sha256":  "976933777b00dd5975d46eab25f68ffd9d6de7c538318ba13ab02b62d32cfc6a",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.2/papertrader.apk",
+                                    "sha256":  "7f0a439bb65eae287a9b893811a2574ec0b76f245faf95343e20209b6eeac124",
                                     "size":  54518913
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.1/papertrader.apk",
-                                 "sha256":  "976933777b00dd5975d46eab25f68ffd9d6de7c538318ba13ab02b62d32cfc6a",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.2/papertrader.apk",
+                                 "sha256":  "7f0a439bb65eae287a9b893811a2574ec0b76f245faf95343e20209b6eeac124",
                                  "size":  54518913
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.1/papertrader.apk",
-                                    "sha256":  "976933777b00dd5975d46eab25f68ffd9d6de7c538318ba13ab02b62d32cfc6a",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.2/papertrader.apk",
+                                    "sha256":  "7f0a439bb65eae287a9b893811a2574ec0b76f245faf95343e20209b6eeac124",
                                     "size":  54518913
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.1/papertrader.apk",
-                                      "sha256":  "976933777b00dd5975d46eab25f68ffd9d6de7c538318ba13ab02b62d32cfc6a",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.2/papertrader.apk",
+                                      "sha256":  "7f0a439bb65eae287a9b893811a2574ec0b76f245faf95343e20209b6eeac124",
                                       "size":  54518913
                                   }
               }
