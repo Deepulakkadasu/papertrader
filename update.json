@@ -1,27 +1,27 @@
 {
-    "build":  1005,
-    "version":  "1.0.5",
-    "notes":  "**The AI was told on every single compile that you had never run the data check** - including a minute after you ran it. The check asks your own broker what history it will actually serve, and the whole point is to stop the model writing rules against data you do not have. The answer was measured, shown to you, and thrown away before the one thing that could use it. It is saved now, and it is the exact sentences you were shown, so the model cannot be told something different from the screen.\n\n**The recorder\u0027s candles were a pool the backtest never read.** The recorder starts with the app and writes every candle it sees, because a session it misses is history no broker will serve again. The archive backtests read is a different file, and the function that folds one into the other was written, tested, and called by nothing. It now runs once a day at startup - so the sessions built from live ticks finally count toward your backtests.",
+    "build":  1006,
+    "version":  "1.0.6",
+    "notes":  "**A rule with no entry condition could sit there saying \"Running\" all session.** It went on, the screen said Running, and the trade list said \"no trades yet, the conditions in your rule have not happened\". They had not happened because there were none. The Backtest gate checked for this; the Start-live-test button skips the backtest on purpose - for anyone whose broker serves no history - and skipped the check with it. One guard now covers every way a rule can be switched on, and it tells you what to fix rather than just refusing.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.5/papertrader.apk",
-                                    "sha256":  "af20be5aa56d16ea35921202638a1bf6ac09e9a23f412cbe6bcbf7bf8f021107",
-                                    "size":  54568169
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.6/papertrader.apk",
+                                    "sha256":  "128ab99431204c6d5c3f026082e2fe771af209d47f7552eda91af16a392d11de",
+                                    "size":  54568165
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.5/papertrader.apk",
-                                 "sha256":  "af20be5aa56d16ea35921202638a1bf6ac09e9a23f412cbe6bcbf7bf8f021107",
-                                 "size":  54568169
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.6/papertrader.apk",
+                                 "sha256":  "128ab99431204c6d5c3f026082e2fe771af209d47f7552eda91af16a392d11de",
+                                 "size":  54568165
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.5/papertrader.apk",
-                                    "sha256":  "af20be5aa56d16ea35921202638a1bf6ac09e9a23f412cbe6bcbf7bf8f021107",
-                                    "size":  54568169
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.6/papertrader.apk",
+                                    "sha256":  "128ab99431204c6d5c3f026082e2fe771af209d47f7552eda91af16a392d11de",
+                                    "size":  54568165
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.5/papertrader.apk",
-                                      "sha256":  "af20be5aa56d16ea35921202638a1bf6ac09e9a23f412cbe6bcbf7bf8f021107",
-                                      "size":  54568169
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.6/papertrader.apk",
+                                      "sha256":  "128ab99431204c6d5c3f026082e2fe771af209d47f7552eda91af16a392d11de",
+                                      "size":  54568165
                                   }
               }
 }
