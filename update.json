@@ -1,26 +1,26 @@
 {
-    "build":  999,
-    "version":  "0.9.99",
-    "notes":  "**The Opening Range Breakout template had never fired. Not once, for anybody.** It sealed the range on a candle stamped exactly 9:29 - and there is no 9:29 candle on a five-minute chart, or fifteen, or hourly. Only a one-minute one has it. So anyone who picked the app\u0027s own ORB template at the default candle size got a report saying \"0 trades\", which reads as a verdict on the idea. The range is sealed by the first candle past 9:30 now, and a test runs the template at all five candle sizes.\n\n**On an Upstox account the opening range ran until three in the afternoon.** The two brokers stamp their candles differently - Dhan in local time, Upstox in UTC - and four places in the rule engine read the clock straight off the candle. So \"before 9:30\" stayed true until 14:59 in Mumbai, and \"buy after 9:30\" first became true at 3pm. There is one conversion now and it is correct for both brokers and for a phone in any timezone.\n\n**Thirteen new tests build the same session twice, once with each broker\u0027s stamp, and demand the same answer from both.**",
+    "build":  1000,
+    "version":  "1.0.0",
+    "notes":  "**\"Running\" was a claim about a switch, not about the app.** A deployed rule runs on a timer inside the app. Close it, or let your phone freeze it, and the rule stops looking - while the screen still said Running and the trade list still said \"no trades yet, the conditions have not happened\". Those are two different sentences: one means it looked and found nothing, the other means nobody looked. The Live screen now says when the rule last actually looked, and past three minutes during market hours it says so in amber and names the cause.\n\n**Three VWAPs, one name.** A rule saying \"above VWAP\" was measured against a line that was not the one drawn on your chart, and not the one a price alert on the same level used. The chart\u0027s own version never reset at a session boundary either, so on a multi-day chart the \"session VWAP\" was a running average of the whole window. All of them use one function now.\n\n**The daily trade cap reset on your phone\u0027s date, not India\u0027s.** On a phone set to another timezone the trading day rolled mid-session, or never.\n\n**The chart\u0027s private EMA and RSI are gone** - they were identical copies, and two copies of an indicator agree right up until one of them is corrected.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.99/papertrader.apk",
-                                    "sha256":  "7b5f87fe9133f9943bfd39df9b2c9a96df3b9b580260510a9ca955b42dba8e22",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.0/papertrader.apk",
+                                    "sha256":  "2be60c1d640f1d376d00244311fd9eb5e5b85f846de5f35e8f923fd7b35d236c",
                                     "size":  53306597
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.99/papertrader.apk",
-                                 "sha256":  "7b5f87fe9133f9943bfd39df9b2c9a96df3b9b580260510a9ca955b42dba8e22",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.0/papertrader.apk",
+                                 "sha256":  "2be60c1d640f1d376d00244311fd9eb5e5b85f846de5f35e8f923fd7b35d236c",
                                  "size":  53306597
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.99/papertrader.apk",
-                                    "sha256":  "7b5f87fe9133f9943bfd39df9b2c9a96df3b9b580260510a9ca955b42dba8e22",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.0/papertrader.apk",
+                                    "sha256":  "2be60c1d640f1d376d00244311fd9eb5e5b85f846de5f35e8f923fd7b35d236c",
                                     "size":  53306597
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.99/papertrader.apk",
-                                      "sha256":  "7b5f87fe9133f9943bfd39df9b2c9a96df3b9b580260510a9ca955b42dba8e22",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.0/papertrader.apk",
+                                      "sha256":  "2be60c1d640f1d376d00244311fd9eb5e5b85f846de5f35e8f923fd7b35d236c",
                                       "size":  53306597
                                   }
               }
