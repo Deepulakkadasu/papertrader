@@ -1,26 +1,26 @@
 {
-    "build":  1001,
-    "version":  "1.0.1",
-    "notes":  "**The AI key screen now explains what it costs.** The model picker was there but nothing told you that the careful models spend your daily allowance much faster, that some are not offered on a free key at all, that a model missing from the list is one your key cannot call, or that removing the daily cap is a billing switch on your own Google account. Everything except the AI parts works with no key at all - that is in there too. No prices anywhere: Google\u0027s change and differ by country, and a number baked into an app would be wrong and believed.\n\n**\"Try again in a minute\" when the day was gone.** A per-minute limit and a spent daily allowance both arrive as the same error and the app told you the same story for both. It now reads which one it is, never retries a spent day, and says when it comes back.\n\n**A backtest that could not price its option was sending its hidden numbers to the AI.** When the contracts cannot be reached the report hides every rupee figure, because it is index arithmetic on a trade nobody made. The explain button was handing the model exactly those hidden numbers. It now says there is nothing to account for.",
+    "build":  1002,
+    "version":  "1.0.2",
+    "notes":  "**Twenty sentences a person would actually type, run through the parser. Five came back confidently wrong.**\n\n**\"delta 0.4 crosses above 0.5\" was read as EMA 4 crossing EMA 0** - and shown in the green half as understood. The cross pattern was matching the digits either side of the decimal point. \"price 0.5 crosses 1.5\" came back as EMA 5 crossing EMA 1 with nothing in the amber box at all. An EMA now needs the word ema actually present, and a period of 0, 1, or one equal to the other is refused.\n\n**\"rsi 30 kinda unte konu, 70 paiki vellithe ammu\" was flipped to SHORT.** Buy below 30, sell above 70 - and because the sentence contains a sell word the whole rule faced the wrong way and would have SOLD when RSI fell below 30. Which way a rule faces is decided by the first clause that names an action now.\n\n**\"... buy, ... sell\" put both halves in the ENTRY.** Cross above AND cross below on the same bar, joined with AND: a rule that can never fire, read back as two conditions understood perfectly. Each clause now knows its own side, whether the verb leads it or trails it.\n\n**Telugu never reached the parser at all.** The translator existed and only the AI path used it. So a Telugu sentence the app can read perfectly was declared unreadable and sent to a paid model. It now comes in the same door as English - free, instant, offline.\n\nAlso: \"1 percent stop\" is now a stop (it was silently keeping the default half-percent), and \"before 3 pm\" is now read - the time gate only worked in one direction.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.1/papertrader.apk",
-                                    "sha256":  "046341780f2a4c6a7014207686fc45bd7b903f24e91875aae38207cbe3392faf",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.2/papertrader.apk",
+                                    "sha256":  "a07dcdf2fd1ea0754e72837a1d9558ffbc8bd64e08c36782a7a6e3fff0db39f1",
                                     "size":  53306601
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.1/papertrader.apk",
-                                 "sha256":  "046341780f2a4c6a7014207686fc45bd7b903f24e91875aae38207cbe3392faf",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.2/papertrader.apk",
+                                 "sha256":  "a07dcdf2fd1ea0754e72837a1d9558ffbc8bd64e08c36782a7a6e3fff0db39f1",
                                  "size":  53306601
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.1/papertrader.apk",
-                                    "sha256":  "046341780f2a4c6a7014207686fc45bd7b903f24e91875aae38207cbe3392faf",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.2/papertrader.apk",
+                                    "sha256":  "a07dcdf2fd1ea0754e72837a1d9558ffbc8bd64e08c36782a7a6e3fff0db39f1",
                                     "size":  53306601
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.1/papertrader.apk",
-                                      "sha256":  "046341780f2a4c6a7014207686fc45bd7b903f24e91875aae38207cbe3392faf",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.2/papertrader.apk",
+                                      "sha256":  "a07dcdf2fd1ea0754e72837a1d9558ffbc8bd64e08c36782a7a6e3fff0db39f1",
                                       "size":  53306601
                                   }
               }
