@@ -1,27 +1,27 @@
 {
-    "build":  1021,
-    "version":  "1.2.1",
-    "notes":  "**The box asking you to reconnect stayed after you reconnected.** The expired-session flag was only cleared by a successful REST poll - and that poll is skipped whenever the socket already covers everything, which on a socket broker is always. So the banner sat on the home screen for the rest of the session while live prices arrived behind it. It clears the moment your credentials change now.\n\n**The \"no broker connected\" card is about a third of the size.** Two lines and a Connect button. Clear is not the same as large. And exactly one connect prompt can appear on the home screen now - it is gated on the session as well, so nothing can offer it to somebody who has already connected.\n\n**The option contract your rule buys had no strike attached.** Two things need it and both were failing silently: the greeks are priced from the strike while a position is open, so a delta rule had nothing to exit on - and a rule WRITING options blocked no margin at all.\n\n**Nine new tests drive the real runner, end to end, on the practice feed** - switch a rule on, hold the contract, do not book a phantom exit, do not double the size on the next tick, a written leg goes short and blocks margin. The runner is a private method behind a timer, which is why three fatal faults shipped in it. It is testable now, and it runs on every build.\n\n**A script that fails now says so on the Live screen** instead of only in the diagnostics log, where a rule failing every tick looked exactly like a rule whose conditions had not happened.",
+    "build":  1022,
+    "version":  "1.2.2",
+    "notes":  "",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.1/papertrader.apk",
-                                    "sha256":  "90f92cb900e0e80e3fa7a7919a2f7d52013b4f071b16376f02fc1c9c6ed635e9",
-                                    "size":  54649989
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.2/papertrader.apk",
+                                    "sha256":  "4ac226856d88f3201037b0cab52bc306888076d5ae5e3b38f3299626ba2487b1",
+                                    "size":  54748485
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.1/papertrader.apk",
-                                 "sha256":  "90f92cb900e0e80e3fa7a7919a2f7d52013b4f071b16376f02fc1c9c6ed635e9",
-                                 "size":  54649989
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.2/papertrader.apk",
+                                 "sha256":  "4ac226856d88f3201037b0cab52bc306888076d5ae5e3b38f3299626ba2487b1",
+                                 "size":  54748485
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.1/papertrader.apk",
-                                    "sha256":  "90f92cb900e0e80e3fa7a7919a2f7d52013b4f071b16376f02fc1c9c6ed635e9",
-                                    "size":  54649989
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.2/papertrader.apk",
+                                    "sha256":  "4ac226856d88f3201037b0cab52bc306888076d5ae5e3b38f3299626ba2487b1",
+                                    "size":  54748485
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.1/papertrader.apk",
-                                      "sha256":  "90f92cb900e0e80e3fa7a7919a2f7d52013b4f071b16376f02fc1c9c6ed635e9",
-                                      "size":  54649989
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.2/papertrader.apk",
+                                      "sha256":  "4ac226856d88f3201037b0cab52bc306888076d5ae5e3b38f3299626ba2487b1",
+                                      "size":  54748485
                                   }
               }
 }
