@@ -1,27 +1,27 @@
 {
-    "build":  1004,
-    "version":  "1.0.4",
-    "notes":  "**You can export a backtest now.** The full spreadsheet - every trade, the running equity, monthly buckets, what the run actually covered - was six hundred lines of finished, tested code that nothing in the app could reach. Its own comment said the screen would hand the report over. No screen did. There is a share button on the report now.\n\nThe exported file says what the run ACTUALLY covered, not what was asked for: a year is requested and a contract that has lived a month returns a month. A trade with no timestamps is left out rather than given a made-up date. And it refuses to export a run whose option could not be priced - those numbers are hidden on the screen for a reason, and putting them in somebody\u0027s inbox would undo that.\n\n**Two more sentences that were written and never shown.** An index reports no volume, so a rule about VWAP was measured against something that is not VWAP - the report never said so. And a rule whose greeks the chain would not serve took no trades and reported \"this rule never entered a trade\", which reads as a verdict on your rule when it is a verdict on the data.",
+    "build":  1005,
+    "version":  "1.0.5",
+    "notes":  "**The AI was told on every single compile that you had never run the data check** - including a minute after you ran it. The check asks your own broker what history it will actually serve, and the whole point is to stop the model writing rules against data you do not have. The answer was measured, shown to you, and thrown away before the one thing that could use it. It is saved now, and it is the exact sentences you were shown, so the model cannot be told something different from the screen.\n\n**The recorder\u0027s candles were a pool the backtest never read.** The recorder starts with the app and writes every candle it sees, because a session it misses is history no broker will serve again. The archive backtests read is a different file, and the function that folds one into the other was written, tested, and called by nothing. It now runs once a day at startup - so the sessions built from live ticks finally count toward your backtests.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.4/papertrader.apk",
-                                    "sha256":  "44c0539cb720793befefb90289b8cd38201486bbc052ba64bdc75272f18e7615",
-                                    "size":  54502629
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.5/papertrader.apk",
+                                    "sha256":  "af20be5aa56d16ea35921202638a1bf6ac09e9a23f412cbe6bcbf7bf8f021107",
+                                    "size":  54568169
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.4/papertrader.apk",
-                                 "sha256":  "44c0539cb720793befefb90289b8cd38201486bbc052ba64bdc75272f18e7615",
-                                 "size":  54502629
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.5/papertrader.apk",
+                                 "sha256":  "af20be5aa56d16ea35921202638a1bf6ac09e9a23f412cbe6bcbf7bf8f021107",
+                                 "size":  54568169
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.4/papertrader.apk",
-                                    "sha256":  "44c0539cb720793befefb90289b8cd38201486bbc052ba64bdc75272f18e7615",
-                                    "size":  54502629
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.5/papertrader.apk",
+                                    "sha256":  "af20be5aa56d16ea35921202638a1bf6ac09e9a23f412cbe6bcbf7bf8f021107",
+                                    "size":  54568169
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.4/papertrader.apk",
-                                      "sha256":  "44c0539cb720793befefb90289b8cd38201486bbc052ba64bdc75272f18e7615",
-                                      "size":  54502629
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.5/papertrader.apk",
+                                      "sha256":  "af20be5aa56d16ea35921202638a1bf6ac09e9a23f412cbe6bcbf7bf8f021107",
+                                      "size":  54568169
                                   }
               }
 }
