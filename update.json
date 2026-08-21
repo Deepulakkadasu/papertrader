@@ -1,26 +1,26 @@
 {
-    "build":  998,
-    "version":  "0.9.98",
-    "notes":  "**Deployed rules were deciding on a bar that had not happened yet.** Your broker sends the bar that is still forming as the last one in the list - its close is just the last trade so far. The runner was reading it. So a rule saying \"close above 24,000\" could enter at 9:31 on a five-minute bar that closed at 23,990 four minutes later: an entry the backtest would never take and could never reproduce. Both the runner and the backtest now drop unfinished bars before anything looks at them.\n\n**\"Exit after three bars\" was exiting after four.** The backtest fills at the open of the bar after the signal and calls that bar one. The runner was not counting the bar the fill landed in, so every deployed rule ran one bar behind the report it was approved on.\n\n**A signal could fire twice, or not at all.** The guard that makes one signal fire exactly once was keyed on a position in a list that gets refetched every minute. Now it is keyed on the bar itself.\n\n**Five new tests replay the live runner against the backtest**, bar for bar, and demand the same decisions. The two paths are genuinely different code and nothing but a test holds them together.\n\n**The report subtitle was telling everybody \"last 30 days of 5-minute candles\"** even after an hourly run over four months. It says what the run actually covered now.\n\n**The AI key screen had no way in.** You could only reach it by starting Coach or Build with AI and being stopped. There is a row in the menu now: it says whether a key is saved and which model is spending your quota, and you can change the model or take the key off the phone from there.",
+    "build":  999,
+    "version":  "0.9.99",
+    "notes":  "**The Opening Range Breakout template had never fired. Not once, for anybody.** It sealed the range on a candle stamped exactly 9:29 - and there is no 9:29 candle on a five-minute chart, or fifteen, or hourly. Only a one-minute one has it. So anyone who picked the app\u0027s own ORB template at the default candle size got a report saying \"0 trades\", which reads as a verdict on the idea. The range is sealed by the first candle past 9:30 now, and a test runs the template at all five candle sizes.\n\n**On an Upstox account the opening range ran until three in the afternoon.** The two brokers stamp their candles differently - Dhan in local time, Upstox in UTC - and four places in the rule engine read the clock straight off the candle. So \"before 9:30\" stayed true until 14:59 in Mumbai, and \"buy after 9:30\" first became true at 3pm. There is one conversion now and it is correct for both brokers and for a phone in any timezone.\n\n**Thirteen new tests build the same session twice, once with each broker\u0027s stamp, and demand the same answer from both.**",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.98/papertrader.apk",
-                                    "sha256":  "ed40ac806f9c13516aa201c0b9ad140253c0eea6cc8436a7fafd4749d8328ba6",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.99/papertrader.apk",
+                                    "sha256":  "7b5f87fe9133f9943bfd39df9b2c9a96df3b9b580260510a9ca955b42dba8e22",
                                     "size":  53306597
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.98/papertrader.apk",
-                                 "sha256":  "ed40ac806f9c13516aa201c0b9ad140253c0eea6cc8436a7fafd4749d8328ba6",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.99/papertrader.apk",
+                                 "sha256":  "7b5f87fe9133f9943bfd39df9b2c9a96df3b9b580260510a9ca955b42dba8e22",
                                  "size":  53306597
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.98/papertrader.apk",
-                                    "sha256":  "ed40ac806f9c13516aa201c0b9ad140253c0eea6cc8436a7fafd4749d8328ba6",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.99/papertrader.apk",
+                                    "sha256":  "7b5f87fe9133f9943bfd39df9b2c9a96df3b9b580260510a9ca955b42dba8e22",
                                     "size":  53306597
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.98/papertrader.apk",
-                                      "sha256":  "ed40ac806f9c13516aa201c0b9ad140253c0eea6cc8436a7fafd4749d8328ba6",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v0.9.99/papertrader.apk",
+                                      "sha256":  "7b5f87fe9133f9943bfd39df9b2c9a96df3b9b580260510a9ca955b42dba8e22",
                                       "size":  53306597
                                   }
               }
