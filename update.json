@@ -1,27 +1,27 @@
 {
-    "build":  1020,
-    "version":  "1.2.0",
-    "notes":  "**You could not tell the simulated market from the real one.** The home screen had the right words and then lost them: with no broker connected you got a full card explaining the prices are simulated - and a button marked \"Practice on simulation\" that folded it into a one-line strip, forever. That strip is the thing everybody ignored, and people were left believing they were watching the real market for weeks.\n\nThe card does not fold any more. **\"No broker connected\"** as a heading, one line on what to do, a full-width **Connect your broker** button - and the practice note demoted to small grey text underneath, because that is what is happening, not what to do. It removes itself the moment a broker is linked, which is the only dismissal a statement of fact gets.\n\nA broker that IS linked with practice deliberately switched on still gets the small line, because that one is your own choice.",
+    "build":  1021,
+    "version":  "1.2.1",
+    "notes":  "**The box asking you to reconnect stayed after you reconnected.** The expired-session flag was only cleared by a successful REST poll - and that poll is skipped whenever the socket already covers everything, which on a socket broker is always. So the banner sat on the home screen for the rest of the session while live prices arrived behind it. It clears the moment your credentials change now.\n\n**The \"no broker connected\" card is about a third of the size.** Two lines and a Connect button. Clear is not the same as large. And exactly one connect prompt can appear on the home screen now - it is gated on the session as well, so nothing can offer it to somebody who has already connected.\n\n**The option contract your rule buys had no strike attached.** Two things need it and both were failing silently: the greeks are priced from the strike while a position is open, so a delta rule had nothing to exit on - and a rule WRITING options blocked no margin at all.\n\n**Nine new tests drive the real runner, end to end, on the practice feed** - switch a rule on, hold the contract, do not book a phantom exit, do not double the size on the next tick, a written leg goes short and blocks margin. The runner is a private method behind a timer, which is why three fatal faults shipped in it. It is testable now, and it runs on every build.\n\n**A script that fails now says so on the Live screen** instead of only in the diagnostics log, where a rule failing every tick looked exactly like a rule whose conditions had not happened.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.0/papertrader.apk",
-                                    "sha256":  "117c06cb2ecb6ea3aef625d21d4c6f51d2934d516db068d1d1db92bc4cd4c094",
-                                    "size":  54649985
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.1/papertrader.apk",
+                                    "sha256":  "90f92cb900e0e80e3fa7a7919a2f7d52013b4f071b16376f02fc1c9c6ed635e9",
+                                    "size":  54649989
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.0/papertrader.apk",
-                                 "sha256":  "117c06cb2ecb6ea3aef625d21d4c6f51d2934d516db068d1d1db92bc4cd4c094",
-                                 "size":  54649985
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.1/papertrader.apk",
+                                 "sha256":  "90f92cb900e0e80e3fa7a7919a2f7d52013b4f071b16376f02fc1c9c6ed635e9",
+                                 "size":  54649989
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.0/papertrader.apk",
-                                    "sha256":  "117c06cb2ecb6ea3aef625d21d4c6f51d2934d516db068d1d1db92bc4cd4c094",
-                                    "size":  54649985
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.1/papertrader.apk",
+                                    "sha256":  "90f92cb900e0e80e3fa7a7919a2f7d52013b4f071b16376f02fc1c9c6ed635e9",
+                                    "size":  54649989
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.0/papertrader.apk",
-                                      "sha256":  "117c06cb2ecb6ea3aef625d21d4c6f51d2934d516db068d1d1db92bc4cd4c094",
-                                      "size":  54649985
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.2.1/papertrader.apk",
+                                      "sha256":  "90f92cb900e0e80e3fa7a7919a2f7d52013b4f071b16376f02fc1c9c6ed635e9",
+                                      "size":  54649989
                                   }
               }
 }
