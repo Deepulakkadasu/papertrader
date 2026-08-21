@@ -1,27 +1,27 @@
 {
-    "build":  1003,
-    "version":  "1.0.3",
-    "notes":  "**Five new things you can just say.** Price levels (\"buy when nifty crosses 24500\"), sides of a moving average (\"price above ema 20\"), N-bar breaks (\"20 bar high break\"), gaps (\"gap up 1%\") and days of the week (\"only on monday and friday\").\n\nNone of these are new capability. The engine could already evaluate all five, correctly, with tests - and nothing in the app could produce one, because the only thing that builds a rule is the sentence parser and the parser knew six conditions out of fifteen. They were built and wired to nothing.\n\n**A side of a moving average is kept apart from a cross.** Being above an EMA is true all the way up a run; crossing it is true on exactly one bar. That is the difference between one trade and forty.\n\n**Two rule engines became one.** There were two implementations of every condition. They agreed - which is exactly why nobody noticed when one of them drifted, twice this week. Now there is one place a condition can be wrong.\n\n**Every template is tested to actually fire**, at all five candle sizes. That is the check the Opening Range Breakout template needed and never had.",
+    "build":  1004,
+    "version":  "1.0.4",
+    "notes":  "**You can export a backtest now.** The full spreadsheet - every trade, the running equity, monthly buckets, what the run actually covered - was six hundred lines of finished, tested code that nothing in the app could reach. Its own comment said the screen would hand the report over. No screen did. There is a share button on the report now.\n\nThe exported file says what the run ACTUALLY covered, not what was asked for: a year is requested and a contract that has lived a month returns a month. A trade with no timestamps is left out rather than given a made-up date. And it refuses to export a run whose option could not be priced - those numbers are hidden on the screen for a reason, and putting them in somebody\u0027s inbox would undo that.\n\n**Two more sentences that were written and never shown.** An index reports no volume, so a rule about VWAP was measured against something that is not VWAP - the report never said so. And a rule whose greeks the chain would not serve took no trades and reported \"this rule never entered a trade\", which reads as a verdict on your rule when it is a verdict on the data.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.3/papertrader.apk",
-                                    "sha256":  "c41889b4746ce61641ac01a676e315f8cc53836f76061bea5f34c3a7c7b99fe6",
-                                    "size":  53421289
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.4/papertrader.apk",
+                                    "sha256":  "44c0539cb720793befefb90289b8cd38201486bbc052ba64bdc75272f18e7615",
+                                    "size":  54502629
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.3/papertrader.apk",
-                                 "sha256":  "c41889b4746ce61641ac01a676e315f8cc53836f76061bea5f34c3a7c7b99fe6",
-                                 "size":  53421289
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.4/papertrader.apk",
+                                 "sha256":  "44c0539cb720793befefb90289b8cd38201486bbc052ba64bdc75272f18e7615",
+                                 "size":  54502629
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.3/papertrader.apk",
-                                    "sha256":  "c41889b4746ce61641ac01a676e315f8cc53836f76061bea5f34c3a7c7b99fe6",
-                                    "size":  53421289
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.4/papertrader.apk",
+                                    "sha256":  "44c0539cb720793befefb90289b8cd38201486bbc052ba64bdc75272f18e7615",
+                                    "size":  54502629
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.3/papertrader.apk",
-                                      "sha256":  "c41889b4746ce61641ac01a676e315f8cc53836f76061bea5f34c3a7c7b99fe6",
-                                      "size":  53421289
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.4/papertrader.apk",
+                                      "sha256":  "44c0539cb720793befefb90289b8cd38201486bbc052ba64bdc75272f18e7615",
+                                      "size":  54502629
                                   }
               }
 }
