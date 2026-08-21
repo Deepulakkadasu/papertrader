@@ -4,588 +4,742 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paper Trader — practise Indian F&amp;O with virtual money</title>
-<meta name="description" content="An Android trading simulator for Indian F&amp;O. Real strikes, real margins, virtual money. The app cannot place a real order.">
-<meta name="theme-color" content="#0a8f6c">
+<meta name="description" content="An Android trading simulator for Indian F&amp;O. Real strikes, real lot sizes, real margins, real charges. Virtual money. The app cannot place a real order — there is no order-placing code in it.">
+<meta name="theme-color" content="#00a877" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="Paper Trader">
-<meta property="og:description" content="Practise Indian F&amp;O with virtual money. Real strikes, real margins, no real orders.">
+<meta property="og:description" content="Practise Indian F&amp;O with virtual money. Real strikes, real margins, real charges — and no real orders.">
 <meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2300a877'/%3E%3Cpath d='M9 21l4-6 4 3 6-9' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
-  :root {
-    --bg:#fff; --fg:#16181d; --dim:#5b616b; --accent:#0a8f6c;
-    --rule:#e3e7eb; --card:#f6f8f9; --warn:#8a5a00; --warnbg:#fff8e6;
+/* ------------------------------------------------------------------ *
+ * No web fonts, on purpose.
+ *
+ * Most of this page is read on a phone in India, often on mobile data,
+ * and a font request is a render-blocking round trip before the first
+ * word appears. The system stack is Roboto on Android and San
+ * Francisco on iOS — both excellent — so the money goes into spacing,
+ * scale and rhythm instead, which is where it shows anyway.
+ * ------------------------------------------------------------------ */
+:root{
+  --bg:#ffffff; --bg2:#f5f8f7; --fg:#0d1117; --dim:#5a6472;
+  --accent:#00a877; --accent2:#0b8f66; --accentSoft:#e6f7f1;
+  --rule:#e6eaee; --card:#ffffff; --shadow:0 1px 2px rgba(13,17,23,.05),0 12px 32px -12px rgba(13,17,23,.14);
+  --red:#e5484d; --warn:#8a5a00; --warnbg:#fff8e6; --radius:16px;
+  --maxw:1080px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0b0d10; --bg2:#111418; --fg:#eef1f4; --dim:#98a1ae;
+    --accent:#2fd8a4; --accent2:#25c393; --accentSoft:#0e2a22;
+    --rule:#1e242b; --card:#12161a;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 18px 40px -18px rgba(0,0,0,.7);
+    --red:#ff6b6b; --warn:#e6b450; --warnbg:#20190a;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg:#0e0e12; --fg:#f2f3f5; --dim:#9aa0ab; --accent:#2ed3a7;
-      --rule:#24262e; --card:#16171d; --warn:#e6b450; --warnbg:#211b0c;
-    }
-  }
-  * { box-sizing:border-box; }
-  body {
-    margin:0; padding:0 20px 70px; background:var(--bg); color:var(--fg);
-    font:16px/1.65 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    -webkit-text-size-adjust:100%;
-  }
-  main { max-width:680px; margin:0 auto; padding-top:52px; }
-  .brand { display:flex; align-items:center; gap:12px; margin-bottom:34px; }
-  .mark { width:38px; height:38px; border-radius:10px; background:var(--accent);
-          display:grid; place-items:center; flex:none; }
-  h1 { font-size:31px; line-height:1.2; margin:0 0 12px; letter-spacing:-0.5px; }
-  h2 { font-size:20px; margin:44px 0 12px; letter-spacing:-0.2px; }
-  h3 { font-size:15px; margin:22px 0 6px; }
-  p  { margin:0 0 15px; color:var(--dim); }
-  .lead { font-size:17.5px; color:var(--fg); }
-  ul { padding-left:20px; margin:0 0 15px; color:var(--dim); }
-  li { margin-bottom:9px; }
-  a { color:var(--accent); }
-  code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-         background:var(--card); padding:1.5px 5px; border-radius:4px;
-         overflow-wrap:anywhere; }
-  hr { border:0; border-top:1px solid var(--rule); margin:44px 0; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:400 16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:100%;
+  overflow-x:hidden;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+.narrow{max-width:720px}
+h1,h2,h3{letter-spacing:-.022em; line-height:1.15; margin:0}
+h1{font-size:clamp(34px,6.4vw,60px); font-weight:800}
+h2{font-size:clamp(24px,3.4vw,34px); font-weight:750; margin-bottom:14px}
+h3{font-size:17px; font-weight:700; margin-bottom:6px}
+p{margin:0 0 16px; color:var(--dim)}
+.lead{font-size:clamp(17px,2.1vw,20px); color:var(--fg); font-weight:450}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+strong{color:var(--fg); font-weight:650}
+code{font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
+  background:var(--bg2); padding:2px 6px; border-radius:6px; word-break:break-all}
+hr{border:0; border-top:1px solid var(--rule); margin:0}
+section{padding:clamp(56px,8vw,104px) 0}
+.eyebrow{font-size:12.5px; font-weight:750; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:12px}
 
-  .shots { display:flex; gap:12px; overflow-x:auto; padding:4px 0 12px;
-           scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
-  .shots img { width:200px; flex:none; border-radius:12px;
-               border:1px solid var(--rule); scroll-snap-align:start; }
+/* ---------------------------------------------------------- nav */
+header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  background:color-mix(in srgb,var(--bg) 82%,transparent);
+  border-bottom:1px solid transparent; transition:border-color .25s}
+header.stuck{border-bottom-color:var(--rule)}
+.nav{display:flex; align-items:center; gap:14px; height:62px}
+.brand{display:flex; align-items:center; gap:10px; font-weight:750;
+  color:var(--fg); letter-spacing:-.02em}
+.brand:hover{text-decoration:none}
+.mark{width:30px;height:30px;border-radius:9px;background:var(--accent);
+  display:grid;place-items:center;flex:none}
+.nav .spacer{flex:1}
+.nav a.lnk{color:var(--dim); font-size:14.5px; font-weight:550}
+.nav a.lnk:hover{color:var(--fg); text-decoration:none}
+@media(max-width:720px){.nav a.lnk{display:none}}
 
-  .card { background:var(--card); border:1px solid var(--rule);
-          border-radius:14px; padding:18px 20px; margin:0 0 16px; }
-  .card h3 { margin-top:0; }
-  .card p:last-child, .card ul:last-child { margin-bottom:0; }
+/* ---------------------------------------------------------- hero */
+.hero{position:relative; padding:clamp(44px,7vw,86px) 0 clamp(40px,6vw,72px)}
+.hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(28px,5vw,64px);
+  align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr; gap:36px}}
+.glow{position:absolute; inset:-20% -10% auto -10%; height:520px; pointer-events:none;
+  background:radial-gradient(60% 60% at 25% 30%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 70%);
+  filter:blur(10px); z-index:-1}
+.pill{display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600;
+  color:var(--accent2); background:var(--accentSoft); border-radius:999px;
+  padding:6px 13px; margin-bottom:20px; border:1px solid color-mix(in srgb,var(--accent) 22%,transparent)}
+@media (prefers-color-scheme:dark){.pill{color:var(--accent)}}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);
+  animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.82)}}
 
-  .note { background:var(--warnbg); border:1px solid var(--warn);
-          border-radius:12px; padding:16px 18px; margin:0 0 20px; }
-  .note p { color:var(--warn); margin-bottom:0; }
-  .note strong { color:var(--warn); }
+/* ------------------------------------------------------- buttons */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  font-size:16px; font-weight:650; letter-spacing:-.01em; padding:15px 26px;
+  border-radius:13px; border:1px solid transparent; cursor:pointer;
+  transition:transform .16s cubic-bezier(.2,.8,.3,1),box-shadow .16s,background .16s}
+.btn:hover{text-decoration:none; transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:var(--accent); color:#fff;
+  box-shadow:0 6px 20px -6px color-mix(in srgb,var(--accent) 65%,transparent)}
+.btn-primary:hover{background:var(--accent2);
+  box-shadow:0 12px 30px -8px color-mix(in srgb,var(--accent) 70%,transparent)}
+@media (prefers-color-scheme:dark){.btn-primary{color:#07110d}}
+.btn-ghost{background:transparent; color:var(--fg); border-color:var(--rule)}
+.btn-ghost:hover{background:var(--bg2)}
+.btn-row{display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:26px}
+.btn-note{font-size:13.5px; color:var(--dim); margin:12px 0 0}
 
-  table { width:100%; border-collapse:collapse; margin:0 0 18px;
-          font-size:15px; }
-  th,td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--rule);
-          vertical-align:top; }
-  th { font-size:12.5px; text-transform:uppercase; letter-spacing:0.5px;
-       color:var(--dim); font-weight:600; }
-  td.n { color:var(--dim); }
-  .wrap { overflow-x:auto; }
+/* ------------------------------------------------- hero artwork */
+.art{position:relative; border-radius:20px; background:var(--card);
+  border:1px solid var(--rule); box-shadow:var(--shadow); overflow:hidden}
+.art-top{display:flex; align-items:center; gap:10px; padding:13px 16px;
+  border-bottom:1px solid var(--rule); font-size:13px; color:var(--dim)}
+.art-top b{color:var(--fg); font-weight:650; letter-spacing:-.01em}
+.up{color:var(--accent2); font-weight:650}
+@media (prefers-color-scheme:dark){.up{color:var(--accent)}}
+.art svg{display:block; width:100%; height:auto}
+/* Candles grow from their own baseline, one after another. */
+.cndl{transform-box:fill-box; transform-origin:50% 100%; transform:scaleY(0)}
+.reveal .cndl{animation:grow .5s cubic-bezier(.2,.9,.3,1) forwards}
+@keyframes grow{to{transform:scaleY(1)}}
+.pathline{stroke-dasharray:520; stroke-dashoffset:520}
+.reveal .pathline{animation:draw 1.9s .5s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.slidein{opacity:0; transform:translateX(14px)}
+.reveal .slidein{animation:slidein .55s 1.5s cubic-bezier(.2,.9,.3,1) forwards}
+@keyframes slidein{to{opacity:1;transform:translateX(0)}}
 
-  ol.flow { counter-reset:step; list-style:none; padding:0; margin:0 0 18px; }
-  ol.flow > li { counter-increment:step; position:relative;
-                 padding:0 0 20px 44px; margin:0; color:var(--dim); }
-  ol.flow > li::before {
-    content:counter(step); position:absolute; left:0; top:0;
-    width:28px; height:28px; border-radius:50%;
-    background:var(--accent); color:#fff; font-size:14px; font-weight:700;
-    display:grid; place-items:center; }
-  ol.flow > li::after {
-    content:''; position:absolute; left:13.5px; top:32px; bottom:4px;
-    width:1px; background:var(--rule); }
-  ol.flow > li:last-child { padding-bottom:0; }
-  ol.flow > li:last-child::after { display:none; }
-  ol.flow b { color:var(--fg); display:block; margin-bottom:3px;
-              font-size:15.5px; }
-  .free { color:var(--accent); font-weight:700; }
-  .launch { border:1px solid var(--accent); border-radius:12px;
-            padding:14px 16px; margin:22px 0; }
-  .launch p { margin:0; }
-  .launch p.small { margin-top:7px; font-size:13px; color:var(--dim); }
-  .platform { display:flex; align-items:flex-start; gap:9px;
-              background:var(--card); border:1px solid var(--rule);
-              border-radius:12px; padding:13px 15px; margin:0 0 8px;
-              font-size:14.5px; line-height:1.55; }
-  .platform strong { color:var(--fg); }
-  .cta { display:inline-flex; align-items:center; background:var(--accent);
-         color:#fff; text-decoration:none; font-weight:700;
-         padding:14px 24px; border-radius:11px; margin:2px 0 10px;
-         font-size:16.5px; }
-  .sub a { white-space:nowrap; }
-  .sub { font-size:13.5px; color:var(--dim); margin-top:0; }
+/* the cost strip — the product's whole argument, as a receipt */
+.receipt{border-top:1px solid var(--rule); padding:14px 16px;
+  font:13.5px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace}
+.rrow{display:flex; justify-content:space-between; color:var(--dim);
+  opacity:0; transform:translateY(6px)}
+.reveal .rrow{animation:rise .45s cubic-bezier(.2,.9,.3,1) forwards}
+.reveal .rrow:nth-child(1){animation-delay:1.7s}
+.reveal .rrow:nth-child(2){animation-delay:1.85s}
+.reveal .rrow:nth-child(3){animation-delay:2.0s}
+.reveal .rrow:nth-child(4){animation-delay:2.15s}
+.rrow.total{color:var(--fg); font-weight:700; border-top:1px dashed var(--rule);
+  margin-top:7px; padding-top:7px}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
 
-  footer { margin-top:52px; padding-top:20px; border-top:1px solid var(--rule);
-           color:var(--dim); font-size:14px; }
-  footer a { margin-right:14px; }
+/* --------------------------------------------------- reveal base */
+.r{opacity:0; transform:translateY(18px);
+  transition:opacity .6s cubic-bezier(.2,.8,.3,1),transform .6s cubic-bezier(.2,.8,.3,1)}
+.r.in{opacity:1; transform:none}
+.r.d1{transition-delay:.07s} .r.d2{transition-delay:.14s}
+.r.d3{transition-delay:.21s} .r.d4{transition-delay:.28s}
 
-  /* Tonight's market diary. A pill, not an interstitial: a visitor who
-     came to download the app should never have to dismiss a video to
-     reach the button. It only appears when today's diary is published. */
-  .diary-pill { position:fixed; right:16px; bottom:16px; z-index:40;
-      display:none; align-items:center; gap:10px; cursor:pointer;
-      background:var(--card); border:1px solid var(--rule);
-      border-radius:999px; padding:9px 16px 9px 11px; font-size:14px;
-      color:var(--ink); box-shadow:0 6px 22px rgba(0,0,0,.14); }
-  .diary-pill.on { display:flex; }
-  .diary-pill .dot { width:9px; height:9px; border-radius:50%;
-      background:var(--accent); flex:none; }
-  .diary-pill b { font-weight:650; }
-  .diary-pill span { color:var(--dim); }
-  .diary-modal { position:fixed; inset:0; z-index:50; display:none;
-      align-items:center; justify-content:center; padding:18px;
-      background:rgba(16,18,22,.62); }
-  .diary-modal.on { display:flex; }
-  .diary-modal video { width:min(340px,86vw); max-height:82vh;
-      border-radius:16px; background:#000; }
-  .diary-close { position:absolute; top:14px; right:16px; color:#fff;
-      font-size:30px; line-height:1; background:none; border:0;
-      cursor:pointer; }
+/* --------------------------------------------------------- cards */
+.grid{display:grid; gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.g3,.g2{grid-template-columns:1fr}}
+.card{background:var(--card); border:1px solid var(--rule); border-radius:var(--radius);
+  padding:22px; transition:transform .22s cubic-bezier(.2,.8,.3,1),box-shadow .22s,border-color .22s}
+.card:hover{transform:translateY(-3px); box-shadow:var(--shadow); border-color:color-mix(in srgb,var(--accent) 35%,var(--rule))}
+.card p{margin:0; font-size:14.8px}
+.ico{width:38px;height:38px;border-radius:11px;background:var(--accentSoft);
+  color:var(--accent2); display:grid;place-items:center;margin-bottom:14px}
+@media (prefers-color-scheme:dark){.ico{color:var(--accent)}}
+.tint{background:var(--bg2)}
+
+/* --------------------------------------------------------- shots */
+.shots{display:flex; gap:18px; overflow-x:auto; padding:6px 22px 22px;
+  scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+  scrollbar-width:none}
+.shots::-webkit-scrollbar{display:none}
+.phone{flex:none; width:246px; scroll-snap-align:center;
+  border-radius:30px; padding:9px; background:linear-gradient(160deg,#2a2f36,#14171b);
+  box-shadow:0 20px 50px -20px rgba(0,0,0,.55); position:relative}
+.phone img{display:block; width:100%; height:auto; border-radius:22px; background:var(--bg2)}
+.phone::after{content:""; position:absolute; top:16px; left:50%; transform:translateX(-50%);
+  width:56px; height:5px; border-radius:3px; background:rgba(255,255,255,.22)}
+.cap{text-align:center; font-size:13px; color:var(--dim); margin:11px 0 0}
+
+/* ---------------------------------------------------------- misc */
+.steps{counter-reset:s; list-style:none; padding:0; margin:0}
+.steps li{counter-increment:s; position:relative; padding:0 0 26px 52px}
+.steps li::before{content:counter(s); position:absolute; left:0; top:-2px;
+  width:34px;height:34px;border-radius:11px;background:var(--accentSoft);
+  color:var(--accent2); font-weight:750; font-size:15px; display:grid;place-items:center}
+@media (prefers-color-scheme:dark){.steps li::before{color:var(--accent)}}
+.steps li::after{content:""; position:absolute; left:17px; top:38px; bottom:6px;
+  width:1px; background:var(--rule)}
+.steps li:last-child{padding-bottom:0}
+.steps li:last-child::after{display:none}
+.note{background:var(--warnbg); border:1px solid color-mix(in srgb,var(--warn) 30%,transparent);
+  border-radius:14px; padding:17px 19px; margin:0 0 18px}
+.note p{color:var(--warn); margin:0}
+.note p+p{margin-top:10px}
+.soft{background:var(--bg2); border:1px solid var(--rule); border-radius:14px;
+  padding:17px 19px; margin:0 0 18px}
+.soft p:last-child{margin-bottom:0}
+details{border-bottom:1px solid var(--rule); padding:16px 0}
+details summary{cursor:pointer; font-weight:650; color:var(--fg); list-style:none;
+  display:flex; justify-content:space-between; align-items:center; gap:14px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+"; color:var(--accent); font-size:21px; font-weight:400;
+  line-height:1; transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:11px 0 0}
+.kpi{display:flex; flex-wrap:wrap; gap:clamp(20px,5vw,54px); margin-top:30px}
+.kpi div{min-width:96px}
+.kpi b{display:block; font-size:clamp(22px,3vw,30px); font-weight:800;
+  letter-spacing:-.03em; color:var(--fg)}
+.kpi span{font-size:13px; color:var(--dim)}
+footer{border-top:1px solid var(--rule); padding:38px 0 54px; font-size:14px}
+.flinks{display:flex; flex-wrap:wrap; gap:20px; margin-bottom:18px}
+.tiny{font-size:12.8px; color:var(--dim)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;
+    animation-iteration-count:1 !important; transition-duration:.001ms !important}
+  html{scroll-behavior:auto}
+  .r{opacity:1; transform:none}
+  .cndl{transform:scaleY(1)} .pathline{stroke-dashoffset:0}
+  .slidein,.rrow{opacity:1; transform:none}
+}
 </style>
 </head>
 <body>
-<main>
 
-  <div class="brand">
-    <div class="mark">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
-        <rect x="3" y="9"  width="4" height="9" rx="1.2"/><rect x="4.3" y="6"  width="1.4" height="15" rx="0.7"/>
-        <rect x="10" y="6" width="4" height="9" rx="1.2"/><rect x="11.3" y="3" width="1.4" height="15" rx="0.7"/>
-        <rect x="17" y="3" width="4" height="9" rx="1.2"/><rect x="18.3" y="1" width="1.4" height="15" rx="0.7"/>
-      </svg>
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+        stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l5-7 4 3 7-9"/></svg></span>
+      Paper Trader
+    </a>
+    <span class="spacer"></span>
+    <a class="lnk" href="#what">What it does</a>
+    <a class="lnk" href="#safety">Your token</a>
+    <a class="lnk" href="#faq">Questions</a>
+    <a class="btn btn-primary" href="#get" style="padding:9px 17px;font-size:14.5px">Get the app</a>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ================================================== HERO -->
+<div class="hero">
+  <div class="glow"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill r"><span class="dot"></span>Free, and unmonetised</span>
+      <h1 class="r d1">Practise Indian F&amp;O<br>with virtual money.</h1>
+      <p class="lead r d2" style="margin-top:18px">
+        Real strikes, real lot sizes, real margin rules, real charges.
+        Virtual money. <strong>The app cannot place a real order — there
+        is no order-placing code in it at all.</strong>
+      </p>
+
+      <div class="btn-row r d3">
+        <a class="btn btn-primary" id="dlBtn"
+           href="https://github.com/Deepulakkadasu/papertrader/releases/latest/download/papertrader.apk">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4l-4.7-4.7 1.4-1.4 3.3 3.3V3h2zM5 19h14v2H5v-2z"/></svg>
+          <span id="dlLabel">Download for Android</span>
+        </a>
+        <a class="btn btn-ghost" href="#get">Install help</a>
+      </div>
+      <p class="btn-note" id="dlNote">Android 7.0 or newer · one file for every phone · <span id="dlSize">52 MB</span></p>
+
+      <div class="kpi r d4">
+        <div><b>₹0</b><span>to us, ever</span></div>
+        <div><b>0</b><span>real orders possible</span></div>
+        <div><b>On-device</b><span>your broker keys</span></div>
+      </div>
     </div>
-    <strong>Paper Trader</strong>
+
+    <!-- The artwork IS the argument: a trade, then what it really cost. -->
+    <div class="art r d2" id="art">
+      <div class="art-top">
+        <b>NIFTY 24 000 CE</b> · 5-minute
+        <span class="spacer" style="flex:1"></span>
+        <span class="up" id="tick">+18.40</span>
+      </div>
+      <svg viewBox="0 0 420 210" role="img" aria-label="An illustrative candlestick chart with a stop line">
+        <defs>
+          <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--accent)" stop-opacity=".22"/>
+            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g stroke="var(--rule)" stroke-width="1">
+          <line x1="0" y1="52" x2="420" y2="52"/><line x1="0" y1="104" x2="420" y2="104"/>
+          <line x1="0" y1="156" x2="420" y2="156"/>
+        </g>
+        <path class="pathline" d="M18 150 L54 138 L90 146 L126 120 L162 128 L198 96 L234 104 L270 74 L306 84 L342 56 L378 44"
+              fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 150 L54 138 L90 146 L126 120 L162 128 L198 96 L234 104 L270 74 L306 84 L342 56 L378 44 L378 200 L18 200 Z"
+              fill="url(#fade)" opacity=".9"/>
+        <g>
+          <rect class="cndl" x="14"  y="142" width="9" height="22" rx="2" fill="var(--accent)"   style="animation-delay:.05s"/>
+          <rect class="cndl" x="50"  y="130" width="9" height="18" rx="2" fill="var(--red)"      style="animation-delay:.12s"/>
+          <rect class="cndl" x="86"  y="132" width="9" height="24" rx="2" fill="var(--accent)"   style="animation-delay:.19s"/>
+          <rect class="cndl" x="122" y="112" width="9" height="20" rx="2" fill="var(--accent)"   style="animation-delay:.26s"/>
+          <rect class="cndl" x="158" y="120" width="9" height="16" rx="2" fill="var(--red)"      style="animation-delay:.33s"/>
+          <rect class="cndl" x="194" y="88"  width="9" height="26" rx="2" fill="var(--accent)"   style="animation-delay:.40s"/>
+          <rect class="cndl" x="230" y="96"  width="9" height="18" rx="2" fill="var(--red)"      style="animation-delay:.47s"/>
+          <rect class="cndl" x="266" y="66"  width="9" height="24" rx="2" fill="var(--accent)"   style="animation-delay:.54s"/>
+          <rect class="cndl" x="302" y="76"  width="9" height="16" rx="2" fill="var(--red)"      style="animation-delay:.61s"/>
+          <rect class="cndl" x="338" y="48"  width="9" height="22" rx="2" fill="var(--accent)"   style="animation-delay:.68s"/>
+          <rect class="cndl" x="374" y="36"  width="9" height="18" rx="2" fill="var(--accent)"   style="animation-delay:.75s"/>
+        </g>
+        <g class="slidein">
+          <line x1="0" y1="168" x2="420" y2="168" stroke="var(--red)" stroke-width="1.6" stroke-dasharray="5 4"/>
+          <rect x="352" y="158" width="60" height="19" rx="5" fill="var(--red)"/>
+          <text x="382" y="171.5" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">STOP</text>
+        </g>
+      </svg>
+      <div class="receipt">
+        <div class="rrow"><span>Gross on the trade</span><span>+1,500.00</span></div>
+        <div class="rrow"><span>Brokerage, both legs</span><span>−40.00</span></div>
+        <div class="rrow"><span>STT, exchange, stamp, GST</span><span>−22.60</span></div>
+        <div class="rrow total"><span>What you actually kept</span><span>+1,437.40</span></div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <h1>Practise Indian F&amp;O with virtual money</h1>
-  <p class="lead">Real strikes, real lot sizes, real margin rules, real
-     charges. Virtual money. <strong>The app cannot place a real order —
-     there is no order-placing code in it at all.</strong></p>
+<hr>
 
-  <!-- The download, first. Most visitors arrive from a WhatsApp share
-       already convinced; making them scroll past the whole pitch to
-       find the button was losing exactly the people who need no pitch.
-       The install help stays in the section below, one tap away. -->
-  <p style="margin-top:18px">
-    <a class="cta" href="https://github.com/Deepulakkadasu/papertrader/releases/latest/download/papertrader.apk">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px;margin-right:7px">
-        <path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4l-4.7-4.7 1.4-1.4 3.3 3.3V3h2zM5 19h14v2H5v-2z"/>
-      </svg>Download for Android · 50 MB</a>
-    &nbsp;&nbsp;<a href="#download" style="font-size:13.5px">install help ↓</a>
-  </p>
-
-  <div class="launch">
-    <p><strong>Free until 10 October 2026.</strong> The app normally costs
-       ₹79 a month to run on your broker's live prices. While it is new
-       it costs nothing — connect your broker and use everything, live
-       feed included, without paying us anything. No card, no trial
-       counter, nothing to cancel.</p>
-    <p class="small">Your broker's own data charge still applies if you
-       use Dhan. On Fyers there is nothing to pay at all, to anyone.</p>
-  </div>
-
-  <p class="platform">
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-3px">
-      <path d="M17.6 9.48l1.84-3.18a.38.38 0 00-.14-.52.38.38 0 00-.52.14l-1.87 3.23a11.4 11.4 0 00-9.82 0L5.22 5.92a.38.38 0 00-.52-.14.38.38 0 00-.14.52L6.4 9.48A10.8 10.8 0 001 18h22a10.8 10.8 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/>
-    </svg>
-    <strong>Android only.</strong> There is no iPhone or iPad version, and
-    there will not be one for a while — so if you are on an iPhone, this
-    is not for you yet. Sorry.
-  </p>
-
-  <h2>What it looks like</h2>
-  <div class="shots">
-    <img src="shots/01-watchlist.webp" width="360" height="780" alt="Watchlist with live index prices" loading="lazy">
-    <img src="shots/02-fno.webp" width="360" height="780" alt="F&amp;O screen" loading="lazy">
-    <img src="shots/03-option-chain.webp" width="360" height="780" alt="Option chain with open interest" loading="lazy">
-    <img src="shots/04-order-ticket.webp" width="360" height="780" alt="Order ticket showing margin and charges" loading="lazy">
-    <img src="shots/05-chart.webp" width="360" height="780" alt="Chart with position and stop lines" loading="lazy">
-    <img src="shots/06-scalper.webp" width="360" height="780" alt="Scalper terminal" loading="lazy">
-  </div>
-
-  <h2>What it does</h2>
-  <ul>
-    <li><strong>NIFTY and BANKNIFTY options and futures</strong> — the real
-        chain, real expiries, real lot sizes.</li>
-    <li><strong>Margin that behaves like a broker's.</strong> Long options
-        are fully paid; writing an option blocks margin; MIS squares off at
-        the real cutoffs. If a trade would be refused at a broker, it is
-        refused here.</li>
-    <li><strong>Brokerage, STT, stamp duty, exchange and SEBI charges</strong>
-        are all deducted. The P&amp;L you see is after costs, which is the
-        only P&amp;L worth practising against.</li>
-    <li><strong>Fills cross the spread</strong> and walk the order book. A
-        practice fill at the last traded price teaches the one lesson a
-        simulator must not teach.</li>
-    <li><strong>Charts you can trade from</strong> — drag a stop, pull a
-        target out of your position line, place a limit at a level.</li>
-    <li><strong>A trade journal</strong> that keeps score honestly, including
-        the trades you would rather forget.</li>
-  </ul>
-
-  <hr>
-
-  <h2 id="how">How it works, start to finish</h2>
-
-  <p>Six steps, and you can stop after the first one and never pay
-     anything.</p>
-
-  <ol class="flow">
-    <li>
-      <b>Install it and use it. <span class="free">Free.</span></b>
-      No account, no sign-up, no broker, no payment. The whole simulator
-      runs on a built-in practice feed — real strikes, real lot sizes,
-      real margins, real charges, virtual money. Most people never need
-      to go past this step.
-    </li>
-    <li>
-      <b>Decide you want real live prices</b>
-      The practice feed behaves like the market but it is not the market.
-      If you want the app to show what NIFTY is actually doing right now,
-      carry on.
-    </li>
-    <li>
-      <b>Get a market data subscription from your broker</b>
-      Two brokers work today. <strong>Fyers</strong> — their market data
-      is free: you create your own API app in your Fyers account (a
-      five-minute, one-time step; the app walks you through it) and log
-      in with it. Or <strong>Dhan</strong> — their data API costs about
-      ₹499 a month, <strong>paid to Dhan, not to us</strong>. Most
-      people should pick Fyers, because the only cost left is ours.
-    </li>
-    <li>
-      <b>Sign in with Google</b>
-      One tap, before the broker is linked. It is what remembers you
-      across a reinstall or a new phone, and it is how we can tell you
-      when the free period ends rather than letting the app quietly stop
-      working. Practice mode needs none of this.
-    </li>
-    <li>
-      <b>Paste the token into the app</b>
-      Menu → Broker connection. The app copies it off your clipboard for
-      you. It then asks your broker for a price, and only says <em>Connected</em>
-      if a real price comes back — so you know your side works before you
-      spend anything with us.
-    </li>
-    <li>
-      <b>Nothing to pay, for now</b>
-      Until 10 October 2026 the live feed is simply on. There is no
-      payment step, no code to send and nothing to unlock — connect your
-      broker and trade.
-    </li>
-    <li>
-      <b>After that, ₹79 for a month at a time</b>
-      Sign in with Google — that is what remembers you when you reinstall
-      or change phone. The app shows you a short code like
-      <code>PT-K4M7</code> and opens your UPI app with the amount and the
-      code already filled in. Pay it. Nothing is auto-debited, ever: each
-      month is a separate payment you choose to make, and the app
-      switches to your live feed on its own once the payment is matched.
-    </li>
-  </ol>
-
-  <p><strong>So the order is deliberate:</strong> you prove your broker
-     works first, and only then are you asked for money. If the token
-     never connects, you have not paid us anything.</p>
-
-  <hr>
-
-  <h2 id="safety">Your broker token, and what happens to it</h2>
-
-  <p>You are being asked to paste a broker access token into an app you
-     downloaded from a link. That deserves a straight answer, so here is
-     exactly what the app does and does not do with it.</p>
-
-  <div class="card">
-    <h3>It never leaves your phone</h3>
-    <p>The token is stored in Android's Keystore-backed secure storage on
-       your device. It is never sent to any server of ours — we do not
-       run a server that market data or tokens pass through. It is
-       excluded from Google cloud backup and from phone-to-phone transfer,
-       so it does not travel even when your other app data does.</p>
-  </div>
-
-  <div class="card">
-    <h3>No real order can be placed</h3>
-    <p>The app calls exactly four kinds of endpoint at your broker: quotes,
-       historical candles, the option chain, and the market feed. There is
-       no order-placement, funds, holdings or positions call anywhere in
-       the source. This is not a policy we promise to follow — the code to
-       place an order does not exist.</p>
-  </div>
-
-  <div class="card">
-    <h3>Your data goes only where you send it</h3>
-    <p>Market prices are drawn on your screen and discarded. Nothing is
-       stored or shared with anyone else, and no other user can see
-       anything of yours.</p>
-    <p>If you choose to sign in with Google to back up your practice
-       trades, your name, email and trading history are stored in your own
-       record so they come back on a new phone. That is optional, and the
-       token is never part of it. The full detail is in the
-       <a href="privacy/">Privacy Policy</a>.</p>
-  </div>
-
-  <div class="card">
-    <h3>What we can see</h3>
-    <p>If you sign in: your name, your email, and your practice trading
-       history. Nothing else. We cannot see your real positions, your real
-       funds, or your broker password — the app never asks for them and
-       the token only permits reading market data.</p>
-  </div>
-
-  <hr>
-
-  <h2>Price, said plainly</h2>
-
+<!-- ================================================== WHAT -->
+<section id="what">
   <div class="wrap">
-  <table>
-    <tr><th>What</th><th>Cost</th><th>Paid to</th></tr>
-    <tr>
-      <td>The whole simulator on practice prices</td>
-      <td><strong>Free</strong></td>
-      <td class="n">—</td>
-    </tr>
-    <tr>
-      <td>Your broker's market data API</td>
-      <td class="n"><strong>Fyers: free</strong><br>Dhan: about ₹499/month</td>
-      <td class="n"><strong>your broker</strong>, not us</td>
-    </tr>
-    <tr>
-      <td>Switching the app onto that live feed</td>
-      <td><strong class="free">free until 10 Oct 2026</strong><br>
-          <span class="n">₹79 / month after that</span></td>
-      <td class="n">us</td>
-    </tr>
-  </table>
+    <div class="narrow">
+      <p class="eyebrow r">What it does</p>
+      <h2 class="r d1">A simulator that refuses to flatter you.</h2>
+      <p class="r d2">Most paper traders fill at the last price, charge
+        nothing, and hand you a P&amp;L that a real account would never
+        produce. That teaches the one lesson a simulator must not teach.</p>
+    </div>
+
+    <div class="grid g3" style="margin-top:34px">
+      <div class="card r">
+        <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
+        <h3>The real chain</h3>
+        <p>NIFTY and BANKNIFTY options and futures — real expiries, real
+          strikes, real lot sizes, straight from your own broker.</p>
+      </div>
+      <div class="card r d1">
+        <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/></svg></div>
+        <h3>Margin that behaves</h3>
+        <p>Long options are fully paid. Writing one blocks margin. MIS
+          squares off at the real cut-off. Refused at a broker means
+          refused here.</p>
+      </div>
+      <div class="card r d2">
+        <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+        <h3>Every charge, deducted</h3>
+        <p>Brokerage, STT, stamp duty, exchange and SEBI fees, GST. The
+          P&amp;L you see is after costs — the only one worth practising
+          against.</p>
+      </div>
+      <div class="card r">
+        <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 7l-4 5 4 5"/><path d="M16 7l4 5-4 5"/></svg></div>
+        <h3>Fills cross the spread</h3>
+        <p>A market order pays what a market order pays, in and out. No
+          free tick on the way through.</p>
+      </div>
+      <div class="card r d1">
+        <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg></div>
+        <h3>Trade from the chart</h3>
+        <p>Drag a stop, pull a target out of the position line, drop a
+          limit at a level. It goes through the same engine.</p>
+      </div>
+      <div class="card r d2">
+        <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg></div>
+        <h3>A journal that keeps score</h3>
+        <p>Every closed trade with what fired it, what it cost, and the
+          ones you would rather forget.</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <p><strong>Right now, only one of them applies.</strong> Our side is
-     free until 10 October 2026 — on Fyers that means the whole thing
-     costs you nothing.</p>
-
-  <p>So live prices cost you two things, and only one of them is ours.
-     We would rather you know that before you pay than after. Everything
-     except the live feed is free forever, with no time limit, no account
-     and no card. Linking a broker — the step that turns live prices on —
-     asks you to sign in with Google first, because that account is what
-     carries your plan to a new phone and it is how we can tell you when
-     the free period ends. We ask Google for your name and email and
-     nothing else.</p>
-
-  <p><strong>Nothing renews by itself.</strong> There is no auto-debit and
-     no mandate on your account. When the month runs out the app goes back
-     to the practice feed and waits; you pay again only if you want to.</p>
-
-  <h3>Refunds and cancellation</h3>
-  <p>There is nothing to cancel — each month is paid separately and
-     nothing renews automatically, so stopping means simply not paying
-     again. If the app does not work for you and you tell us within
-     <strong>7 days</strong> of paying, we refund that month in full, no
-     questions. Write to
-     <a href="mailto:pradeeplakkadasu@gmail.com">pradeeplakkadasu@gmail.com</a>
-     with the payment reference shown in the app.</p>
-
-  <hr>
-
-  <h2 id="community">The WhatsApp channel</h2>
-  <p>Updates go out there first: what has been fixed, what is being
-     worked on, and what other people are doing with it. It is a channel,
-     not a group — nobody sees your number, and you cannot be added to
-     anything.</p>
-  <p><strong>No tips, no calls, no signals</strong>, ever. This is a
-     practice app and that is the only thing it will ever be about.</p>
-  <p><a class="cta" href="https://whatsapp.com/channel/0029VbDVpCYDZ4LVx24kty3m"
-        rel="noopener">Join the channel</a></p>
-
-  <h2 id="download">Getting it</h2>
-
-  <div class="note">
-    <p><strong>Android only, and not on the Play Store yet.</strong> Android will
-       warn you before installing an app from outside the store, and it is
-       right to. Only install this if you trust the person who sent you
-       the link — and check the fingerprint below matches, so you know the
-       file was not altered on the way to you.</p>
+<!-- ================================================== SHOTS -->
+<section class="tint" style="padding-bottom:clamp(34px,5vw,58px)">
+  <div class="wrap narrow">
+    <p class="eyebrow r">Inside</p>
+    <h2 class="r d1">What it looks like</h2>
+    <p class="r d2">Swipe. These are the real screens, not mock-ups.</p>
   </div>
-
-  <p>
-    <a class="cta" href="https://github.com/Deepulakkadasu/papertrader/releases/latest/download/papertrader.apk">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px;margin-right:7px">
-        <path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4l-4.7-4.7 1.4-1.4 3.3 3.3V3h2zM5 19h14v2H5v-2z"/>
-      </svg>Download for Android · 50 MB</a>
-  </p>
-  <p class="sub">The download starts as soon as you tap it. When it
-     finishes, tap the file in your notifications to install.</p>
-
-  <div class="note" style="margin-top:14px">
-    <p><strong>If it reaches 100% and then never finishes,
-       Chrome is refusing to release it.</strong> Some phones do this to
-       every APK, whatever the source, and there is no button to override
-       it. The file is not corrupt — Chrome simply will not hand it over.
-       Two ways round it:</p>
-    <p style="margin-top:10px">
-       <strong>1.</strong> Ask us on WhatsApp and we will send you the
-       file directly. This always works and takes a minute.<br>
-       <strong>2.</strong> Or
-       <a href="https://github.com/Deepulakkadasu/papertrader/releases/latest/download/papertrader-apk.bin">download this copy</a>,
-       then rename it from <code>papertrader-apk.bin</code> to
-       <code>papertrader.apk</code> in your Files app and tap it. Same
-       file, same fingerprint — only the name is different, which is the
-       whole reason Chrome allows it.</p>
+  <div class="shots r d2" style="max-width:var(--maxw);margin:26px auto 0">
+    <figure class="phone" style="margin:0"><img src="shots/01-watchlist.webp" width="720" height="1560" alt="Watchlist with live index prices" loading="lazy" decoding="async"></figure>
+    <figure class="phone" style="margin:0"><img src="shots/03-option-chain.webp" width="720" height="1560" alt="Option chain with open interest" loading="lazy" decoding="async"></figure>
+    <figure class="phone" style="margin:0"><img src="shots/04-order-ticket.webp" width="720" height="1560" alt="Order ticket showing margin and charges" loading="lazy" decoding="async"></figure>
+    <figure class="phone" style="margin:0"><img src="shots/05-chart.webp" width="720" height="1560" alt="Chart with position and stop lines" loading="lazy" decoding="async"></figure>
+    <figure class="phone" style="margin:0"><img src="shots/02-fno.webp" width="720" height="1560" alt="F&amp;O screen" loading="lazy" decoding="async"></figure>
+    <figure class="phone" style="margin:0"><img src="shots/06-scalper.webp" width="720" height="1560" alt="Scalper terminal" loading="lazy" decoding="async"></figure>
   </div>
-  <p class="sub">Android 7.0 or newer, and one file for every phone —
-     32-bit and 64-bit alike.
-     <a href="https://github.com/Deepulakkadasu/papertrader/releases/latest">All versions and fingerprints</a>.</p>
+  <p class="cap">Watchlist · option chain · order ticket · chart · F&amp;O · scalper</p>
+</section>
 
-  <h3 id="notinstalled">If it says <em>App not installed</em></h3>
-  <p>Until 0.9.59 this page handed out a 64-bit-only build, so phones with
-     a 32-bit processor downloaded a file they could not run and got
-     exactly that message. That was our mistake and it is fixed — the
-     download above now works on every Android phone. If you hit it
-     before, download again; nothing else is needed.</p>
-  <p>If it still fails, it is one of these:</p>
-  <ul>
-    <li><strong>Play Protect blocked it.</strong> Tap <em>More details</em>
-        → <em>Install anyway</em>. It warns about every app installed
+<!-- ================================================== HOW -->
+<section id="how">
+  <div class="wrap narrow">
+    <p class="eyebrow r">How it works</p>
+    <h2 class="r d1">Start to finish, in six steps.</h2>
+    <p class="r d2">You can stop after the first one and it still works.</p>
+
+    <ol class="steps r d2" style="margin-top:32px">
+      <li><h3>Install and open it</h3><p>No account, no sign-up, no card.
+        You are trading on practice prices within a minute.</p></li>
+      <li><h3>Connect your broker, if you want live prices</h3>
+        <p>Dhan, Fyers or Upstox. You create your own API key on their
+          site and paste it in. We never see it.</p></li>
+      <li><h3>Pick something and look at it properly</h3>
+        <p>The chain with open interest, the chart with your own drawings,
+          the greeks worked out from the option's own traded premium.</p></li>
+      <li><h3>Place a trade</h3><p>The ticket shows the margin it will
+        block and the charges it will cost before you confirm — not
+        after.</p></li>
+      <li><h3>Write a rule in your own words</h3>
+        <p>English or Telugu. The app reads it back to you, tells you what
+          it could not understand, and backtests it on your own broker's
+          candles with real costs.</p></li>
+      <li><h3>Deploy it on paper</h3><p>The same rule runs live on paper
+        money, on the same candles it was tested on, and every trade it
+        takes is recorded.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================================================== SAFETY -->
+<section id="safety" class="tint">
+  <div class="wrap">
+    <div class="narrow">
+      <p class="eyebrow r">Your broker token</p>
+      <h2 class="r d1">It never leaves your phone.</h2>
+      <p class="r d2">This is the part that should worry you about any app
+        like this, so here is exactly how it works.</p>
+    </div>
+    <div class="grid g2" style="margin-top:32px">
+      <div class="card r">
+        <h3>There is no server of ours</h3>
+        <p>The app talks to your broker directly from your phone. Your
+          token is kept in Android's own encrypted keystore. There is
+          nowhere for it to be uploaded to, because we run nothing that
+          could receive it.</p>
+      </div>
+      <div class="card r d1">
+        <h3>No real order can be placed</h3>
+        <p>The app only ever calls the market-data half of your broker's
+          API. There is no order-placing code in it. Even if it were
+          compromised, it could not buy anything.</p>
+      </div>
+      <div class="card r d2">
+        <h3>Your password never touches it</h3>
+        <p>Every broker signs you in on their own page and hands back a
+          token. No password, PIN or 2FA code ever reaches this app.</p>
+      </div>
+      <div class="card r d3">
+        <h3>What we can see</h3>
+        <p>A count of installs — a random id, two dates and the app
+          version. If you sign in for cloud backup, your name and email.
+          Nothing else. <a href="privacy/">The whole list</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== GET IT -->
+<section id="get">
+  <div class="wrap narrow">
+    <p class="eyebrow r">Getting it</p>
+    <h2 class="r d1">Download</h2>
+
+    <div class="note r d1" id="iosNote" hidden>
+      <p><strong>You are on an iPhone or iPad.</strong> There is no iOS
+        version and there will not be one for a while. Open this page on
+        an Android phone, or send yourself the link.</p>
+    </div>
+
+    <div class="note r d1" id="deskNote" hidden>
+      <p><strong>You are on a computer.</strong> The file below is an
+        Android app — download it here and move it to your phone, or open
+        this page on the phone itself.</p>
+    </div>
+
+    <p class="r d2">Not on the Play Store yet, so Android will warn you
+      before installing it. It is right to. Check the fingerprint below
+      matches, so you know the file was not altered on the way to you.</p>
+
+    <div class="btn-row r d2">
+      <a class="btn btn-primary" id="dlBtn2"
+         href="https://github.com/Deepulakkadasu/papertrader/releases/latest/download/papertrader.apk">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4l-4.7-4.7 1.4-1.4 3.3 3.3V3h2zM5 19h14v2H5v-2z"/></svg>
+        Download the APK
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/Deepulakkadasu/papertrader/releases/latest">All versions</a>
+    </div>
+    <p class="btn-note">When it finishes, tap the file in your
+      notifications to install.</p>
+
+    <!-- The failure everybody hits, answered where they hit it rather
+         than in an FAQ further down the page. A user reported this and
+         could not find the way round it, because the way round it was
+         four screens below the button. -->
+    <div class="note r" style="margin-top:26px">
+      <p><strong>If it reaches 100% and then never finishes, or Chrome
+        says the file is not commonly downloaded —</strong> that is Chrome
+        refusing to hand over an APK. Some phones do it to every APK
+        whatever the source, and there is no button to override it. The
+        file is not broken. Three ways round it, in order:</p>
+      <p><strong>1.</strong> In the download notification or Chrome's
+        Downloads list, tap the ⋮ next to the file and choose
+        <em>Download anyway</em> / <em>Keep</em>.</p>
+      <p><strong>2.</strong>
+        <a href="https://github.com/Deepulakkadasu/papertrader/releases/latest/download/papertrader-apk.bin">Download this identical copy</a>
+        instead, then rename it from <code>papertrader-apk.bin</code> to
+        <code>papertrader.apk</code> in your Files app and tap it. Same
+        file, same fingerprint — only the name differs, which is the
+        whole reason Chrome allows it.</p>
+      <p><strong>3.</strong> Ask on WhatsApp and we will send you the file
+        directly. That always works.</p>
+    </div>
+
+    <h3 style="margin-top:34px">If it says <em>App not installed</em></h3>
+    <ul>
+      <li><strong>Play Protect blocked it.</strong> Tap <em>More details</em>
+        → <em>Install anyway</em>. It warns about every app installed from
         outside the store, ours included.</li>
-    <li><strong>An older Paper Trader is already on the phone</strong> from
-        a file someone sent you long ago. Android refuses to replace an app
-        with one signed differently. Uninstall the old one first — your
-        trades are in your account, so signing in restores them.</li>
-    <li><strong>Not enough free space.</strong> Android needs roughly twice
-        the file size free while it installs.</li>
-    <li><strong>The download stopped short.</strong> Check the fingerprint
-        below; if it does not match, delete the file and download again.</li>
-  </ul>
+      <li><strong>An older Paper Trader is on the phone</strong> from before
+        we settled on one signing key. Uninstall it first; nothing of
+        yours is stored outside the app.</li>
+      <li><strong>Not enough space.</strong> Android needs roughly twice
+        the file size free to install.</li>
+      <li><strong>The download stopped short.</strong> Check the
+        fingerprint on the
+        <a href="https://github.com/Deepulakkadasu/papertrader/releases/latest">release page</a>;
+        if it does not match, delete the file and download again.</li>
+    </ul>
 
-  <h3>Check what you downloaded</h3>
-  <p>Every release lists a SHA-256 fingerprint. On a phone, an app like
-     <em>Hash Droid</em> will compute it; on a computer:</p>
-  <p><code>sha256sum papertrader.apk</code></p>
-  <p>If it does not match the one on the release page, do not install it —
-     tell us instead.</p>
-
-  <h3>Installing</h3>
-  <ul>
-    <li>Tap the finished download — in your notification shade, or in
-        <em>Files → Downloads</em>. Android will ask whether to allow
-        installing from this source; allow it for your browser.</li>
-    <li>Play Protect may show a warning because the app is not from the
-        store. Choose <em>Install anyway</em> if you are sure of the
-        fingerprint.</li>
-    <li>Turn the permission back off afterwards if you like. The app does
-        not need it again.</li>
-  </ul>
-
-  <hr>
-
-  <h2>How it is built</h2>
-
-  <p>Written for people who want to know what they are installing.</p>
-
-  <div class="wrap">
-  <table>
-    <tr><th>Part</th><th>What it is</th></tr>
-    <tr><td>App</td><td class="n">Flutter (Dart), Android. One codebase, no web view except the chart.</td></tr>
-    <tr><td>Charts</td><td class="n">TradingView Lightweight Charts, running locally — the same charting engine broker apps use, drawing your own data.</td></tr>
-    <tr><td>Option pricing</td><td class="n">Black-Scholes with a volatility smile, used for the practice feed's chain.</td></tr>
-    <tr><td>Market data</td><td class="n">Your own broker account, over their published REST and WebSocket APIs. Fyers or Dhan today; the broker layer is an adapter, so others can be added.</td></tr>
-    <tr><td>Fills</td><td class="n">Modelled against the live order book — the spread is crossed and size walks the levels.</td></tr>
-    <tr><td>Charges</td><td class="n">Brokerage, STT, stamp duty, exchange transaction charges, SEBI turnover fee and GST, computed per trade.</td></tr>
-    <tr><td>Storage</td><td class="n">On your device. Tokens in Android Keystore-backed secure storage; everything else in ordinary app storage.</td></tr>
-    <tr><td>Optional backup</td><td class="n">Firebase Authentication and Firestore, only if you sign in.</td></tr>
-    <tr><td>Tests</td><td class="n">280+ automated tests, run before every release, covering the engine, margins, charges, fills and expiry settlement.</td></tr>
-  </table>
+    <div class="soft" style="margin-top:22px">
+      <p><strong>Still stuck?</strong> Tell us what the phone said, word
+        for word, and which browser you used — that one sentence is
+        usually enough to know exactly which of the above it was.</p>
+    </div>
   </div>
+</section>
 
-  <hr>
+<!-- ================================================== NOT -->
+<section class="tint">
+  <div class="wrap narrow">
+    <p class="eyebrow r">Straight answers</p>
+    <h2 class="r d1">What this is not.</h2>
+    <div class="grid g2 r d2" style="margin-top:26px">
+      <div class="card"><h3>Not a broker</h3><p>It cannot buy or sell
+        anything. It holds no money and moves none.</p></div>
+      <div class="card"><h3>Not advice</h3><p>It never tells you what to
+        trade. No tips, no signals, no calls — not from us and not from
+        the AI features.</p></div>
+      <div class="card"><h3>Not a promise</h3><p>Doing well here is not
+        evidence you will do well with real money. Most rules do not clear
+        costs. That is the normal result, not a bug.</p></div>
+      <div class="card"><h3>Not selling you anything</h3><p>There is no
+        subscription, no in-app purchase and no card field. The whole app
+        is free and stays free.</p></div>
+    </div>
+  </div>
+</section>
 
-  <h2>What this is not</h2>
-  <ul>
-    <li><strong>Not investment advice.</strong> The app gives no tips, no
-        recommendations, no buy or sell signals, and makes no claim about
-        returns. We are not registered with SEBI in any capacity and do
-        not advise anyone.</li>
-    <li><strong>Not real trading.</strong> No money is invested and no
-        order reaches an exchange. Profits and losses shown are virtual.</li>
-    <li><strong>Not a game.</strong> There are no prizes, no entry fees, no
-        leaderboards and no rewards of any kind.</li>
-    <li><strong>Not a substitute for losing your own money.</strong> A
-        simulator cannot reproduce what it feels like when the money is
-        real. It can teach you the mechanics, the costs and the maths.
-        That is worth a lot, and it is not the same thing.</li>
-  </ul>
+<!-- ================================================== FAQ -->
+<section id="faq">
+  <div class="wrap narrow">
+    <p class="eyebrow r">Questions</p>
+    <h2 class="r d1" style="margin-bottom:22px">The ones people actually ask</h2>
 
-  <hr>
+    <div class="r d2">
+    <details><summary>Is there an iPhone version?</summary>
+      <p>No, and not for a while. Android only.</p></details>
 
-  <h2>Questions</h2>
+    <details><summary>Do I need a broker account?</summary>
+      <p>No. Everything works on the built-in practice feed. Connecting a
+        broker swaps that for your own live prices, which is better
+        practice — but it is optional and nothing is locked behind it.</p></details>
 
-  <h3>The download stopped at 100% and never finished</h3>
-  <p>Chrome on some phones will take every byte of an APK and then refuse
-     to release the file, with no prompt and no way to override it. It is
-     not a broken download and it is not this site — the same thing
-     happens to APKs from anywhere. Either ask us for the file on
-     WhatsApp, or use the <code>.bin</code> copy linked in the download
-     section and rename it. Both are the identical file.</p>
+    <details><summary>Does it cost anything?</summary>
+      <p>No. Not now and not later. There is no subscription, no in-app
+        purchase and no card field anywhere in the app. If your broker
+        charges for its own market-data API — Dhan does, Fyers and Upstox
+        do not — that is between you and them, and we never see it.</p></details>
 
-  <h3>Is there an iPhone version?</h3>
-  <p>No, and not soon. This is an Android app. Everything on this page
-     applies to Android phones only.</p>
+    <details><summary>Will it place a trade in my real account by mistake?</summary>
+      <p>It cannot. There is no order-placing code in the app. It only
+        ever calls the market-data half of your broker's API.</p></details>
 
-  <h3>Do I need a broker account?</h3>
-  <p>No. Everything works on a built-in practice feed with no account, no
-     token and no payment. You only need a broker if you want the app to
-     show real live prices.</p>
+    <details><summary>Do you store my broker password?</summary>
+      <p>We never see it. Your broker signs you in on their own page and
+        hands the app a token, which is kept in Android's encrypted
+        keystore on your phone and is never uploaded anywhere.</p></details>
 
-  <h3>Will it place a trade in my real account by mistake?</h3>
-  <p>It cannot. The app contains no code that places an order.</p>
+    <details><summary>What happens when my token expires?</summary>
+      <p>Most broker tokens last a day. The app tells you and shows a
+        reconnect button; until you tap it, prices go back to the practice
+        feed and everything else keeps working.</p></details>
 
-  <h3>What happens when my token expires?</h3>
-  <p>Broker tokens usually last a day. The app renews it silently when it
-     can, and tells you plainly when it cannot, so prices never quietly
-     go stale without you knowing.</p>
+    <details><summary>Why is it not on the Play Store?</summary>
+      <p>It is on the way. Play verification for a new developer account
+        takes documents and time; the app is finished and shipping here in
+        the meantime.</p></details>
 
-  <h3>Do you store my broker password?</h3>
-  <p>We never see it. You paste a token that your broker generates; it
-     permits reading market data and nothing else.</p>
+    <details><summary>How do I get updates?</summary>
+      <p>The app checks for them itself and offers a one-tap update. You
+        can also come back to this page any time — the button always
+        points at the newest build.</p></details>
+    </div>
+  </div>
+</section>
 
-  <h3>Can I get my money back?</h3>
-  <p>Yes — within 7 days of paying, for any reason. See above.</p>
+<footer>
+  <div class="wrap">
+    <div class="flinks">
+      <a href="privacy/">Privacy</a>
+      <a href="terms/">Terms</a>
+      <a href="delete-account/">Delete your account</a>
+      <a href="https://github.com/Deepulakkadasu/papertrader/releases">Releases</a>
+      <a href="mailto:pradeeplakkadasu@gmail.com">Contact</a>
+    </div>
+    <p class="tiny">Paper Trader is a trading <em>simulator</em>. It is not a
+      broker, not an adviser, and not registered with SEBI as either. It
+      places no real orders and holds no money. Nothing in the app or on
+      this page is investment advice. Derivatives carry a real risk of
+      loss; most retail traders lose money in them.</p>
+  </div>
+</footer>
 
-  <footer>
-    <a href="privacy/">Privacy Policy</a>
-    <a href="terms/">Terms of Use</a>
-    <a href="mailto:pradeeplakkadasu@gmail.com">Contact</a>
-    <br><br>
-    Paper Trader is made in Telangana, India by Pradeep Lakkadasu.<br>
-    Trading in securities carries risk. Nothing here is investment advice.
-  </footer>
-
-</main>
-
-<div class="diary-pill" id="diaryPill" role="button" tabindex="0">
-  <span class="dot"></span>
-  <b>Ee roju market</b> <span id="diaryLen">51 sec</span>
-</div>
-<div class="diary-modal" id="diaryModal">
-  <button class="diary-close" id="diaryClose" aria-label="Close">&times;</button>
-  <video id="diaryVideo" controls playsinline preload="none"></video>
-</div>
 <script>
-// The diary is one manifest key away, so the page never needs editing
-// for a new night - and if tonight has not been published, nothing at
-// all is shown.
+/* ------------------------------------------------------------------
+ * Everything below is progressive: with JavaScript off the page is
+ * fully readable, every link works, and the download button still
+ * points at the right file. Motion and platform detection are the
+ * only things that need it.
+ * ------------------------------------------------------------------ */
 (function () {
-  var pill = document.getElementById('diaryPill');
-  var modal = document.getElementById('diaryModal');
-  var video = document.getElementById('diaryVideo');
-  function close() { modal.classList.remove('on'); video.pause(); }
-  fetch('videos.json', { cache: 'no-store' }).then(function (r) {
-    return r.json();
-  }).then(function (m) {
-    var d = m.diary;
-    if (!d || !d.url) return;
-    document.getElementById('diaryLen').textContent =
-      (d.seconds || 51) + ' sec  ·  ' + (d.title || '').replace('Market Diary - ', '');
-    video.src = d.url;
-    pill.classList.add('on');
-  }).catch(function () {});
-  function open() { modal.classList.add('on'); video.play(); }
-  pill.addEventListener('click', open);
-  pill.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
-  });
-  document.getElementById('diaryClose').addEventListener('click', close);
-  modal.addEventListener('click', function (e) {
-    if (e.target === modal) close();
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') close();
-  });
+  'use strict';
+
+  // Sticky header hairline, only once it has actually scrolled.
+  var hdr = document.getElementById('hdr');
+  var onScroll = function () {
+    hdr.classList.toggle('stuck', window.scrollY > 8);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Scroll reveals. IntersectionObserver so nothing runs on a frame
+  // the user is not looking at.
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.r');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    items.forEach(function (el) { io.observe(el); });
+  }
+
+  // The hero artwork animates once, when it is on screen.
+  var art = document.getElementById('art');
+  if (art) {
+    if (reduce || !('IntersectionObserver' in window)) {
+      art.classList.add('reveal');
+    } else {
+      var io2 = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { art.classList.add('reveal'); io2.disconnect(); }
+        });
+      }, { threshold: 0.25 });
+      io2.observe(art);
+    }
+  }
+
+  // A number that moves, so the card reads as a live thing rather than
+  // a picture of one. Deliberately small and deliberately not a price
+  // anybody could mistake for a quote.
+  var tick = document.getElementById('tick');
+  if (tick && !reduce) {
+    var v = 18.40;
+    setInterval(function () {
+      v += (Math.random() - 0.45) * 0.6;
+      if (v < 12) v = 12.4;
+      if (v > 26) v = 25.6;
+      tick.textContent = '+' + v.toFixed(2);
+    }, 1400);
+  }
+
+  // ---------------------------------------------------------------
+  // Platform. An iPhone visitor tapping "Download for Android" gets a
+  // file they cannot use and no explanation, and a desktop visitor
+  // gets one they cannot install — both then report that the download
+  // "did not work". Say so before the tap, not after.
+  // ---------------------------------------------------------------
+  var ua = navigator.userAgent || '';
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) ||
+    (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+
+  if (isIOS) {
+    var n = document.getElementById('iosNote');
+    if (n) n.hidden = false;
+    ['dlBtn', 'dlBtn2'].forEach(function (id) {
+      var b = document.getElementById(id);
+      if (!b) return;
+      b.classList.remove('btn-primary');
+      b.classList.add('btn-ghost');
+    });
+    var lbl = document.getElementById('dlLabel');
+    if (lbl) lbl.textContent = 'Android only — not for iPhone';
+    var note = document.getElementById('dlNote');
+    if (note) note.textContent = 'There is no iOS version yet. Open this page on an Android phone.';
+  } else if (!isAndroid) {
+    var d = document.getElementById('deskNote');
+    if (d) d.hidden = false;
+  }
+
+  // The real size of the current build, read from the manifest the app
+  // itself updates. Hard-coding it meant the page said 50 MB for
+  // months while the file grew.
+  fetch('update.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (j) {
+      if (!j || !j.files || !j.files.universal) return;
+      var mb = Math.round(j.files.universal.size / 1048576);
+      var el = document.getElementById('dlSize');
+      if (el && mb > 0) el.textContent = mb + ' MB';
+    })
+    .catch(function () { /* the hard-coded figure stands */ });
 })();
 </script>
 </body>
