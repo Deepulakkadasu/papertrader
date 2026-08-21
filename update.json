@@ -1,27 +1,27 @@
 {
-    "build":  1006,
-    "version":  "1.0.6",
-    "notes":  "**A rule with no entry condition could sit there saying \"Running\" all session.** It went on, the screen said Running, and the trade list said \"no trades yet, the conditions in your rule have not happened\". They had not happened because there were none. The Backtest gate checked for this; the Start-live-test button skips the backtest on purpose - for anyone whose broker serves no history - and skipped the check with it. One guard now covers every way a rule can be switched on, and it tells you what to fix rather than just refusing.",
+    "build":  1010,
+    "version":  "1.1.0",
+    "notes":  "Two audits ran across the whole app - nineteen readers, every finding put to independent skeptics before it counted. 151 survived. These are the ones that were costing you money or telling you something false.\n\n**Every live entry booked a phantom exit on the same tick.** The runner checked whether it was flat BEFORE entering, then re-used that answer after entering - so the moment a rule opened a position it immediately booked an exit for it, cleared the contract it was holding, and left the real position running with no rule watching it. Every entry, every time. This is why a deployed rule\u0027s record never looked like its backtest.\n\n**The runner never told the engine what it bought.** No strike, no expiry on the fill. So a rule that entered on delta had no delta to exit on - the half of \"buy at 0.5, exit at 0.3\" that gets you out - and a rule WRITING options blocked no margin at all.\n\n**Expired SENSEX contracts settled against NIFTY\u0027s close.** A SENSEX 82000 put settled at 82,000 minus about 25,100: eleven lakh of invented profit on one lot, written into your tradebook as \"Expiry settlement\". Every SENSEX call settled at zero however deep in the money it expired.\n\n**Market Pulse showed nothing at all on Upstox accounts** - every candle was rejected before a card saw it.\n\n**The report told you costs were 0.35% of traded value.** That flat model was replaced by real per-segment charges months ago - on index futures about a third of what the sentence claimed. The arithmetic was fixed and the sentence was left.\n\n**The privacy paragraph undercounted.** It said one thing leaves the phone when you use the AI. One key drives three paths - building a rule, explaining a backtest, and the Coach reading - and only the first was described. All three are named now, on the key screen, the build screen and in the privacy policy, which had no mention of Gemini in it at all.\n\n**A Paywall switch was still shipping in the app**, saying it controlled whether live data needs a subscription. It controlled nothing, in an app with nothing to sell. Gone, with the free-trial control, the payment QR dependency and every stale reference to a price.\n\n**The AI was being told, in the same prompt, that delta rules are runnable and that it must REFUSE them.** It would have refused the exact rule this feature was built for.",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.6/papertrader.apk",
-                                    "sha256":  "128ab99431204c6d5c3f026082e2fe771af209d47f7552eda91af16a392d11de",
-                                    "size":  54568165
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.0/papertrader.apk",
+                                    "sha256":  "6ebad4e019d29509993349ddd5945f209aafc06eb84567f7814f5dac9fd1331d",
+                                    "size":  54502529
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.6/papertrader.apk",
-                                 "sha256":  "128ab99431204c6d5c3f026082e2fe771af209d47f7552eda91af16a392d11de",
-                                 "size":  54568165
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.0/papertrader.apk",
+                                 "sha256":  "6ebad4e019d29509993349ddd5945f209aafc06eb84567f7814f5dac9fd1331d",
+                                 "size":  54502529
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.6/papertrader.apk",
-                                    "sha256":  "128ab99431204c6d5c3f026082e2fe771af209d47f7552eda91af16a392d11de",
-                                    "size":  54568165
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.0/papertrader.apk",
+                                    "sha256":  "6ebad4e019d29509993349ddd5945f209aafc06eb84567f7814f5dac9fd1331d",
+                                    "size":  54502529
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.0.6/papertrader.apk",
-                                      "sha256":  "128ab99431204c6d5c3f026082e2fe771af209d47f7552eda91af16a392d11de",
-                                      "size":  54568165
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.1.0/papertrader.apk",
+                                      "sha256":  "6ebad4e019d29509993349ddd5945f209aafc06eb84567f7814f5dac9fd1331d",
+                                      "size":  54502529
                                   }
               }
 }
