@@ -1,26 +1,26 @@
 {
-    "build":  1034,
-    "version":  "1.4.2",
+    "build":  1035,
+    "version":  "1.4.3",
     "notes":  "",
     "files":  {
                   "universal":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.4.2/papertrader.apk",
-                                    "sha256":  "2db5b9d2b2e789b4fdb58b9e90c3f5f218b40d39467dea91fa4b7cb2916d4e83",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.4.3/papertrader.apk",
+                                    "sha256":  "0c1f5f45d595c01ba2a9d8393e2c5918d950e2ba9153d5f2da50a00ba6112bf4",
                                     "size":  52241797
                                 },
                   "x86_64":  {
-                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.4.2/papertrader.apk",
-                                 "sha256":  "2db5b9d2b2e789b4fdb58b9e90c3f5f218b40d39467dea91fa4b7cb2916d4e83",
+                                 "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.4.3/papertrader.apk",
+                                 "sha256":  "0c1f5f45d595c01ba2a9d8393e2c5918d950e2ba9153d5f2da50a00ba6112bf4",
                                  "size":  52241797
                              },
                   "arm64-v8a":  {
-                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.4.2/papertrader.apk",
-                                    "sha256":  "2db5b9d2b2e789b4fdb58b9e90c3f5f218b40d39467dea91fa4b7cb2916d4e83",
+                                    "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.4.3/papertrader.apk",
+                                    "sha256":  "0c1f5f45d595c01ba2a9d8393e2c5918d950e2ba9153d5f2da50a00ba6112bf4",
                                     "size":  52241797
                                 },
                   "armeabi-v7a":  {
-                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.4.2/papertrader.apk",
-                                      "sha256":  "2db5b9d2b2e789b4fdb58b9e90c3f5f218b40d39467dea91fa4b7cb2916d4e83",
+                                      "url":  "https://github.com/Deepulakkadasu/papertrader/releases/download/v1.4.3/papertrader.apk",
+                                      "sha256":  "0c1f5f45d595c01ba2a9d8393e2c5918d950e2ba9153d5f2da50a00ba6112bf4",
                                       "size":  52241797
                                   }
               }
